@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-
+  public showMenu = true;
+  public showLightBox = true;
   constructor() { }
 
   ngOnInit() {

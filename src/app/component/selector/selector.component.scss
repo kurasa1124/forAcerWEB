@@ -1,0 +1,39 @@
+@import "../../../theme.scss";
+.selector {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.mi {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
+ul {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid $grey;
+}
+li {
+  line-height: 2rem;
+  padding: 0 10px;
+  &:hover {
+    background: $lightGrey;
+  }
+  &.active {
+    color: #fff;
+    background: $main;
+  }
+}

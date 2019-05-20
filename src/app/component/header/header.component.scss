@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 0.5rem 0;
+  box-shadow: 0 0 5px rgba(black, 0.5);
+}
+.limit {
+  margin: 0 auto;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mo,
+.wellcome {
+  margin-left: 0.5rem;
+}

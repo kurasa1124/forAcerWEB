@@ -1,3 +1,8 @@
-<p>
-  index works!
-</p>
+<app-header (showMenu)="showMenu = $event"></app-header>
+<app-menu *ngIf="showMenu"></app-menu>
+<div class="container"></div>
+<app-footer></app-footer>
+<app-light-box
+  (showBox)="showLightBox = $event"
+  *ngIf="showLightBox"
+></app-light-box>

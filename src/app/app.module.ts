@@ -13,6 +13,8 @@ import { CardSportComponent } from './component/card-sport/card-sport.component'
 import { AdComponent } from './component/ad/ad.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
+import { LightBoxComponent } from './component/light-box/light-box.component';
+import { SelectorComponent } from './component/selector/selector.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CalendarComponent } from './component/calendar/calendar.component';
     CardSportComponent,
     AdComponent,
     MenuComponent,
-    CalendarComponent
+    CalendarComponent,
+    LightBoxComponent,
+    SelectorComponent
   ],
   imports: [
     BrowserModule,
