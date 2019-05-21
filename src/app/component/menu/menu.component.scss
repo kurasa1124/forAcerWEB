@@ -1,0 +1,43 @@
+@import "../../../theme.scss";
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  overflow: auto;
+  color: #fff;
+  background: $second;
+  padding: 4rem 0;
+  z-index: 10;
+  box-shadow: 0 0 5px rgba(black, 0.5);
+}
+
+li {
+  cursor: pointer;
+  user-select: none;
+  line-height: 3rem;
+  padding: 0 2rem;
+  &:hover {
+    background: $active;
+  }
+  > ul {
+    background: $second;
+    width: calc(100% + 4rem);
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-left: -2rem;
+    > li {
+      padding-left: 4rem;
+    }
+  }
+}
+.fold {
+  display: flex;
+  align-items: center;
+}
+.mi {
+  font-size: 1.5rem;
+  margin-right: -1rem;
+}

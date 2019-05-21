@@ -1,11 +1,16 @@
 .header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   background: #fff;
-  padding: 0.5rem 0;
+  padding: 0.5em 0;
   box-shadow: 0 0 5px rgba(black, 0.5);
+  z-index: 100;
+  font-size: 1rem;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 }
 .limit {
   margin: 0 auto;
@@ -15,7 +20,25 @@
   align-items: center;
 }
 
+.menu {
+  cursor: pointer;
+  user-select: none;
+}
+
+.mo {
+  cursor: pointer;
+}
 .mo,
 .wellcome {
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
+}
+
+.logo {
+  cursor: pointer;
+  height: 2em;
+  margin: 0 1.5em;
+  outline: 0;
+  img {
+    height: 100%;
+  }
 }

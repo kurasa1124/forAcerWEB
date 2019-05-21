@@ -15,6 +15,7 @@ import { MenuComponent } from './component/menu/menu.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { LightBoxComponent } from './component/light-box/light-box.component';
 import { SelectorComponent } from './component/selector/selector.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SelectorComponent } from './component/selector/selector.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

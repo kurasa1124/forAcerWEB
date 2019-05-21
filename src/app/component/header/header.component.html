@@ -1,11 +1,17 @@
 <div class="header">
   <div class="limit">
-    <div class="mi menu">menu</div>
-    <div class="logo"></div>
+    <div class="mi menu" (click)="showMenu.emit(!menu)">menu</div>
+    <div class="logo" [routerLink]="['']">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Acer_2011.svg/1280px-Acer_2011.svg.png"
+        alt="logo"
+      />
+    </div>
     <div class="f1"></div>
     <app-selector [optionals]="language"></app-selector>
-    <div class="wellcome">{{ name }}，您好</div>
-    <div class="mo user">account_circle</div>
+    <div class="wellcome" *ngIf="isLogin">{{ name }}，您好</div>
+    <div class="mo user" *ngIf="isLogin">account_circle</div>
+    <div class="mo user" *ngIf="!isLogin">account_circle</div>
     <div class="mo cart">shopping_cart</div>
   </div>
 </div>

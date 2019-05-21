@@ -1,3 +1,41 @@
-<p>
-  menu works!
-</p>
+<ul class="menu">
+  <li (click)="menu1 = !menu1">
+    <div class="fold">
+      節目資訊<span class="f1"></span>
+      <div class="mi">{{ menu1 ? "expand_more" : "chevron_right" }}</div>
+    </div>
+    <ul [style.max-height]="menu1 ? '9rem' : 0">
+      <li>分類商品</li>
+      <li>套票商品</li>
+      <li>其他</li>
+    </ul>
+  </li>
+  <li (click)="menu2 = !menu2">
+    <div class="fold">
+      購取票方式<span class="f1"></span>
+      <div class="mi">{{ menu2 ? "expand_more" : "chevron_right" }}</div>
+    </div>
+    <ul [style.max-height]="menu2 ? '18rem' : 0">
+      <li>購票須知</li>
+      <li>網路購票</li>
+      <li>傳真刷卡購票</li>
+      <li>端點購票</li>
+      <li>退票方式</li>
+      <li>如何確認訂票</li>
+    </ul>
+  </li>
+  <li (click)="menu3 = !menu3">
+    <div class="fold">
+      會員專區<span class="f1"></span>
+      <div class="mi">{{ menu3 ? "expand_more" : "chevron_right" }}</div>
+    </div>
+    <ul [style.max-height]="menu3 ? '9rem' : 0">
+      <li>加入會員</li>
+      <li>忘記密碼</li>
+      <li>變更密碼</li>
+    </ul>
+  </li>
+  <li>常見問題</li>
+  <li>精彩回顧</li>
+  <li>支持贊助</li>
+</ul>
