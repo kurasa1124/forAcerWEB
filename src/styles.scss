@@ -8,6 +8,10 @@ body {
   font-family: Helvetica, Arial, "Noto Sans CJK TC", "文泉驛正黑",
     "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體",
     "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+  font-size: 1rem;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 }
 
 * {
@@ -32,6 +36,7 @@ li {
 }
 
 .mi {
+  display: inline-block;
   font-size: 2rem;
   font-family: "Material Icons";
   @media screen and (max-width: 480px) {
@@ -39,6 +44,7 @@ li {
   }
 }
 .mo {
+  display: inline-block;
   font-size: 2rem;
   font-family: "Material Icons Outlined";
   @media screen and (max-width: 480px) {

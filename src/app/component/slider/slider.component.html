@@ -3,7 +3,10 @@
     <img [src]="'../../../assets/' + slider" [alt]="slider" />
   </li>
 </ul>
-<div class="buttons">
-  <div class="mi" (click)="changeActive(active - 1, scroll)">chevron_left</div>
-  <div class="mi" (click)="changeActive(active + 1, scroll)">chevron_right</div>
+
+<div class="mi left" (click)="changeActive(active - 1, scroll)">
+  chevron_left
+</div>
+<div class="mi right" (click)="changeActive(active + 1, scroll)">
+  chevron_right
 </div>
