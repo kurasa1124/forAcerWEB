@@ -1,12 +1,11 @@
-<ul #scroll>
-  <li *ngFor="let slider of sliders">
-    <img [src]="'../../../assets/' + slider" [alt]="slider" />
-  </li>
-</ul>
+<div (mouseenter)="stopCarousel()" (mouseleave)="startCarousel()">
+  <ul #carousel="">
+    <li
+      *ngFor="let slider of sliders"
+      [style.background-image]="'url(../../../assets/' + slider + ')'"
+    ></li>
+  </ul>
 
-<div class="mi left" (click)="changeActive(active - 1, scroll)">
-  chevron_left
-</div>
-<div class="mi right" (click)="changeActive(active + 1, scroll)">
-  chevron_right
+  <i class="ai-left left" (click)="changeActive(active - 1)"> </i>
+  <i class="ai-right right" (click)="changeActive(active + 1)"> </i>
 </div>

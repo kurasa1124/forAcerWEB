@@ -12,10 +12,15 @@ import { CardColumnComponent } from './component/card-column/card-column.compone
 import { CardSportComponent } from './component/card-sport/card-sport.component';
 import { AdComponent } from './component/ad/ad.component';
 import { MenuComponent } from './component/menu/menu.component';
-import { CalendarComponent } from './component/calendar/calendar.component';
+import { CalendarComponent } from './component/tools/calendar/calendar.component';
 import { LightBoxComponent } from './component/light-box/light-box.component';
 import { SelectorComponent } from './component/selector/selector.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WeekPickerComponent } from './component/tools/week-picker/week-picker.component';
+import { SearchComponent } from './component/tools/search/search.component';
+import { ToolsComponent } from './component/tools/tools.component';
+import { DatePickerComponent } from './component/tools/date-picker/date-picker.component';
+import { QuickBuyComponent } from './component/tools/quick-buy/quick-buy.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     CalendarComponent,
     LightBoxComponent,
-    SelectorComponent
+    SelectorComponent,
+    WeekPickerComponent,
+    SearchComponent,
+    ToolsComponent,
+    DatePickerComponent,
+    QuickBuyComponent
   ],
   imports: [
     BrowserModule,

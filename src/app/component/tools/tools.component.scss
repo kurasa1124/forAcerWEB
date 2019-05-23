@@ -1,0 +1,24 @@
+@import "../../../theme.scss";
+:host {
+  display: block;
+  position: relative;
+  margin-top: -90px;
+  line-height: 0;
+}
+.limit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $opacityWhite;
+  border: 2px solid $opacityBorder;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  .f0 {
+    width: 50px;
+  }
+  > * {
+    display: block;
+    height: 50px;
+    min-width: 50px;
+  }
+}

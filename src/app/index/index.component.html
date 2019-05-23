@@ -1,8 +1,8 @@
 <app-header (showMenu)="showMenu = $event" [menu]="showMenu"></app-header>
 <app-menu *ngIf="showMenu"></app-menu>
-<div class="container" (click)="showMenu = false">
-  <app-slider></app-slider>
-</div>
+<app-slider></app-slider>
+<app-tools></app-tools>
+<div class="container" (click)="showMenu = false"></div>
 <app-footer></app-footer>
 <app-light-box
   (showBox)="showLightBox = $event"

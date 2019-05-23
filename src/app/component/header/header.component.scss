@@ -8,12 +8,16 @@
   box-shadow: 0 0 5px rgba(black, 0.5);
   z-index: 100;
 }
+.logo {
+  text-align: left;
+}
 .limit {
   margin: 0 auto;
   display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
 }
 
 .menu {
@@ -21,12 +25,13 @@
   user-select: none;
 }
 
-.mo {
+i {
+  font-size: 2rem;
   cursor: pointer;
 }
-.mo,
+i,
 .wellcome {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 .logo {
