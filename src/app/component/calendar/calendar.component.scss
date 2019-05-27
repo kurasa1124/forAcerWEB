@@ -1,0 +1,35 @@
+@import "../../../theme.scss";
+
+.calendar-bg {
+  background: #fff;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px 0 rgba(black, 0.5);
+  position: relative;
+  padding: 10px;
+}
+.arrow {
+  pointer-events: none;
+  width: 70px;
+  height: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.6);
+  @media screen and (max-width: 960px) {
+    left: $square / 2;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    background: #fff;
+    box-shadow: 0 3px 10px 0 rgba(black, 0.5);
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../../../theme.scss";
+:host {
+  display: block;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 1rem;
+  width: 15vw;
+  max-width: 10rem;
+  min-width: 6rem;
+  box-shadow: 0 3px 10px 0 $darker;
+  position: relative;
+}
+
+ul {
+  width: 100%;
+}
+
+li {
+  width: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+  + li {
+    border-top: 1px solid $grey;
+  }
+}
+
+.arrow {
+  pointer-events: none;
+  width: 70px;
+  height: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-55%) scaleX(0.6);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    background: #fff;
+    box-shadow: 0 3px 10px 0 rgba(black, 0.5);
+  }
+}

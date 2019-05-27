@@ -1,0 +1,31 @@
+@import "../../../../theme.scss";
+.full {
+  display: flex;
+}
+input,
+button {
+  background: $tools;
+  margin-left: 2px;
+  min-width: $square;
+  height: $square;
+  border: 0;
+}
+
+input {
+  display: block;
+  min-width: 0;
+  max-width: 15vw;
+  @media screen and (max-width: 480px) {
+    max-width: none;
+  }
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: $square;
+  padding: 0 1vmin;
+  border: none;
+  &::placeholder {
+    color: #000;
+    opacity: 0.3;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="full" (click)="close.emit()"></div>
+<app-login
+  *ngIf="!forgetPassword"
+  (forget)="forgetPassword = true"
+  (login)="login.emit(); close.emit()"
+></app-login>
+<app-password
+  *ngIf="forgetPassword"
+  (cancel)="forgetPassword = false"
+></app-password>

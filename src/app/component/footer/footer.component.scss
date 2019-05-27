@@ -1,0 +1,121 @@
+@import "../../../theme.scss";
+.footer {
+  width: 100%;
+  background: $second;
+}
+
+.content {
+  background: $opacityWhite;
+  border: 2px solid $opacityBorder;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4vmin;
+}
+
+.link {
+  a {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $second;
+    padding-right: 2vw;
+    text-decoration: none;
+    line-height: 1.5em;
+    + a {
+      border-left: 1px solid $second;
+      padding-left: 2vw;
+    }
+  }
+}
+
+.copyright {
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  color: #fff;
+  padding: 1rem 0;
+  .limit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .addr {
+    span {
+      display: block;
+      margin-right: 0.8rem;
+    }
+  }
+
+  .secure {
+    width: 30%;
+    max-width: 150px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.contact {
+  display: flex;
+}
+
+.twitter,
+.instgram,
+.facebook {
+  color: #fff;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter {
+  background: $twitter;
+}
+.instgram {
+  background: $instagram;
+}
+.facebook {
+  background: $facebook;
+}
+
+input {
+  width: 14rem;
+  background: $second;
+  line-height: 1.6rem;
+  border: none;
+  border-radius: 1.6rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 7rem;
+  font-size: 0.8rem;
+  &::placeholder {
+    font-size: 0.8rem;
+    color: $opacityWhite;
+  }
+  + button {
+    font-size: 0.8rem;
+    color: #fff;
+    width: 6rem;
+    line-height: 1.6rem;
+    margin-left: -6rem;
+    margin-top: 1px;
+    background: $lighter;
+    border: none;
+    border-radius: 1.6rem;
+  }
+}
+
+.small {
+  width: 6rem;
+  padding-right: 2rem;
+  + button {
+    width: 1.6rem;
+    margin-left: -1.6rem;
+  }
+}

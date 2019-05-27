@@ -1,0 +1,33 @@
+<div class="icon"><i class="ai-user"></i></div>
+<div class="box">
+  <h1>會員登入</h1>
+  <label
+    ><span class="mi">person</span><input type="text" placeholder="帳號"
+  /></label>
+  <label
+    ><span class="mi">lock</span><input type="text" placeholder="密碼"
+  /></label>
+  <div class="securiry">
+    <div class="code"><img [src]="imgDataURL" alt="" (click)="reload()" /></div>
+    <label class="f1"
+      ><span class="mi">verified_user</span
+      ><input type="text" placeholder="驗證碼"
+    /></label>
+  </div>
+  <div class="buttons">
+    <button class="gg"><i class="fab fa-google"></i></button>
+    <button class="fb"><i class="fab fa-facebook-f"></i></button>
+    <button class="f1" (click)="login.emit()">登入</button>
+  </div>
+  <div class="remember">
+    <label for="checkbox" (click)="remember = !remember">
+      <div class="mo" [class.color]="remember">
+        {{ remember ? "check_box" : "check_box_outline_blank" }}
+      </div>
+      <span>記住我</span>
+    </label>
+    <span (click)="forget.emit()">忘記密碼？</span>
+  </div>
+</div>
+
+<p>沒有帳戶嗎？請先按此註冊</p>

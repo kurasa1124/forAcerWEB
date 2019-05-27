@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" id="header">
   <div class="limit">
     <div class="mi menu" (click)="showMenu.emit(!menu)">menu</div>
     <div class="logo f1" [routerLink]="['']">
@@ -8,9 +8,26 @@
       />
     </div>
     <app-selector [optionals]="language"></app-selector>
-    <div class="wellcome" *ngIf="isLogin">{{ name }}，您好</div>
-    <div class="mo user" *ngIf="isLogin">account_circle</div>
-    <i class="ai-user" *ngIf="!isLogin"></i>
+    <div class="wellcome" *ngIf="token.isLogin">{{ name }}，您好</div>
+    <div
+      class="user"
+      *ngIf="token.isLogin"
+      [style.backgroundImage]="'url(' + photoUrl + ')'"
+      (click)="showUserList = !showUserList"
+    >
+      <app-user-list
+        *ngIf="showUserList"
+        (logout)="token.isLogin = false"
+      ></app-user-list>
+    </div>
+    <i class="ai-user" *ngIf="!token.isLogin" (click)="showLogin = true"></i>
     <i class="ai-shopping-cart"></i>
+    <div class="count" *ngIf="token.isLogin">99</div>
   </div>
 </div>
+
+<app-frosted-glass
+  *ngIf="showLogin"
+  (close)="showLogin = false"
+  (login)="token.isLogin = true"
+></app-frosted-glass>

@@ -1,0 +1,33 @@
+@import "../../../theme.scss";
+:host {
+  display: block;
+  position: relative;
+  margin-top: calc(3rem * -1 - 4vmin - 2px);
+  line-height: 0;
+}
+
+.limit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $opacityWhite;
+  border: 2px solid $opacityBorder;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  .week {
+    max-width: 100%;
+    min-width: $square;
+  }
+  .square {
+    width: $square;
+    max-width: calc($square + 2px);
+  }
+  > * {
+    cursor: pointer;
+    height: $square;
+    min-width: $square;
+    &:hover {
+      box-shadow: 0 0 3px $opacityBorder;
+    }
+  }
+}

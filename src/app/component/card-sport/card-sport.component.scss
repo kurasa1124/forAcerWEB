@@ -1,0 +1,62 @@
+@import "../../../theme.scss";
+:host {
+  width: calc(50% - 2vw);
+  margin: 2vw;
+  margin-left: 0;
+  @media screen and (max-width: 960px) {
+    width: calc(100% - 2vw);
+  }
+}
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 $lightGrey;
+  padding: 1rem;
+  background: #fff;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.logo {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  .mi {
+    font-size: 1rem;
+  }
+}
+
+.team {
+  display: block;
+  width: 50%;
+  padding-top: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.title {
+  color: $darkGrey;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .mi {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+}
+
+.text {
+  color: $grey;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}

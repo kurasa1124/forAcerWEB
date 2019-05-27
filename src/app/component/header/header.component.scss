@@ -1,3 +1,4 @@
+@import "../../../theme.scss";
 .header {
   width: 100%;
   position: sticky;
@@ -7,13 +8,15 @@
   padding: 0.5em 0;
   box-shadow: 0 0 5px rgba(black, 0.5);
   z-index: 100;
+  transition: filter 0.5s;
+  will-change: filter;
 }
 .logo {
   text-align: left;
 }
 .limit {
   margin: 0 auto;
-  display: block;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,21 +28,64 @@
   user-select: none;
 }
 
-i {
-  font-size: 2rem;
-  cursor: pointer;
-}
 i,
+.user,
 .wellcome {
   margin-left: 0.5rem;
+}
+
+.user {
+  user-select: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid $lightGrey;
+  position: relative;
+  app-user-list {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    transform: translateX(-50%);
+  }
+}
+
+.wellcome {
+  margin-right: 0.5rem;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .logo {
   cursor: pointer;
   height: 2em;
   margin: 0 1.5em;
-  outline: 0;
   img {
     height: 100%;
   }
+}
+
+.count {
+  width: 2rem;
+  height: 2rem;
+  background: $red;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  transform: scale(0.6) translate(10%, -10%);
+  transform-origin: right top;
+}
+
+app-selector {
+  margin-right: 0.5rem;
 }

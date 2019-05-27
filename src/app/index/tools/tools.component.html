@@ -1,0 +1,9 @@
+<div #tools="" class="limit padding">
+  <app-date-picker class="f0"></app-date-picker>
+  <app-week-picker class="week f2 xs-hide"></app-week-picker>
+  <app-search
+    [class.f0]="tools.clientWidth < 800 && tools.clientWidth > 485"
+    [class.f1]="tools.clientWidth < 475"
+  ></app-search>
+  <app-quick-buy class="f0 square"></app-quick-buy>
+</div>

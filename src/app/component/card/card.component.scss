@@ -1,0 +1,128 @@
+@import "../../../theme.scss";
+@mixin rowImg {
+  width: 50%;
+  padding-top: 20%;
+  &::after {
+    bottom: auto;
+    left: auto;
+    top: 0;
+    right: -1px;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(
+      90deg,
+      rgba(white, 0),
+      rgba(white, 0.3),
+      rgba(white, 0.7),
+      rgba(white, 0.9),
+      rgba(white, 1)
+    );
+  }
+}
+@mixin colImg {
+  width: 100%;
+  padding-top: 90%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(
+      rgba(white, 0),
+      rgba(white, 0.3),
+      rgba(white, 0.7),
+      rgba(white, 0.9),
+      rgba(white, 1)
+    );
+  }
+}
+
+:host {
+  display: inline-block;
+  width: calc(25% - 2vw);
+  margin-right: 2vw;
+  position: relative;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 960px) {
+    width: calc(33.3% - 2vw);
+  }
+  @media screen and (max-width: 480px) {
+    width: calc(100% - 2vw);
+  }
+}
+
+:host.nowrap {
+  &:last-child {
+    padding-right: 2vw;
+    box-sizing: content-box;
+  }
+  @media screen and (max-width: 480px) {
+    width: calc(50% - 2vw);
+    .card {
+      display: block;
+    }
+    .image {
+      @include colImg();
+    }
+  }
+}
+
+:host.row {
+  width: calc(100% - 2vw);
+  .card {
+    display: flex;
+  }
+  .image {
+    @include rowImg();
+  }
+  .content {
+    padding: 2rem 3vw;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.5s;
+  box-shadow: 0 3px 20px 0 $lightGrey;
+  &:hover {
+    transform: translateY(-1vw);
+    box-shadow: 0 6px 20px 0 $lightGrey;
+  }
+  @media screen and (max-width: 480px) {
+    display: flex;
+  }
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  @include colImg();
+  @media screen and (max-width: 480px) {
+    @include rowImg();
+  }
+}
+
+.content {
+  padding: 1.5rem 1rem;
+}
+
+.title {
+  color: $darkGrey;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.text {
+  color: $grey;
+  font-size: 1rem;
+}

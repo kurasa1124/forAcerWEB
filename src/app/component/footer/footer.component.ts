@@ -12,4 +12,13 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  public get viewport() {
+    let e = window as unknown as HTMLElement;
+    let a = 'inner';
+    if (!('innerWidth' in window)) {
+      a = 'client';
+      e = document.documentElement || document.body;
+    }
+    return { width: e[a + 'Width'], height: e[a + 'Height'] };
+  }
 }

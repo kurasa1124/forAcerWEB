@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<app-header
+  class="f0"
+  (showMenu)="showMenu = $event"
+  [menu]="showMenu"
+></app-header>
+<app-menu *ngIf="showMenu" (toggle)="showMenu = $event"></app-menu>
+<div id="container" class="f1" (click)="showMenu = false">
+  <router-outlet></router-outlet>
+</div>

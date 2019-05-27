@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, stagger, animate, style, query } from '@angular/animations';
 
 @Component({
@@ -19,14 +19,16 @@ import { trigger, transition, stagger, animate, style, query } from '@angular/an
     ])
   ]
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
   public menu1 = false;
   public menu2 = false;
   public menu3 = false;
 
-  constructor() { }
+  @Output() toggle = new EventEmitter();
 
-  ngOnInit() {
+  public toggleMenu(event: MouseEvent) {
+    let el = event.target as HTMLElement;
+    if (el.classList.contains("fold")) return;
+    this.toggle.emit(false);
   }
-
 }

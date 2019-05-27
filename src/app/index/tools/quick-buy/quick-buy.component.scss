@@ -1,0 +1,17 @@
+@import "../../../../theme.scss";
+.full {
+  background: $tools;
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mi {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 45%;
+  margin-top: -15%;
+  transform: skewX(-20deg);
+}

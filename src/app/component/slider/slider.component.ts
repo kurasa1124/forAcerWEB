@@ -19,6 +19,9 @@ export class SliderComponent implements OnInit {
     smoothscroll.polyfill();
     this.startCarousel();
   }
+  ngOnDestroy(): void {
+    this.stopCarousel()
+  }
   public startCarousel() {
     this.timer = setInterval(() => this.changeActive(this.active + 1), 3000)
   }

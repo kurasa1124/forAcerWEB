@@ -1,6 +1,8 @@
 $background: linear-gradient(#ffffff, #bee7fc);
 $main: #45a5bf;
 $second: #223e5e;
+$lighter: rgba(white, 0.3);
+$darker: rgba(black, 0.3);
 $opacityBorder: rgba(black, 0.1);
 $opacityWhite: rgba(white, 0.6);
 $tools: rgba(white, 0.75);
@@ -26,3 +28,5 @@ $instagram: radial-gradient(
   #d6249f 60%,
   #285aeb 90%
 );
+
+$square: 3rem;

@@ -1,4 +1,5 @@
 @import "./theme.scss";
+@import "./app/component/calendar/tiny-datepicker.scss";
 html,
 body {
   width: 100%;
@@ -29,6 +30,12 @@ li {
   padding: 0;
 }
 
+input,
+button,
+image {
+  outline: 0;
+}
+
 .full {
   flex: 1 1 auto;
   width: 100%;
@@ -38,43 +45,93 @@ li {
   position: relative;
 }
 .mi {
+  user-select: none;
   display: inline-block;
   font-size: 2rem;
   font-family: "Material Icons";
 }
 .mo {
+  user-select: none;
   display: inline-block;
   font-size: 2rem;
   font-family: "Material Icons Outlined";
 }
 
+[class*=" ai-"],
+[class^="ai-"] {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   overflow: auto;
-  background: $background;
+  background: $background fixed top;
 }
 
 .limit {
-  width: 70%;
+  width: 80%;
   max-width: 1040px;
   margin: 0 auto;
   &.padding {
-    padding: 20px 2vw;
+    padding: 2vmin 4vmin;
   }
   @media screen and (max-width: 640px) {
     width: 100%;
   }
 }
 
-.f0 {
-  flex: 0 0 auto;
+@for $i from 0 through 5 {
+  .f#{$i} {
+    flex: $i $i auto;
+  }
 }
 
-.f1 {
-  flex: 1 1 auto;
+.lg-hide {
+  @media screen and (min-width: 1440px) {
+    display: none !important;
+  }
 }
 
-.f2 {
-  flex: 2 1 auto;
+.lg-show {
+  @media screen and (min-width: 1440px) {
+    display: block !important;
+  }
+}
+
+.md-hide {
+  @media screen and (max-width: 960px) {
+    display: none !important;
+  }
+}
+
+.md-show {
+  @media screen and (max-width: 960px) {
+    display: block !important;
+  }
+}
+
+.ss-hide {
+  @media screen and (max-width: 640px) {
+    display: none !important;
+  }
+}
+
+.ss-show {
+  @media screen and (max-width: 640px) {
+    display: block !important;
+  }
+}
+
+.xs-hide {
+  @media screen and (max-width: 480px) {
+    display: none !important;
+  }
+}
+
+.xs-show {
+  @media screen and (max-width: 480px) {
+    display: block !important;
+  }
 }

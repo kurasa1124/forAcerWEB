@@ -1,3 +1,15 @@
-<p>
-  card-sport works!
-</p>
+<div class="card">
+  <div class="logo">
+    <div class="team" [style.backgroundImage]="'url(' + logo1 + ')'"></div>
+    <div class="mi">clear</div>
+    <div class="team" [style.backgroundImage]="'url(' + logo2 + ')'"></div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>{{ team1 }}</span>
+      <div class="mi">clear</div>
+      <span>{{ team2 }}</span>
+    </div>
+    <div class="text">{{ text }}</div>
+  </div>
+</div>
