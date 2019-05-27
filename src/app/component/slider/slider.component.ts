@@ -8,7 +8,7 @@ import * as smoothscroll from 'smoothscroll-polyfill';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  public sliders: string[] = ["slider1.jpg", "slider2.jpg", "slider3.jpg"];
+  public sliders: string[] = ["assets/slider1.jpg", "assets/slider2.jpg", "assets/slider3.jpg"];
   public active = 0;
   public timer;
   @ViewChild("carousel") public carousel: ElementRef;
