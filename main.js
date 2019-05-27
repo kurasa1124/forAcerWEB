@@ -1702,7 +1702,7 @@ var IndexComponent = /** @class */ (function () {
         var _this = this;
         this._active = _active;
         this._router = _router;
-        this.showLightBox = false;
+        this.showLightBox = true;
         this.hots = [
             { image: "http://pipsum.com/1100x1100.jpg", title: chinesegen__WEBPACK_IMPORTED_MODULE_4__({ count: 5, freq: true }).text, text: "尚未開始" },
             { image: "http://pipsum.com/1200x1200.jpg", title: chinesegen__WEBPACK_IMPORTED_MODULE_4__({ count: 5, freq: true }).text, text: "尚未開始" },
