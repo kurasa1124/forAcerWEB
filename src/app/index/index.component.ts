@@ -9,7 +9,7 @@ import * as chinese from "chinesegen"
 })
 export class IndexComponent implements OnInit {
   public date;
-  public showLightBox = false;
+  public showLightBox = true;
   constructor(private _active: ActivatedRoute, private _router: Router) {
     this._active.queryParams.subscribe(param => {
       if (!param.date || !moment(param.date).isValid()) this._router.navigate([], { queryParams: { date: moment().format("YYYY-MM-DD") } })
