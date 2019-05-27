@@ -1566,7 +1566,7 @@ var SelectorComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div (mouseenter)=\"stopCarousel()\" (mouseleave)=\"startCarousel()\">\n  <ul #carousel=\"\">\n    <li\n      *ngFor=\"let slider of sliders\"\n      [style.background-image]=\"'url(../../../assets/' + slider + ')'\"\n    ></li>\n  </ul>\n\n  <i class=\"ai-left left\" (click)=\"changeActive(active - 1)\"> </i>\n  <i class=\"ai-right right\" (click)=\"changeActive(active + 1)\"> </i>\n</div>\n"
+module.exports = "<div (mouseenter)=\"stopCarousel()\" (mouseleave)=\"startCarousel()\">\n  <ul #carousel=\"\">\n    <li\n      *ngFor=\"let slider of sliders\"\n      [style.background-image]=\"'url(' + slider + ')'\"\n    ></li>\n  </ul>\n\n  <i class=\"ai-left left\" (click)=\"changeActive(active - 1)\"> </i>\n  <i class=\"ai-right right\" (click)=\"changeActive(active + 1)\"> </i>\n</div>\n"
 
 /***/ }),
 
@@ -1603,7 +1603,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var SliderComponent = /** @class */ (function () {
     function SliderComponent() {
-        this.sliders = ["slider1.jpg", "slider2.jpg", "slider3.jpg"];
+        this.sliders = ["assets/slider1.jpg", "assets/slider2.jpg", "assets/slider3.jpg"];
         this.active = 0;
     }
     SliderComponent.prototype.ngOnInit = function () {
