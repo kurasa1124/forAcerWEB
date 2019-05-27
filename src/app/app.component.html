@@ -7,3 +7,8 @@
 <div id="container" class="f1" (click)="showMenu = false">
   <router-outlet></router-outlet>
 </div>
+
+<app-light-box
+  (showBox)="showLightBox = $event"
+  *ngIf="showLightBox"
+></app-light-box>
