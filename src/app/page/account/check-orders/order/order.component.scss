@@ -1,0 +1,23 @@
+@import "../../../../../theme.scss";
+:host {
+  display: block;
+  padding: 2rem 0 3rem 0;
+  &:not(:last-child) {
+    border-bottom: 1px dashed $grey;
+  }
+}
+h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+p {
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.2rem;
+  span {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

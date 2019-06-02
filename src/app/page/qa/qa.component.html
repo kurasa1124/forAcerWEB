@@ -1,0 +1,41 @@
+<div class="content-bg"></div>
+<div class="limit padding f1">
+  <div class="header">
+    <ul class="f1 flex">
+      <li class="f1" [routerLink]="['./buy-way']" routerLinkActive="active">
+        購票方式
+      </li>
+      <li class="f1" [routerLink]="['./atm']" routerLinkActive="active">
+        ATM付款
+      </li>
+      <li class="f1" [routerLink]="['./get']" routerLinkActive="active">
+        取票方式
+      </li>
+      <li class="f1" [routerLink]="['./join']" routerLinkActive="active">
+        加入會員
+      </li>
+      <li class="f1" [routerLink]="['./buy']" routerLinkActive="active">
+        購票
+      </li>
+      <li class="f1" [routerLink]="['./return']" routerLinkActive="active">
+        退票
+      </li>
+      <li class="f1" [routerLink]="['./others']" routerLinkActive="active">
+        其他
+      </li>
+      <li class="f1" [routerLink]="['./change']" routerLinkActive="active">
+        商品退換貨
+      </li>
+      <li class="f1" [routerLink]="['./invoice']" routerLinkActive="active">
+        電子發票
+      </li>
+      <li class="f1" [routerLink]="['./card']" routerLinkActive="active">
+        信用卡3D認證
+      </li>
+    </ul>
+  </div>
+
+  <div class="content f1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

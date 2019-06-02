@@ -1,0 +1,126 @@
+@import "../../../theme.scss";
+:host {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.head {
+  background: #fff;
+  box-shadow: 0 3px 6px $opacityBorder;
+  position: relative;
+  z-index: 1;
+}
+.image {
+  padding-top: 350px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  line-height: 5rem;
+  font-weight: normal;
+  @media screen and (max-width: 640px) {
+    padding: 0 2rem;
+  }
+}
+h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.order {
+  background: #fff;
+  padding-right: 2rem;
+  @media screen and (max-width: 640px) {
+    padding: 0 2rem;
+  }
+  @media screen and (max-width: 480px) {
+    border-bottom: none;
+  }
+  .limit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .buttons {
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: 640px) {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      display: flex;
+    }
+  }
+  button {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    background: $main;
+    padding: 0 2rem;
+    line-height: 2.5rem;
+    border: none;
+    margin-left: 1rem;
+    position: relative;
+    transform: translateY(50%);
+    @media screen and(max-width:640px) {
+      flex: 1 1 auto;
+      transform: none;
+      border-radius: 0;
+      margin-left: 0;
+      line-height: 3rem;
+      + button {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+}
+
+.main {
+  align-items: flex-start;
+  background: $opacityWhite;
+  border-left: 2px solid $opacityBorder;
+  border-right: 2px solid $opacityBorder;
+  @media screen and (max-width: 640px) {
+    border: none;
+  }
+}
+
+app-selector {
+  margin-left: -2rem;
+  width: 33.33%;
+  color: #fff;
+  background: $second;
+}
+
+.content {
+  position: relative;
+}
+
+.share {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: $grey;
+  margin-bottom: 0.5rem;
+  text-align: right;
+  > * {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+  [class*="facebook"] {
+    color: $facebook;
+  }
+  [class*="line"] {
+    color: $line;
+  }
+}

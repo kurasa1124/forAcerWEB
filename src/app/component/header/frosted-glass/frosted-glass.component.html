@@ -3,8 +3,10 @@
   *ngIf="!forgetPassword"
   (forget)="forgetPassword = true"
   (login)="login.emit(); close.emit()"
+  (close)="close.emit()"
 ></app-login>
 <app-password
   *ngIf="forgetPassword"
   (cancel)="forgetPassword = false"
+  (close)="close.emit()"
 ></app-password>

@@ -14,7 +14,9 @@ ul {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
-    display: none;
+    height: 0px !important;
+    width: 0px !important;
+    display: none !important;
   }
 }
 

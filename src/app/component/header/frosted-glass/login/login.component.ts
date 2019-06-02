@@ -9,6 +9,7 @@ import verification from 'verification-code';
 export class LoginComponent {
   @Output() forget = new EventEmitter();
   @Output() login = new EventEmitter();
+  @Output() close = new EventEmitter();
   public remember = false;
   private _result = verification.create();
   private _code = this._result.code;

@@ -1,0 +1,60 @@
+<div class="card">
+  <h4 class="title">幾米音樂劇《時光電影院》</h4>
+  <p>
+    <span>2018/6/28 (四) 19:30</span>
+    <span>臺中國家歌劇院大劇院 (台中市西屯區惠來路二段101號)</span>
+  </p>
+  <div
+    class="more"
+    [class.active]="showDetail"
+    (click)="showDetail = !showDetail"
+  ></div>
+  <div class="overflow" *ngIf="showDetail" [@slideIn]>
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <th>座位資訊</th>
+        <th>票別</th>
+        <th>數量</th>
+        <th>定價</th>
+        <th>售價</th>
+        <th>狀態</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>2樓 - 8排 - 25 號</td>
+        <td>全票</td>
+        <td>1</td>
+        <td>2500</td>
+        <td>2250</td>
+        <td>電子票</td>
+        <td><div class="tag">轉贈</div></td>
+      </tr>
+      <tr>
+        <td>2樓 - 8排 - 27 號</td>
+        <td>全票</td>
+        <td>1</td>
+        <td>2500</td>
+        <td>2250</td>
+        <td>轉贈中</td>
+        <td><div class="tag">回收</div></td>
+      </tr>
+      <tr>
+        <td>2樓 - 8排 - 29 號</td>
+        <td>全票</td>
+        <td>1</td>
+        <td>2500</td>
+        <td>2250</td>
+        <td>已轉贈</td>
+        <td><div class="tag disabled">回收</div></td>
+      </tr>
+    </table>
+  </div>
+
+  <p *ngIf="showDetail" [@slideIn]>
+    <span>原價：2400</span>
+    <span class="red">折價：-360 </span>
+    <span class="red">促銷代碼：0 </span>
+  </p>
+
+  <h4>總計: $ 2,040</h4>
+</div>

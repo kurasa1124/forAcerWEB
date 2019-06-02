@@ -1,0 +1,30 @@
+<div class="content-bg"></div>
+
+<div class="head">
+  <h1 class="limit">{{ title }}</h1>
+  <div class="image" [style.backgroundImage]="'url(' + image + ')'"></div>
+  <div class="order">
+    <div class="limit">
+      <app-selector [optionals]="menu" class="ss-show"></app-selector>
+      <h3>{{ time }}</h3>
+      <div class="buttons">
+        <button>活動場次</button>
+        <button>套票場次</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="limit">
+  <div class="flex main">
+    <d-menu class="ss-hide"></d-menu>
+    <div class="content">
+      <div class="share flex">
+        <i class="fab fa-line"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fas fa-link"></i>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

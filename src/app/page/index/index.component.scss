@@ -1,0 +1,17 @@
+@import "../../../theme.scss";
+
+.full {
+  overflow: auto;
+}
+
+.limit {
+  background: $opacityWhite;
+  border: 2px solid $opacityBorder;
+  border-top: none;
+  border-bottom: none;
+}
+
+iframe {
+  display: block;
+  margin: 5vw auto;
+}

@@ -1,6 +1,9 @@
-<div class="card">
+<div class="card" (click)="goDetail()">
   <div class="image" [style.backgroundImage]="'url(' + image + ')'"></div>
   <div class="content">
+    <div class="tag" [style.background]="tag.color" *ngIf="showTag">
+      {{ tag.name }}
+    </div>
     <div class="title">{{ title }}</div>
     <div class="text">{{ text }}</div>
   </div>

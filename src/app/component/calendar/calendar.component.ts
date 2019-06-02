@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input, ViewChild, ElementRef } from '@angular/core';
 import * as TinyDatePicker from 'tiny-date-picker';
 import * as moment from "moment";
-import { ActivatedRoute } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -24,14 +23,9 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class CalendarComponent implements OnInit {
   @ViewChild("calendar") calendar: ElementRef;
-  private _date = moment();
+  @Input() date = moment();
   @Output() select = new EventEmitter();
   public datePicker: TinyDatePicker;
-  constructor(private _active: ActivatedRoute) {
-    this._active.queryParams.subscribe(param => {
-      this._date = moment(param.date);
-    })
-  }
 
   ngOnInit() {
     this._datePicker()
@@ -49,23 +43,17 @@ export class CalendarComponent implements OnInit {
         return date.toLocaleDateString();
       },
       parse(str) {
-        let date = moment(str).valueOf();
-        return isNaN(date) ? moment() : date;
+        let date = moment(str, "YYYY/MM/DD");
+        return date.isValid() ? date : moment();
       },
       mode: 'dp-permanent',
-      hilightedDate: this._date,
-      min: '10/1/2016',
-      max: '10/1/2020',
-      inRange(dt) {
-        return dt.getFullYear() % 2 > 0;
-      },
-      dateClass(dt) {
-        return dt.getFullYear() % 2 ? 'odd-date' : 'even-date';
-      },
+      hilightedDate: this.date || moment(),
+      min: '1911/01/01',
+      max: moment().add(5, 'year').format("YYYY/MM/DD"),
       dayOffset: 1
     })
     this.datePicker.open();
-    this.datePicker.on('statechange', (event, picker) => this.select.emit(picker.state.selectedDate));
+    this.datePicker.on('statechange', (event, picker) => { this.select.emit(picker.state.selectedDate) });
   }
 
   private _lang = {

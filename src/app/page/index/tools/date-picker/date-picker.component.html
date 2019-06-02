@@ -1,0 +1,11 @@
+<div class="full" (click)="showCalendar = !showCalendar">
+  <i class="ai-calendar"></i>
+  <div class="month xs-hide">{{ date.format("MMM") | uppercase }}</div>
+</div>
+<app-calendar
+  class="calendar"
+  [date]="date"
+  (select)="changeDate($event)"
+  (mouseleave)="showCalendar = false"
+  *ngIf="showCalendar"
+></app-calendar>

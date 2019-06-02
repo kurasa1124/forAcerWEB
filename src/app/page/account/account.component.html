@@ -1,3 +1,45 @@
-<p>
-  account works!
-</p>
+<div class="content-bg"></div>
+<div class="limit padding f1">
+  <div class="header">
+    <ul class="f1">
+      <li
+        *ngIf="!token.isLogin"
+        [routerLink]="['./joinMember']"
+        routerLinkActive="active"
+      >
+        加入會員
+      </li>
+      <li
+        *ngIf="!token.isLogin"
+        [routerLink]="['./forgetPassword']"
+        routerLinkActive="active"
+      >
+        忘記密碼
+      </li>
+      <li
+        *ngIf="token.isLogin"
+        [routerLink]="['./changeProfile']"
+        routerLinkActive="active"
+      >
+        變更資料
+      </li>
+      <li [routerLink]="['./changePassword']" routerLinkActive="active">
+        變更密碼
+      </li>
+      <li
+        *ngIf="token.isLogin"
+        [routerLink]="['./checkOrders']"
+        routerLinkActive="active"
+      >
+        訂單查詢
+      </li>
+    </ul>
+    <div class="icon f0 ss-hide">
+      <img [src]="'assets/' + activeImage + '.svg'" alt="" />
+    </div>
+  </div>
+
+  <div class="content f1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import "../../../../theme.scss";
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  .f1 {
+    font-size: 0.8rem;
+  }
+  button {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background: $main;
+    height: 3rem;
+    line-height: 3rem;
+    border: none;
+    padding: 0 2rem;
+    margin-left: 1rem;
+  }
+  @media screen and (max-width: 640px) {
+    > * {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -8,6 +8,7 @@ import verification from 'verification-code';
 })
 export class PasswordComponent {
   @Output() cancel = new EventEmitter();
+  @Output() close = new EventEmitter();
   private _result = verification.create();
   private _code = this._result.code;
   public imgDataURL = this._result.dataURL;

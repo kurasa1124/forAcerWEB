@@ -1,0 +1,15 @@
+<div class="full">
+  <input
+    type="search"
+    placeholder="SEARCH"
+    class="f1 md-hide xs-show"
+    [(ngModel)]="keyword"
+  />
+  <button
+    class="f0"
+    [routerLink]="['goods', 'search']"
+    [queryParams]="{ keyword: keyword }"
+  >
+    <i class="ai-search"></i>
+  </button>
+</div>

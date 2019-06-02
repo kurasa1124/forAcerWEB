@@ -1,0 +1,152 @@
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td rowspan="4" class="img md-hide">
+      <img src="assets/joinMember-image.svg" alt="" />
+    </td>
+    <td>
+      <div class="flex">
+        <label class="f1"
+          ><span class="mi">person</span><input type="text" placeholder="帳號"
+        /></label>
+        <button class="gg f0">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="fb f0"><i class="fab fa-facebook-f"></i></button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><span class="mi">lock</span
+        ><input
+          [type]="showPassword1 ? 'text' : 'password'"
+          placeholder="密碼"
+          [(ngModel)]="password"
+        /><i class="mo" (click)="showPassword1 = !showPassword1">{{
+          showPassword1 ? "visibility" : "visibility_off"
+        }}</i></label
+      >
+      <ng2-password-strength-bar
+        [passwordToCheck]="password"
+        [barColors]="['#b74085', '#ed6161', '#e5b822', '#83b81a', '#45a5bf']"
+      >
+      </ng2-password-strength-bar>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><span class="mi">lock</span
+        ><span class="mi check">check_circle_outline </span
+        ><input
+          [type]="showPassword2 ? 'text' : 'password'"
+          placeholder="確認密碼"
+        /><i class="mo" (click)="showPassword2 = !showPassword2">{{
+          showPassword2 ? "visibility" : "visibility_off"
+        }}</i></label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><span class="mi">face</span><input type="text" placeholder="姓名"
+      /></label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><span class="mi">public</span>
+        <app-selector [optionals]="country"></app-selector
+      ></label>
+    </td>
+    <td>
+      <label
+        ><span class="mi">cake</span>
+        <div class="muti-input" (click)="showCalendar = !showCalendar">
+          出生於<span>{{ birthDay ? birthDay.format("YYYY") : "-" }}</span
+          >年<span>{{ birthDay ? birthDay.format("MM") : "-" }}</span
+          >月<span>{{ birthDay ? birthDay.format("DD") : "-" }}</span
+          >日
+        </div>
+        <app-calendar
+          class="calendar"
+          (select)="birthDayChange($event)"
+          (mouseleave)="showCalendar = false"
+          *ngIf="showCalendar"
+        ></app-calendar>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><span class="mi">phone</span>
+        <div class="muti-input">
+          <input type="tel" placeholder="區碼" maxlength="4" /><span>-</span>
+          <input type="tel" placeholder="手機" maxlength="10" /></div
+      ></label>
+    </td>
+    <td>
+      <label
+        ><span class="mi">mail</span
+        ><input
+          type="email"
+          placeholder="電子信箱"
+          (keyup)="emailChange($event)"
+        /><i class="mo" [ngClass]="rightEmail ? 'green' : 'red'">{{
+          rightEmail ? "check_circle" : "cancel"
+        }}</i>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label>
+        <span class="mi">location_city</span>
+        <div class="muti-input">
+          <input type="tel" placeholder="郵遞區號" />
+          <span>-</span>
+          <input class="addr" type="text" placeholder="地址" />
+        </div>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label class="fc"
+        ><div class="title">
+          <span class="mi">speaker_notes</span>隱私權保護聲明
+        </div>
+        <div class="textArea">
+          The confirmation e-mails are sent to the e-mail address given in the
+          contact address (address for delivery). If the address is given
+          incorrectly or technical problems occur on the side of the user,
+          ABC.COM shall not be held liable for the non-delivery of these
+          e-mails.
+        </div>
+        <div class="checkRead" (click)="checkRead = !checkRead">
+          <span class="mi">{{
+            checkRead ? "check_box" : "check_box_outline_blank"
+          }}</span>
+          我已詳細閱讀並同意隱私權保護聲明
+        </div>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="flex submit">
+        <button (click)="joinMember()">加入會員</button>
+        <div class="checkRead" (click)="orderRss = !orderRss">
+          <span class="mi">{{
+            orderRss ? "check_box" : "check_box_outline_blank"
+          }}</span>
+          我願意訂閱電子報
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>

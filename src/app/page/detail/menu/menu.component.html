@@ -1,0 +1,9 @@
+<ul>
+  <li
+    *ngFor="let item of menu; index as idx"
+    (click)="active = idx"
+    [class.active]="active == idx"
+  >
+    {{ item }}
+  </li>
+</ul>

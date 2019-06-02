@@ -1,41 +1,130 @@
-<ul class="menu" (click)="toggleMenu($event)">
-  <li (click)="menu1 = !menu1">
+<ul class="menu" (click)="toggleMenu($event)" (mouseleave)="toggle.emit(false)">
+  <li (click)="goods = !goods">
     <div class="fold">
       節目資訊<span class="f1"></span>
-      <div class="mi">{{ menu1 ? "expand_more" : "chevron_right" }}</div>
+      <div class="mi">{{ goods ? "expand_more" : "chevron_right" }}</div>
     </div>
-    <ul [style.max-height]="menu1 ? '9rem' : 0">
-      <li>分類商品</li>
-      <li>套票商品</li>
-      <li>其他</li>
+    <ul [style.max-height]="goods ? (optionals.length + 2) * 3 + 'rem' : 0">
+      <li
+        *ngFor="let item of optionals"
+        [routerLink]="['goods', 'category']"
+        routerLinkActive="active"
+        [queryParams]="{ title: item }"
+      >
+        {{ item }}
+      </li>
+      <li [routerLink]="['goods', 'package']" routerLinkActive="active">
+        套票商品
+      </li>
+      <li [routerLink]="['goods', 'others']" routerLinkActive="active">其他</li>
     </ul>
   </li>
-  <li (click)="menu2 = !menu2">
+  <li (click)="notice = !notice">
     <div class="fold">
       購取票方式<span class="f1"></span>
-      <div class="mi">{{ menu2 ? "expand_more" : "chevron_right" }}</div>
+      <div class="mi">{{ notice ? "expand_more" : "chevron_right" }}</div>
     </div>
-    <ul [style.max-height]="menu2 ? '18rem' : 0">
-      <li>購票須知</li>
-      <li>網路購票</li>
-      <li>傳真刷卡購票</li>
-      <li>端點購票</li>
-      <li>退票方式</li>
-      <li>如何確認訂票</li>
+    <ul [style.max-height]="notice ? '18rem' : 0">
+      <li [routerLink]="['notice', 'buy']" routerLinkActive="active">
+        購票須知
+      </li>
+      <li [routerLink]="['notice', 'web-buy']" routerLinkActive="active">
+        網路購票
+      </li>
+      <li [routerLink]="['notice', 'fax-card']" routerLinkActive="active">
+        傳真刷卡購票
+      </li>
+      <li [routerLink]="['notice', 'point-buy']" routerLinkActive="active">
+        端點購票
+      </li>
+      <li [routerLink]="['notice', 'return']" routerLinkActive="active">
+        退票方式
+      </li>
+      <li [routerLink]="['notice', 'check']" routerLinkActive="active">
+        如何確認訂票
+      </li>
     </ul>
   </li>
-  <li (click)="menu3 = !menu3">
+  <li (click)="accounts = !accounts">
     <div class="fold">
       會員專區<span class="f1"></span>
-      <div class="mi">{{ menu3 ? "expand_more" : "chevron_right" }}</div>
+      <div class="mi">{{ accounts ? "expand_more" : "chevron_right" }}</div>
     </div>
-    <ul [style.max-height]="menu3 ? '9rem' : 0">
-      <li>加入會員</li>
-      <li>忘記密碼</li>
-      <li>變更密碼</li>
+    <ul [style.max-height]="accounts ? '9rem' : 0">
+      <li
+        *ngIf="!token.isLogin"
+        [routerLink]="['account', 'joinMember']"
+        routerLinkActive="active"
+      >
+        加入會員
+      </li>
+      <li
+        *ngIf="!token.isLogin"
+        [routerLink]="['account', 'forgetPassword']"
+        routerLinkActive="active"
+      >
+        忘記密碼
+      </li>
+      <li
+        *ngIf="token.isLogin"
+        [routerLink]="['account', 'changeProfile']"
+        routerLinkActive="active"
+      >
+        變更資料
+      </li>
+      <li
+        [routerLink]="['account', 'changePassword']"
+        routerLinkActive="active"
+      >
+        變更密碼
+      </li>
+      <li
+        *ngIf="token.isLogin"
+        [routerLink]="['account', 'checkOrders']"
+        routerLinkActive="active"
+      >
+        訂單查詢
+      </li>
     </ul>
   </li>
-  <li>常見問題</li>
-  <li>精彩回顧</li>
+  <li (click)="qa = !qa">
+    <div class="fold">
+      常見問題<span class="f1"></span>
+      <div class="mi">{{ qa ? "expand_more" : "chevron_right" }}</div>
+    </div>
+    <ul [style.max-height]="qa ? '30rem' : 0">
+      <li [routerLink]="['QA', 'buy-way']" routerLinkActive="active">
+        購票方式
+      </li>
+      <li [routerLink]="['QA', 'atm']" routerLinkActive="active">
+        ATM付款
+      </li>
+      <li [routerLink]="['QA', 'get']" routerLinkActive="active">
+        取票方式
+      </li>
+      <li [routerLink]="['QA', 'join']" routerLinkActive="active">
+        加入會員
+      </li>
+      <li [routerLink]="['QA', 'buy']" routerLinkActive="active">
+        購票
+      </li>
+      <li [routerLink]="['QA', 'return']" routerLinkActive="active">
+        退票
+      </li>
+      <li [routerLink]="['QA', 'others']" routerLinkActive="active">
+        其他
+      </li>
+      <li [routerLink]="['QA', 'change']" routerLinkActive="active">
+        商品退換貨
+      </li>
+      <li [routerLink]="['QA', 'invoice']" routerLinkActive="active">
+        電子發票
+      </li>
+      <li [routerLink]="['QA', 'card']" routerLinkActive="active">
+        信用卡3D認證
+      </li>
+    </ul>
+  </li>
+  <li [routerLink]="['goods', 'review']" routerLinkActive="active">精彩回顧</li>
   <li>支持贊助</li>
 </ul>

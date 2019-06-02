@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 50%;
+}
+
+.flex {
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    img {
+      margin-top: 2rem;
+      width: 80%;
+      min-width: 250px;
+    }
+  }
+}

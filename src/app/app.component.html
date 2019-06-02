@@ -4,8 +4,9 @@
   [menu]="showMenu"
 ></app-header>
 <app-menu *ngIf="showMenu" (toggle)="showMenu = $event"></app-menu>
-<div id="container" class="f1" (click)="showMenu = false">
+<div id="container" class="f1 fc">
   <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
 
 <app-light-box

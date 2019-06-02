@@ -1,0 +1,33 @@
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <label>
+        <span class="mi">apps</span>
+        <app-selector [optionals]="optionals"></app-selector>
+      </label>
+    </td>
+    <td>
+      <label>
+        <span class="mi">event_note</span>
+        <app-selector [optionals]="years"></app-selector>
+      </label>
+    </td>
+    <td>
+      <button [routerLink]="['../', 'review']">
+        搜尋
+      </button>
+    </td>
+  </tr>
+</table>
+
+<div class="hr"><span>搜尋結果</span></div>
+
+<div class="cards" (window:resize)="(viewport)">
+  <app-card
+    *ngFor="let card of cards; index as idx"
+    [image]="card.image"
+    [title]="card.title"
+    [text]="card.text"
+    [class.row]="isSingle(idx, cards.length)"
+  ></app-card>
+</div>

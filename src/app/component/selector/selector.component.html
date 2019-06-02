@@ -1,7 +1,7 @@
 <div class="selector" (click)="showOptionals = !showOptionals">
   {{ active || optionals[0] }}
   <span class="mi">keyboard_arrow_down</span>
-  <ul *ngIf="showOptionals">
+  <ul *ngIf="showOptionals" (mouseleave)="showOptionals = false">
     <li
       *ngFor="let optional of optionals"
       (click)="active = optional"

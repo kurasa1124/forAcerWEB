@@ -1,0 +1,29 @@
+<div class="content-bg"></div>
+<div class="limit padding f1">
+  <div class="header">
+    <ul class="f1 flex">
+      <li class="f1" [routerLink]="['./buy']" routerLinkActive="active">
+        購票須知
+      </li>
+      <li class="f1" [routerLink]="['./web-buy']" routerLinkActive="active">
+        網路購票
+      </li>
+      <li class="f1" [routerLink]="['./fax-card']" routerLinkActive="active">
+        傳真刷卡購票
+      </li>
+      <li class="f1" [routerLink]="['./point-buy']" routerLinkActive="active">
+        端點購票
+      </li>
+      <li class="f1" [routerLink]="['./return']" routerLinkActive="active">
+        退票方式
+      </li>
+      <li class="f1" [routerLink]="['./check']" routerLinkActive="active">
+        如何確認訂票
+      </li>
+    </ul>
+  </div>
+
+  <div class="content f1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

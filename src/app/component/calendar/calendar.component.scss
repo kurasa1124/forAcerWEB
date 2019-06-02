@@ -2,7 +2,11 @@
 
 .calendar-bg {
   background: #fff;
-  width: 300px;
+  width: 90vw;
+  min-width: 250px;
+  max-width: 300px;
+  max-height: 300px;
+  overflow: auto;
   border-radius: 10px;
   box-shadow: 0 3px 10px 0 rgba(black, 0.5);
   position: relative;

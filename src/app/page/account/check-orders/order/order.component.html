@@ -1,0 +1,10 @@
+<h3>訂單編號：{{ order.id }}</h3>
+<p>
+  <span>狀態：{{ order.status }}</span>
+  <span>付款方式：{{ order.payMode }}</span>
+  <span class="f1">繳款期限：{{ order.payLastTime }}</span>
+  <span>購買時間：{{ order.buyTime }}</span>
+</p>
+<app-no-seat *ngIf="type == 'noSeat'"></app-no-seat>
+<app-seat-info *ngIf="type == 'seatInfo'"></app-seat-info>
+<app-package *ngIf="type == 'package'"></app-package>

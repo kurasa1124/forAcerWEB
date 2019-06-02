@@ -1,0 +1,10 @@
+<div class="cards" (window:resize)="(viewport)">
+  <app-card
+    *ngFor="let card of cards; index as idx"
+    [image]="card.image"
+    [title]="card.title"
+    [text]="card.text"
+    [class.row]="isSingle(idx, cards.length)"
+    [showTag]="false"
+  ></app-card>
+</div>

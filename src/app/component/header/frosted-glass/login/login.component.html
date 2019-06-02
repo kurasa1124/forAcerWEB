@@ -5,7 +5,7 @@
     ><span class="mi">person</span><input type="text" placeholder="帳號"
   /></label>
   <label
-    ><span class="mi">lock</span><input type="text" placeholder="密碼"
+    ><span class="mi">lock</span><input type="password" placeholder="密碼"
   /></label>
   <div class="securiry">
     <div class="code"><img [src]="imgDataURL" alt="" (click)="reload()" /></div>
@@ -30,4 +30,6 @@
   </div>
 </div>
 
-<p>沒有帳戶嗎？請先按此註冊</p>
+<p [routerLink]="['account', 'joinMember']" (click)="close.emit()">
+  沒有帳戶嗎？請先按此註冊
+</p>

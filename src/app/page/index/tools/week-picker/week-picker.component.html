@@ -1,0 +1,18 @@
+<div class="full">
+  <div class="f0" (click)="changeDate(selectDate.add(-1, 'day'))">
+    <i class="ai-left-circle-o"></i>
+  </div>
+  <div class="week f1">
+    <div
+      class="day f1"
+      *ngFor="let date of dates; trackBy: date"
+      [class.active]="this.selectDate.isSame(date)"
+      (click)="changeDate(date)"
+    >
+      {{ date.format("DD") }}<span>{{ date.format("ddd") | uppercase }}</span>
+    </div>
+  </div>
+  <div class="f0" (click)="changeDate(selectDate.add(1, 'day'))">
+    <i class="ai-right-circle-o"></i>
+  </div>
+</div>

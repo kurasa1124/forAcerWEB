@@ -1,0 +1,38 @@
+@import "../../../../../theme.scss";
+.full {
+  background: $tools;
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mi {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 45%;
+  margin-top: -15%;
+  transform: skewX(-20deg);
+}
+
+.hint {
+  &:hover {
+    &::before {
+      content: "快速訂購";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: $square;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6rem;
+      height: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0 3px 5px 0 $darker;
+    }
+  }
+}
