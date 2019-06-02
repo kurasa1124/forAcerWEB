@@ -92,10 +92,10 @@
   background: #fff;
   overflow: hidden;
   transition: all 0.5s;
-  box-shadow: 0 3px 20px 0 rgba($second, 0.2);
+  box-shadow: 0 3px 20px 0 $opacityBorder;
   &:hover {
     transform: translateY(-1vw);
-    box-shadow: 0 6px 20px 0 rgba($second, 0.2);
+    box-shadow: 0 6px 20px 0 $opacityBorder;
   }
   @media screen and (max-width: 480px) {
     display: flex;
