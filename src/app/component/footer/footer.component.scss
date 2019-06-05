@@ -2,6 +2,7 @@
 .footer {
   width: 100%;
   background: $second;
+  padding-bottom: 3rem;
 }
 
 .content {
@@ -24,6 +25,7 @@
 
 .link {
   a {
+    cursor: pointer;
     display: inline-block;
     font-size: 0.8rem;
     font-weight: bold;

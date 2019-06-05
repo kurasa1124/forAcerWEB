@@ -1,4 +1,4 @@
-@import "../../../../../theme.scss";
+@import "../../../theme.scss";
 p,
 table {
   font-size: 0.8rem;
@@ -40,7 +40,7 @@ table {
   width: 100%;
   min-width: 480px;
   border-bottom: 1px solid $second;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 tr {
@@ -58,11 +58,8 @@ th {
 }
 
 td {
-  text-align: center;
   padding: 5px;
-  &:first-child {
-    width: 25%;
-  }
+  text-align: center;
 }
 
 .red {
@@ -96,8 +93,4 @@ td {
       content: "keyboard_arrow_up";
     }
   }
-}
-
-.nowrap {
-  white-space: nowrap;
 }

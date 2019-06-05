@@ -1,0 +1,58 @@
+<div class="box">
+  <h1>選擇數量</h1>
+  <div class="content">
+    <ul>
+      <li>
+        自由座:
+        <label>
+          <span class="mi" (click)="addUp(free, false)">remove</span>
+          <input type="number" value="0" #free />
+          <span class="mi" (click)="addUp(free)">add</span>
+        </label>
+      </li>
+      <li>
+        全票 :
+        <label>
+          <span class="mi" (click)="addUp(normal, false)">remove</span>
+          <input type="number" value="0" #normal />
+          <span class="mi" (click)="addUp(normal)">add</span>
+        </label>
+      </li>
+      <li>
+        學生票 :
+        <label>
+          <span class="mi" (click)="addUp(student, false)">remove</span>
+          <input type="number" value="0" #student />
+          <span class="mi" (click)="addUp(student)">add</span>
+        </label>
+      </li>
+      <li>
+        兒童票 :
+        <label>
+          <span class="mi" (click)="addUp(child, false)">remove</span>
+          <input type="number" value="0" #child />
+          <span class="mi" (click)="addUp(child)">add</span>
+        </label>
+      </li>
+      <li>
+        敬老票 :
+        <label>
+          <span class="mi" (click)="addUp(old, false)">remove</span>
+          <input type="number" value="0" #old />
+          <span class="mi" (click)="addUp(old)">add</span>
+        </label>
+      </li>
+      <li>
+        優待票 :
+        <label>
+          <span class="mi" (click)="addUp(discount, false)">remove</span>
+          <input type="number" value="0" #discount />
+          <span class="mi" (click)="addUp(discount)">add</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <button (click)="addToCart()">
+    加入購物車
+  </button>
+</div>

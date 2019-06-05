@@ -25,7 +25,6 @@ table {
     line-height: 2rem;
   }
 }
-
 .overflow {
   width: calc(100% + 2rem);
   margin: 1rem -1rem;
@@ -61,6 +60,31 @@ th {
 td {
   padding: 5px;
   text-align: center;
+  &:first-child {
+    padding-left: 1rem;
+    text-align: left;
+  }
+  &:nth-last-child(2) {
+    width: 8rem;
+  }
+  &:last-child {
+    width: 2rem;
+  }
+  input {
+    text-align: center;
+    width: 100%;
+    background: $lightGrey;
+    border: 0;
+    border-radius: 2rem;
+  }
+  .mi {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $red;
+    font-size: 1.5rem;
+  }
 }
 
 .red {
@@ -96,18 +120,17 @@ td {
   }
 }
 
-.tag {
-  cursor: pointer;
-  display: inline-block;
-  color: #fff;
-  background: $main;
-  line-height: 1.2rem;
-  padding: 0 1rem;
-  border-radius: 2rem;
-  margin: 5px;
-  &.disabled {
-    pointer-events: none;
-    color: $grey;
-    background: $lightGrey;
+.discount {
+  white-space: nowrap;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  > * {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 0.5rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    max-width: 8rem;
   }
 }

@@ -4,7 +4,7 @@ import verification from 'verification-code';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['../form.scss']
 })
 export class LoginComponent {
   @Output() forget = new EventEmitter();

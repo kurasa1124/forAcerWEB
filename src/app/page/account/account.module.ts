@@ -10,17 +10,12 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ChangeProfileComponent } from './change-profile/change-profile.component';
 import { CheckOrdersComponent } from './check-orders/check-orders.component';
 import { ComponentModule } from '../../component/component.module';
-import { NoSeatComponent } from './check-orders/no-seat/no-seat.component';
-import { SeatInfoComponent } from './check-orders/seat-info/seat-info.component';
-import { PackageComponent } from './check-orders/package/package.component';
+
 import { OrderComponent } from './check-orders/order/order.component';
 
 @NgModule({
   declarations: [
     OrderComponent,
-    NoSeatComponent,
-    SeatInfoComponent,
-    PackageComponent,
     AccountComponent,
     JoinMemberComponent,
     ForgetPasswordComponent,

@@ -1,12 +1,15 @@
-<div class="full" (click)="close.emit()"></div>
+<div class="full" (click)="closeAll()"></div>
 <app-login
-  *ngIf="!forgetPassword"
-  (forget)="forgetPassword = true"
-  (login)="login.emit(); close.emit()"
-  (close)="close.emit()"
+  *ngIf="lightBox.showLogIn"
+  (forget)="lightBox.showPassword = true; lightBox.showLogIn = false"
+  (login)="login.emit(); lightBox.showBlur = false; lightBox.showLogIn = false"
+  (close)="lightBox.showBlur = false; lightBox.showLogIn = false"
 ></app-login>
 <app-password
-  *ngIf="forgetPassword"
-  (cancel)="forgetPassword = false"
-  (close)="close.emit()"
+  *ngIf="lightBox.showPassword"
+  (cancel)="lightBox.showPassword = false; lightBox.showLogIn = true"
+  (close)="lightBox.showBlur = false; lightBox.showPassword = false"
 ></app-password>
+<app-seats *ngIf="lightBox.showSeats"></app-seats>
+<app-packages *ngIf="lightBox.showPackages"></app-packages>
+<app-identity *ngIf="lightBox.showIdentity"></app-identity>

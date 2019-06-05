@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>訂票系統</title>
-    <!-- <base href="/forAcerWEB/" /> -->
-    <base href="/" />
+    <base href="/forAcerWEB/" />
+    <!-- <base href="/" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
@@ -29,5 +29,17 @@
   </head>
   <body>
     <app-root></app-root>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.js"></script>
+
+    <script type="text/javascript">
+      $(document).load(function() {
+        $("map").imageMapResize();
+      });
+    </script>
   </body>
 </html>

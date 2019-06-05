@@ -17,7 +17,7 @@
     <div class="cards">
       <app-card-sport *ngFor="let card of sports"></app-card-sport>
     </div>
-    <app-title word="主題套票"></app-title>
+    <app-title word="主題套票" (more)="routerTo('/goods/package')"></app-title>
     <div class="cards">
       <app-card
         class="row"
@@ -28,7 +28,10 @@
         [showTag]="false"
       ></app-card>
     </div>
-    <app-title word="活動概覽"></app-title>
+    <app-title
+      word="活動概覽"
+      (more)="routerTo('/goods/category?title=全部分類')"
+    ></app-title>
     <div class="cards">
       <app-card
         *ngFor="let card of cards; index as idx"

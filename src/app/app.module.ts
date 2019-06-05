@@ -21,6 +21,9 @@ import { ComponentModule } from './component/component.module';
 import { NoticeModule } from './page/notice/notice.module';
 import { QAModule } from './page/qa/qa.module';
 import { DetailModule } from './page/detail/detail.module';
+import { LightBoxService } from './service/lightBox.service';
+import { ShappingCartModule } from './page/shopping-cart/shopping-cart.module';
+import { AboutModule } from './page/about/about.module';
 
 @NgModule({
   declarations: [
@@ -43,12 +46,14 @@ import { DetailModule } from './page/detail/detail.module';
     NoticeModule,
     QAModule,
     DetailModule,
+    ShappingCartModule,
+    AboutModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [TokenService],
+  providers: [TokenService, LightBoxService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

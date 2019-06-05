@@ -11,6 +11,7 @@
   margin-top: 3rem;
   background: $opacityWhite;
   position: relative;
+  padding-top: 0;
   @media screen and (max-width: 640px) {
     margin-top: 0;
     border: none;
@@ -20,14 +21,12 @@
 
 .header {
   display: flex;
-  @media screen and (max-width: 640px) {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    z-index: 1;
-    padding-top: 2vw;
-    margin-top: -2vw;
-  }
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  margin: 0 -4vmin;
+  padding: 1rem 4vmin 0;
 }
 
 ul {

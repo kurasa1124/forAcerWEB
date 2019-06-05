@@ -23,14 +23,17 @@
         (mouseleave)="showUserList = false"
       ></app-user-list>
     </div>
-    <i class="ai-user" *ngIf="!token.isLogin" (click)="showLogin = true"></i>
-    <i class="ai-shopping-cart"></i>
+    <i
+      class="ai-user"
+      *ngIf="!token.isLogin"
+      (click)="lightBox.showBlur = true; lightBox.showLogIn = true"
+    ></i>
+    <i class="ai-shopping-cart" (click)="goCart()"></i>
     <div [@slideIn] class="count" *ngIf="token.isLogin">99</div>
   </div>
 </div>
 
 <app-frosted-glass
-  *ngIf="showLogin"
-  (close)="showLogin = false"
+  *ngIf="lightBox.showBlur"
   (login)="token.isLogin = true"
 ></app-frosted-glass>

@@ -1,0 +1,19 @@
+:host {
+  text-align: center;
+  padding: 5px;
+}
+.hint {
+  height: 2rem;
+  margin: 1rem;
+}
+.map {
+  text-align: center;
+
+  img {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+area {
+  outline: 3px solid #000;
+}

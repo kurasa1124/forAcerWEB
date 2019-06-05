@@ -1,4 +1,4 @@
-@import "../../../../../theme.scss";
+@import "../../../theme.scss";
 p,
 table {
   font-size: 0.8rem;
@@ -25,6 +25,7 @@ table {
     line-height: 2rem;
   }
 }
+
 .overflow {
   width: calc(100% + 2rem);
   margin: 1rem -1rem;
@@ -92,5 +93,21 @@ td {
     &::after {
       content: "keyboard_arrow_up";
     }
+  }
+}
+
+.tag {
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+  background: $main;
+  line-height: 1.2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  margin: 5px;
+  &.disabled {
+    pointer-events: none;
+    color: $grey;
+    background: $lightGrey;
   }
 }

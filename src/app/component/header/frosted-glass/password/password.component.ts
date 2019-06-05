@@ -4,7 +4,7 @@ import verification from 'verification-code';
 @Component({
   selector: 'app-password',
   templateUrl: './password.component.html',
-  styleUrls: ['./password.component.scss']
+  styleUrls: ['../form.scss']
 })
 export class PasswordComponent {
   @Output() cancel = new EventEmitter();

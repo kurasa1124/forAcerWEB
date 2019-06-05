@@ -1,4 +1,7 @@
 @import "../../../theme.scss";
+:host {
+  display: inline-block;
+}
 .selector {
   cursor: pointer;
   user-select: none;
@@ -8,6 +11,7 @@
   padding-left: 1rem;
   position: relative;
   line-height: 1.8rem;
+  white-space: nowrap;
 }
 
 .mi {
@@ -16,12 +20,13 @@
 }
 
 ul {
-  display: block;
+  max-height: 10rem;
+  overflow: auto;
+  display: inline-block;
   position: absolute;
   top: 2rem;
   left: 0;
-  width: 100%;
-  overflow: hidden;
+  min-width: 100%;
   background: #fff;
   border-radius: 2px;
   color: #000;

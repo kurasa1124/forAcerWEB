@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as chinese from "chinesegen"
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-package',
@@ -20,4 +21,9 @@ export class PackageComponent {
     { image: "http://pipsum.com/900x900.jpg", title: chinese({ count: 5, freq: true }).text, text: "尚未開始" },
   ]
 
+  constructor(private _router: Router) { }
+
+  public routerTo() {
+    this._router.navigateByUrl("/shopping-cart/package")
+  }
 }

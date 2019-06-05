@@ -6,6 +6,7 @@ import { GoodsComponent } from './page/goods/goods/goods.component';
 import { NoticeComponent } from './page/notice/notice.component';
 import { QAComponent } from './page/qa/qa.component';
 import { DetailComponent } from './page/detail/detail.component';
+import { ShoppingCartComponent } from './page/shopping-cart/shopping-cart.component';
 const routes: Routes = [
   { path: '', pathMatch: "full", component: IndexComponent },
   { path: 'account', component: AccountComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'notice', component: NoticeComponent },
   { path: 'QA', component: QAComponent },
   { path: 'detail', component: DetailComponent },
+  { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: '**', redirectTo: '' }
 ];
 

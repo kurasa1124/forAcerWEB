@@ -61,4 +61,7 @@ export class IndexComponent implements OnDestroy {
   }
 
 
+  public routerTo(url: string) {
+    this._router.navigateByUrl(url)
+  }
 }

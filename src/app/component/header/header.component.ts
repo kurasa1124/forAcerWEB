@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { TokenService } from '../../service/token.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { LightBoxService } from '../../service/lightBox.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -27,6 +29,9 @@ export class HeaderComponent {
   public language: string[] = ['中文', '英文'];
   public showLogin = false;
   public photoUrl = "http://pipsum.com/100x100.jpg"
-  constructor(public token: TokenService) { }
+  constructor(public token: TokenService, public lightBox: LightBoxService, private _router: Router) { }
+  public goCart() {
+    this._router.navigate(['shopping-cart', 'pay'])
+  }
 
 }

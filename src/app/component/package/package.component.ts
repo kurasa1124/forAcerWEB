@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
-  selector: 'app-package',
+  selector: 'package-ticket',
   templateUrl: './package.component.html',
   styleUrls: ['./package.component.scss'],
   animations: [

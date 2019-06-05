@@ -8,8 +8,14 @@
       <app-selector [optionals]="menu" class="ss-show"></app-selector>
       <h3>{{ time }}</h3>
       <div class="buttons">
-        <button>活動場次</button>
-        <button>套票場次</button>
+        <button (click)="lightBox.showBlur = true; lightBox.showSeats = true">
+          活動場次
+        </button>
+        <button
+          (click)="lightBox.showBlur = true; lightBox.showPackages = true"
+        >
+          套票場次
+        </button>
       </div>
     </div>
   </div>

@@ -1,0 +1,44 @@
+<div class="content-bg"></div>
+<div class="limit padding f1">
+  <div class="header">
+    <ul class="f1">
+      <li
+        [routerLink]="['./package']"
+        routerLinkActive="active"
+        *ngIf="isPackage"
+      >
+        劃區選位
+      </li>
+      <li
+        [routerLink]="['./seat']"
+        routerLinkActive="active"
+        *ngIf="!isPackage"
+      >
+        劃區選位
+      </li>
+      <li class="mi">
+        arrow_forward_ios
+      </li>
+      <li [routerLink]="['./pay']" routerLinkActive="active">
+        確認付款
+      </li>
+      <li class="mi">
+        arrow_forward_ios
+      </li>
+      <li [routerLink]="['./complete']" routerLinkActive="active">
+        完成訂購
+      </li>
+    </ul>
+    <div class="icon f0">
+      <span *ngIf="!isComplete">剩餘時間</span>
+      <countdown
+        *ngIf="!isComplete"
+        [config]="{ leftTime: 1200, template: '$!m!:$!s!' }"
+        (finished)="timeOut()"
+      ></countdown>
+      <img src="assets/complete.svg" alt="" *ngIf="isComplete" />
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

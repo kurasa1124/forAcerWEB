@@ -1,0 +1,75 @@
+@import "../../../../../theme.scss";
+
+.box {
+  display: block;
+  width: 80vw;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background: rgba(white, 0.8);
+  color: $grey;
+  position: relative;
+  z-index: 1;
+  h1 {
+    font-weight: normal;
+    color: #000;
+  }
+}
+
+.content {
+  color: #000;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  ul {
+    width: 50%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+  li {
+    font-size: 1rem;
+    white-space: nowrap;
+    line-height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+
+  span.mi {
+    color: $grey;
+    font-size: 1rem;
+  }
+
+  input {
+    background: none;
+    border: none;
+    text-align: center;
+    line-height: 1.5rem;
+    width: 3rem;
+    margin-left: 0.5rem;
+    appearance: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: $main;
+  padding: 1rem 2rem;
+  border: none;
+}

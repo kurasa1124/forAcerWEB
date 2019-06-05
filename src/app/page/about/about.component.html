@@ -1,0 +1,20 @@
+<div class="content-bg"></div>
+<div class="limit padding f1">
+  <div class="header">
+    <ul class="f1 flex">
+      <li class="f1" [routerLink]="['./us']" routerLinkActive="active">
+        關於我們
+      </li>
+      <li class="f1" [routerLink]="['./privicy']" routerLinkActive="active">
+        隱私權政策
+      </li>
+      <li class="f1" [routerLink]="['./service']" routerLinkActive="active">
+        服務條款
+      </li>
+    </ul>
+  </div>
+
+  <div class="content f1">
+    <router-outlet></router-outlet>
+  </div>
+</div>

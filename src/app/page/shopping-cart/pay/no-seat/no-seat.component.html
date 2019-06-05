@@ -1,0 +1,47 @@
+<div class="card">
+  <h4 class="title">What is Beauty 時尚趨勢髮型秀</h4>
+  <p>
+    <span>2018/6/28 (四) 19:30</span>
+    <span>華山文創中心 西6館(台北市中正區八德路一段1號)</span>
+  </p>
+  <div
+    class="more"
+    [class.active]="showDetail"
+    (click)="showDetail = !showDetail"
+  ></div>
+  <div [@slideIn] class="overflow" *ngIf="showDetail">
+    <div class="discount">
+      <app-selector></app-selector>
+      <input type="text" placeholder="promotional code" />
+      <input type="text" placeholder="Enter Membership" />
+    </div>
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <th>座位資訊</th>
+        <th>票別</th>
+        <th>數量</th>
+        <th>定價</th>
+        <th>售價</th>
+        <th>兌換券序號</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>不劃位</td>
+        <td>全票</td>
+        <td>2</td>
+        <td>2400</td>
+        <td>2000</td>
+        <td><input type="text" /></td>
+        <td><span class="mi">delete</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <p [@slideIn] *ngIf="showDetail">
+    <span>原價：2400</span>
+    <span class="red">折價：-360 </span>
+    <span class="red">促銷代碼：0 </span>
+  </p>
+
+  <h4>總計: $ 2,040</h4>
+</div>

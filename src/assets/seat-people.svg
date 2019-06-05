@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.392" height="40.812" viewBox="0 0 40.392 40.812">
+  <g id="组_125" data-name="组 125" transform="translate(40.392) rotate(90)">
+    <ellipse id="椭圆_64" data-name="椭圆 64" cx="20.139" cy="20.139" rx="20.139" ry="20.139" transform="translate(0.001)" fill="#ed6161"/>
+    <path id="减去_7" data-name="减去 7" d="M20.142,40.28A20.144,20.144,0,0,1,12.3,1.585,20.021,20.021,0,0,1,20.142,0a20.248,20.248,0,0,1,4.026.4V8.036a12.754,12.754,0,1,0,0,24.212v7.631A20.274,20.274,0,0,1,20.142,40.28Z" transform="translate(0 0.112)" fill="rgba(0,0,0,0.1)"/>
+    <path id="减去_9" data-name="减去 9" d="M20.142,40.28A20.144,20.144,0,0,1,12.3,1.585,20.021,20.021,0,0,1,20.142,0a20.248,20.248,0,0,1,4.026.4V8.036a12.754,12.754,0,1,0,0,24.212v7.631A20.274,20.274,0,0,1,20.142,40.28Z" transform="translate(0.001 0.112)" fill="rgba(0,0,0,0.1)"/>
+    <g id="组_117" data-name="组 117" transform="translate(6.803 2.481)">
+      <g id="组_124" data-name="组 124" transform="translate(10.817 9.874)">
+        <rect id="矩形_98" data-name="矩形 98" width="15.838" height="4.83" rx="2.415" transform="translate(7.353 1.839)" fill="#868787"/>
+        <rect id="矩形_99" data-name="矩形 99" width="15.838" height="4.83" rx="2.415" transform="translate(7.353 9.477)" fill="#868787"/>
+        <g id="组_123" data-name="组 123">
+          <rect id="矩形_103" data-name="矩形 103" width="20.168" height="8.176" rx="4.088" transform="translate(0 0)"/>
+          <rect id="矩形_104" data-name="矩形 104" width="20.168" height="8.176" rx="4.088" transform="translate(0 7.914)"/>
+        </g>
+      </g>
+      <g id="组_119" data-name="组 119" transform="translate(4.02)">
+        <rect id="矩形_101" data-name="矩形 101" width="12.06" height="4.83" rx="2.415" transform="translate(0 10.444) rotate(-60)"/>
+        <rect id="矩形_102" data-name="矩形 102" width="8.281" height="4.83" rx="2.415" transform="translate(4.934 0.867)" fill="#e6c49b"/>
+      </g>
+      <g id="组_120" data-name="组 120" transform="translate(4.02 22.673)">
+        <rect id="矩形_101-2" data-name="矩形 101" width="12.059" height="4.829" rx="2.415" transform="translate(4.182 0) rotate(60)"/>
+        <rect id="矩形_102-2" data-name="矩形 102" width="8.28" height="4.83" rx="2.415" transform="translate(4.933 7.162)" fill="#e6c49b"/>
+      </g>
+      <ellipse id="椭圆_71" data-name="椭圆 71" cx="11.714" cy="9.825" rx="11.714" ry="9.825" transform="translate(0 8.501)"/>
+    </g>
+    <g id="组_118" data-name="组 118" transform="translate(0.379 9.292)">
+      <ellipse id="椭圆_69" data-name="椭圆 69" cx="10.958" cy="10.958" rx="10.958" ry="10.958" transform="translate(0.001 0)" fill="#e6c49b"/>
+      <path id="减去_10" data-name="减去 10" d="M10.96,21.918A10.959,10.959,0,0,1,3.21,3.21,10.972,10.972,0,0,1,15.069.8V21.121A10.9,10.9,0,0,1,10.96,21.918Z"/>
+    </g>
+  </g>
+</svg>

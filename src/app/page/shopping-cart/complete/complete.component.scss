@@ -1,0 +1,72 @@
+@import "../../../../theme.scss";
+h1 {
+  font-weight: normal;
+}
+.orders {
+  > * {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+
+.ticket {
+  position: relative;
+  .mi {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    background: $lightGrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  &:hover {
+    .mi {
+      opacity: 1;
+    }
+  }
+}
+
+.red {
+  color: $red;
+}
+
+.countTotal {
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $grey;
+  .count {
+    span {
+      display: block;
+      line-height: 1.5rem;
+    }
+  }
+  .total {
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+
+.payment {
+  padding: 1rem 0;
+  margin: 2rem 0;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+  td {
+    vertical-align: top;
+    padding: 0.5rem;
+    &:first-child {
+      font-size: 1rem;
+      min-width: 5rem;
+    }
+  }
+}

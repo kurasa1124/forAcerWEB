@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { LightBoxService } from '../../../service/lightBox.service';
 @Component({
   selector: 'app-frosted-glass',
   templateUrl: './frosted-glass.component.html',
@@ -22,7 +23,7 @@ export class FrostedGlassComponent implements OnInit {
   @Output() close = new EventEmitter();
   @Output() login = new EventEmitter();
   public forgetPassword = false;
-  constructor() {
+  constructor(public lightBox: LightBoxService) {
 
   }
 
@@ -32,6 +33,14 @@ export class FrostedGlassComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.unBlur()
+  }
+
+  public closeAll() {
+    this.lightBox.showBlur = false;
+    this.lightBox.showLogIn = false;
+    this.lightBox.showPackages = false;
+    this.lightBox.showPassword = false;
+    this.lightBox.showSeats = false;
   }
 
   public blur() {

@@ -1,0 +1,137 @@
+<h1>幾米音樂劇《時光電影院》</h1>
+<h4>
+  <span>Select 2 from 11 Events 10% Off</span>
+  <div class="choice">
+    <div class="checkbox" (click)="noContinuous = !noContinuous">
+      <input type="number" placeholder="套票數量" [(ngModel)]="ticketLength" />
+      <i class="mi">{{
+        noContinuous ? "check_box" : "check_box_outline_blank"
+      }}</i>
+      電腦配未接受不連號
+    </div>
+  </div>
+</h4>
+
+<table class="packages" cellpadding="0" cellspacing="0">
+  <tr>
+    <th>節目名稱</th>
+    <th>場次時間</th>
+    <th>價位</th>
+  </tr>
+  <tr>
+    <td class="align-left">2018TIFA－呂紹嘉與NSO《馬勒第七》</td>
+    <td><app-selector [optionals]="selectTime"></app-selector></td>
+    <td><app-selector [optionals]="selectPrice"></app-selector></td>
+  </tr>
+  <tr>
+    <td class="align-left">
+      2018TIFA 克莉絲朵．派特X強納森．楊《愛與痛的練習曲》
+    </td>
+    <td><app-selector [optionals]="selectTime"></app-selector></td>
+    <td><app-selector [optionals]="selectPrice"></app-selector></td>
+  </tr>
+  <tr>
+    <td class="align-left">2018TIFA 碧娜．鮑許烏帕塔舞蹈劇場《康乃馨》</td>
+    <td><app-selector [optionals]="selectTime"></app-selector></td>
+    <td><app-selector [optionals]="selectPrice"></app-selector></td>
+  </tr>
+</table>
+
+<div class="btns" *ngIf="!hasPlace">
+  <button (click)="hasPlace = true">取得配位</button>
+</div>
+
+<table class="auto" cellpadding="0" cellspacing="0" *ngIf="hasPlace">
+  <tr>
+    <th>節目名稱</th>
+    <th>票種</th>
+    <th>座位</th>
+    <th>票價</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td class="align-left" [rowSpan]="ticketLength">
+      2018TIFA－呂紹嘉與NSO《馬勒第七》<br />
+      2018-08-26 18:30 臺中國家歌劇院大劇院
+    </td>
+    <td>全票</td>
+    <td>2樓 - 8 排 - 25 號</td>
+    <td class="align-right">500</td>
+    <td class="align-right" [rowSpan]="ticketLength">
+      <button (click)="changeSeat = true">換位</button><br /><button
+        class="cancel"
+      >
+        刪除
+      </button>
+    </td>
+  </tr>
+  <tr *ngFor="let td of ticketArray">
+    <td>全票</td>
+    <td>2樓 - 8 排 - 25 號</td>
+    <td class="align-right">500</td>
+  </tr>
+  <tr>
+    <td class="align-left" [rowSpan]="ticketLength">
+      2018TIFA 克莉絲朵．派特X強納森．楊《愛與痛的練習曲》<br />
+      2018-5-25 18:30 臺北國家戲劇院
+    </td>
+    <td>全票</td>
+    <td>2樓 - 8 排 - 29 號</td>
+    <td class="align-right">1200</td>
+    <td class="align-right" [rowSpan]="ticketLength">
+      <button (click)="changeSeat = true">換位</button><br /><button
+        class="cancel"
+      >
+        刪除
+      </button>
+    </td>
+  </tr>
+  <tr *ngFor="let td of ticketArray">
+    <td>全票</td>
+    <td>2樓 - 8 排 - 29 號</td>
+    <td class="align-right">1200</td>
+  </tr>
+</table>
+
+<div class="btns" *ngIf="hasPlace && !changeSeat">
+  <button class="cancel" (click)="hasPlace = false">重選場次</button
+  ><button (click)="addToCart()">加入購物車</button>
+</div>
+
+<div *ngIf="changeSeat">
+  <hr />
+  <div class="seatMap">
+    <div>
+      <h2>
+        請勾選你要的座位
+      </h2>
+      <div class="seat-icons flex">
+        <span class="flex">
+          <img src="assets/seat-empty.svg" alt="" /> 空位</span
+        >
+        <span class="flex"
+          ><img src="assets/seat-check.svg" alt="" /> 已加入購物車</span
+        >
+        <span class="flex"
+          ><img src="assets/seat-lock.svg" alt="" /> 已被選擇</span
+        >
+        <span class="flex"
+          ><img src="assets/seat-people.svg" alt="" /> 已售出</span
+        >
+      </div>
+    </div>
+    <div class="seat-content flex">
+      <app-seat-content class="f1"></app-seat-content>
+      <div class="mini-map f0">
+        <img src="assets/seat-mini.png" alt="" />
+        <img src="assets/map-hint.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="btns">
+    <button (click)="changeSeat = false">
+      更新座位
+    </button>
+  </div>
+</div>
