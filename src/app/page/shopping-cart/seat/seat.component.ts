@@ -13,7 +13,7 @@ export class SeatComponent implements OnInit {
   public noContinuous = true;
   public selectId: string;
   public seatMap = false;
-  public seats: { id: string, title: string, price: string, num: string, color: string }[];
+  public seats: { id: string, title: string, price: string, num: number, color: string }[];
   private _result = verification.create();
   public verificationValue: string;
   public code = this._result.code;
@@ -33,11 +33,12 @@ export class SeatComponent implements OnInit {
       .sort((a, b) => Number(b) - Number(a));
     this.seats = datas.map((data, i) => {
       let price = data[1].replace(/:/g, "：").replace(/,/g, "").split("：")[1];
+      let num = Number(data[2].replace(/:/g, "：").split("：")[1]);
       return {
         id: areas[i].id,
         title: data[0].replace(/:/g, "：").split("：")[1],
         price: price,
-        num: data[2].replace(/:/g, "：").split("：")[1],
+        num: isNaN(num) ? 0 : num,
         color: colors[prices.indexOf(price)]
       }
     })
@@ -55,7 +56,8 @@ export class SeatComponent implements OnInit {
     if (!this.selectId) return;
     if (!this.computerChoice) { this.seatMap = true; return }
     this.lightBox.showBlur = true;
-    this.lightBox.showIdentity = true
+    this.lightBox.showIdentity = true;
+    this.lightBox.remainder = this.seats.find(seat => seat.id == this.selectId).num;
   }
 
   public reload() {

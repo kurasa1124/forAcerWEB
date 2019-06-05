@@ -8,4 +8,5 @@ export class LightBoxService {
   public showSeats = false;
   public showPackages = false;
   public showIdentity = false;
+  public remainder = 0;
 }
