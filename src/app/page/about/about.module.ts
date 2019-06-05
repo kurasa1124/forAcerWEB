@@ -5,10 +5,14 @@ import { UsComponent } from './us/us.component';
 import { PrivicyComponent } from './privicy/privicy.component';
 import { ServiceComponent } from './service/service.component';
 import { RouterModule } from '@angular/router';
+import { DonationComponent } from './donation/donation.component';
+import { FormComponent } from './donation/form/form.component';
+import { ComponentModule } from '../../component/component.module';
 
 @NgModule({
-  declarations: [AboutComponent, UsComponent, PrivicyComponent, ServiceComponent],
+  declarations: [AboutComponent, UsComponent, PrivicyComponent, ServiceComponent, DonationComponent, FormComponent],
   imports: [
+    ComponentModule,
     CommonModule,
     RouterModule.forChild([
       {
@@ -18,6 +22,7 @@ import { RouterModule } from '@angular/router';
           { path: "us", component: UsComponent },
           { path: "privicy", component: PrivicyComponent },
           { path: "service", component: ServiceComponent },
+          { path: "donation", component: DonationComponent },
           { path: "**", redirectTo: "/" }
         ]
       }

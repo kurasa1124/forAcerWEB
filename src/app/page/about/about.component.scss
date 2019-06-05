@@ -88,13 +88,46 @@ p {
   width: 100%;
   overflow: auto;
   table {
+    width: 100%;
     font-size: 0.8rem;
-    td {
-      white-space: nowrap;
+    line-height: 1.2rem;
+    td,
+    th {
       padding: 0.5rem;
     }
   }
 }
 a {
   display: inline-block;
+}
+
+button {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+  background: $main;
+  &.cancel {
+    color: $grey;
+    background: $lightGrey;
+  }
+}
+
+.btns {
+  font-size: 1rem;
+  margin: 2rem 0;
+  margin-left: 0.5rem;
+  text-align: center;
+  button {
+    padding: 0.5rem 2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+app-selector {
+  font-size: 0.8rem;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
