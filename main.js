@@ -1652,7 +1652,7 @@ var UserListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"full\">\n  <div class=\"mi close\" (click)=\"showBox.emit(false)\">\n    close\n  </div>\n  <div class=\"content\">\n    <div class=\"title\">\n      <div class=\"line\"></div>\n      <span>公告</span>\n      <div class=\"line\"></div>\n    </div>\n\n    <div class=\"video\">\n      <iframe\n        src=\"https://www.youtube.com/embed/NyAigd8XgGA\"\n        frameborder=\"0\"\n        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n        allowfullscreen\n      ></iframe>\n    </div>\n    <div class=\"footer\">\n      <div class=\"line long\"></div>\n      <div class=\"line\"></div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"full\">\n  <div class=\"mi close\" (click)=\"showBox.emit(false)\">\n    close\n  </div>\n  <div class=\"content\">\n    <div class=\"title\">\n      <div class=\"line\"></div>\n      <span>公告</span>\n      <div class=\"line\"></div>\n    </div>\n\n    <div class=\"video\">\n      <iframe\n        src=\"https://www.youtube.com/embed/3AtDnEC4zak\"\n        frameborder=\"0\"\n        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n        allowfullscreen\n      ></iframe>\n    </div>\n    <div class=\"footer\">\n      <div class=\"line long\"></div>\n      <div class=\"line\"></div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
