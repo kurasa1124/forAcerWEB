@@ -1,172 +1,77 @@
-<h1>{{ tickets.length ? "確認訂單" : "沒有任何訂單" }}</h1>
-<img src="assets/empty-cart.svg" alt="" *ngIf="!tickets.length" class="empty" />
-<div class="orders">
-  <div class="ticket" *ngIf="tickets.includes(0)">
-    <pay-no-seat></pay-no-seat><span class="mi" (click)="remove(0)">clear</span>
-  </div>
-  <div class="ticket" *ngIf="tickets.includes(1)">
-    <pay-seat-info></pay-seat-info
-    ><span class="mi" (click)="remove(1)">clear</span>
-  </div>
-  <div class="ticket" *ngIf="tickets.includes(2)">
-    <pay-package></pay-package><span class="mi" (click)="remove(2)">clear</span>
-  </div>
-</div>
+<div class="payment">
+  <h1>取票方式</h1>
+  <ul>
+    <li class="flex" (click)="payment.delivery = 0">
+      <span class="mi">{{
+        payment.delivery == 0
+          ? "radio_button_checked"
+          : "radio_button_unchecked"
+      }}</span
+      >E-Ticket (QR Code) Please download
+      <a href="" target="blank">APP</a>
+    </li>
+    <li class="flex" (click)="payment.delivery = 1">
+      <span class="mi">{{
+        payment.delivery == 1
+          ? "radio_button_checked"
+          : "radio_button_unchecked"
+      }}</span>
+      <a href="" target="blank" class="no-margin">Collect at Box Office</a>
+    </li>
+    <li class="flex" (click)="payment.delivery = 2">
+      <span class="mi">{{
+        payment.delivery == 2
+          ? "radio_button_checked"
+          : "radio_button_unchecked"
+      }}</span
+      >Post Office (Postage: $50)
+      <input type="text" placeholder="Recipient" /><input
+        type="text"
+        placeholder="Address"
+        class="address"
+      />
+    </li>
+  </ul>
+  <div class="explain">取票方式說明</div>
+  <div class="hr"></div>
+  <h1>付款方式</h1>
+  <ul>
+    <li class="flex" (click)="payment.payment = 0">
+      <span class="mi">{{
+        payment.payment == 0 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >WeChat Pay
+    </li>
+    <li class="flex" (click)="payment.payment = 1">
+      <span class="mi">{{
+        payment.payment == 1 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >Credit Card
+    </li>
+    <li class="flex" (click)="payment.payment = 2">
+      <span class="mi">{{
+        payment.payment == 2 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >Credit Card + Points
+      <input type="text" placeholder="Points" />
+    </li>
+    <li class="flex" (click)="payment.payment = 3">
+      <span class="mi">{{
+        payment.payment == 3 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >Credit Card + Gift Card
+      <input type="text" placeholder="Gift Card Value" />
+    </li>
+    <li class="flex" (click)="payment.payment = 4">
+      <span class="mi">{{
+        payment.payment == 4 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >ATM
+    </li>
+  </ul>
+  <div class="explain">付款方式說明</div>
 
-<div class="full" *ngIf="tickets.length">
-  <div class="flex countTotal">
-    <div class="count">
-      <span>訂單金額： 15300</span>
-      <span class="red">折價： 2460</span>
-    </div>
-    <div class="total">總價： <span>12,840</span></div>
-  </div>
-
-  <div class="flex">
-    <div class="hr f1"></div>
-    <div class="btns f0">
-      <button class="cancel" (click)="tickets = []">清空購物車</button>
-      <button [routerLink]="['']">繼續購物</button>
-    </div>
-  </div>
-
-  <h1>Bonus Add-On Opportunities:</h1>
-  <div class="cards nowrap">
-    <app-card
-      class="nowrap"
-      *ngFor="let card of cards"
-      [image]="card.image"
-      [title]="card.title"
-      [text]="card.text"
-    ></app-card>
-  </div>
-
-  <div class="payment">
-    <h1>付款方式</h1>
-    <table cellpadding="0" cellspacing="0">
-      <tr>
-        <td>取票：</td>
-        <td>
-          <div class="flex" (click)="payment.delivery = 0">
-            <span class="mi">{{
-              payment.delivery == 0
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >E-Ticket (QR Code) Please download
-            <a href="" target="blank">APP</a>
-          </div>
-          <div class="flex" (click)="payment.delivery = 1">
-            <span class="mi">{{
-              payment.delivery == 1
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span>
-            <a href="" target="blank" class="no-margin"
-              >Collect at Box Office</a
-            >
-          </div>
-          <div class="flex" (click)="payment.delivery = 2">
-            <span class="mi">{{
-              payment.delivery == 2
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >Post Office (Postage: $50)
-            <input type="text" placeholder="Recipient" /><input
-              type="text"
-              placeholder="Address"
-              class="address"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>發票：</td>
-        <td>
-          <div class="flex" (click)="payment.invoice = 0">
-            <span class="mi">{{
-              payment.invoice == 0
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >個人電子發票
-            <a href="" target="blank">(詳)</a>
-          </div>
-          <div class="flex" (click)="payment.invoice = 1">
-            <span class="mi">{{
-              payment.invoice == 1
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >捐贈發票 <a href="" target="blank">(詳)</a>
-            <app-selector></app-selector>
-          </div>
-          <div class="flex" (click)="payment.invoice = 2">
-            <span class="mi">{{
-              payment.invoice == 2
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >公司戶電子發票
-            <input type="text" placeholder="統一編號" />
-            <span class="small"
-              >*依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</span
-            >
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>付款：</td>
-        <td>
-          <div class="flex" (click)="payment.payment = 0">
-            <span class="mi">{{
-              payment.payment == 0
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >WeChat Pay
-          </div>
-          <div class="flex" (click)="payment.payment = 1">
-            <span class="mi">{{
-              payment.payment == 1
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >Credit Card
-          </div>
-          <div class="flex" (click)="payment.payment = 2">
-            <span class="mi">{{
-              payment.payment == 2
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >Credit Card + Points
-            <input type="text" placeholder="Points" />
-          </div>
-          <div class="flex" (click)="payment.payment = 3">
-            <span class="mi">{{
-              payment.payment == 3
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >Credit Card + Gift Card
-            <input type="text" placeholder="Gift Card Value" />
-          </div>
-          <div class="flex" (click)="payment.payment = 4">
-            <span class="mi">{{
-              payment.payment == 4
-                ? "radio_button_checked"
-                : "radio_button_unchecked"
-            }}</span
-            >ATM
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="payment card" *ngIf="payment.payment > 0 && payment.payment < 4">
+  <div class="card" *ngIf="payment.payment > 0 && payment.payment < 4">
     <table>
       <tr>
         <td>持卡人：</td>
@@ -214,14 +119,44 @@
       </tr>
     </table>
   </div>
-
-  <div class="btns">
-    <div class="checkRead" (click)="checkRead = !checkRead">
+  <div class="hr"></div>
+  <h1>發票索取方式</h1>
+  <ul>
+    <li class="flex" (click)="payment.invoice = 0">
       <span class="mi">{{
-        checkRead ? "check_box" : "check_box_outline_blank"
-      }}</span>
-      我以詳閱並同意 <a href="">電子商務約定條款</a>
-    </div>
-    <button [routerLink]="['../', 'complete']">送出結帳</button>
+        payment.invoice == 0 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >個人電子發票
+      <a href="" target="blank">(詳)</a>
+    </li>
+    <li class="flex" (click)="payment.invoice = 1">
+      <span class="mi">{{
+        payment.invoice == 1 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >捐贈發票 <a href="" target="blank">(詳)</a>
+      <app-selector></app-selector>
+    </li>
+    <li class="flex" (click)="payment.invoice = 2">
+      <span class="mi">{{
+        payment.invoice == 2 ? "radio_button_checked" : "radio_button_unchecked"
+      }}</span
+      >公司戶電子發票
+      <input type="text" placeholder="統一編號" />
+      <span class="small"
+        >*依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</span
+      >
+    </li>
+  </ul>
+  <div class="explain">發票索取方式說明</div>
+  <div class="hr"></div>
+</div>
+
+<div class="btns">
+  <div class="checkRead" (click)="checkRead = !checkRead">
+    <span class="mi">{{
+      checkRead ? "check_box" : "check_box_outline_blank"
+    }}</span>
+    我以詳閱並同意 <a href="">電子商務約定條款</a>
   </div>
+  <button [routerLink]="['../', 'complete']">送出結帳</button>
 </div>

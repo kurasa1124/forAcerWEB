@@ -9,13 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./seat.component.scss']
 })
 export class SeatComponent implements OnInit {
+  public imageHeight: 0;
   public computerChoice = true;
   public noContinuous = true;
   public selectId: string;
   public seatMap = false;
   public seats: { id: string, title: string, price: string, num: number, color: string }[];
   private _result = verification.create();
-  public verificationValue: string;
+  public verificationValue: string = "";
   public code = this._result.code;
   public imgDataURL = this._result.dataURL;
   constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router) { }
@@ -70,10 +71,10 @@ export class SeatComponent implements OnInit {
     if (!this._token.isLogin) {
       this.lightBox.showLogIn = true;
       this.lightBox.showBlur = true;
-      this._router.navigate(['shopping-cart', 'pay'])
+      this._router.navigate(['shopping-cart', 'orders'])
       return
     }
-    this._router.navigate(['shopping-cart', 'pay'])
+    this._router.navigate(['shopping-cart', 'orders'])
   }
 
 }

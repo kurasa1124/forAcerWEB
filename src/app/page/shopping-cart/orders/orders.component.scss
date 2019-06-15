@@ -34,6 +34,33 @@ h1 {
   }
 }
 
+button {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+  background: $main;
+  &.cancel {
+    color: $grey;
+    background: $lightGrey;
+  }
+  &.green {
+    background: $green;
+  }
+}
+
+.btns {
+  font-size: 1rem;
+  margin: 2rem 0;
+  margin-left: 0.5rem;
+  text-align: center;
+  button {
+    padding: 0.5rem 2rem;
+    margin-left: 0.5rem;
+  }
+}
+
 .red {
   color: $red;
 }
@@ -41,8 +68,6 @@ h1 {
 .countTotal {
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid $grey;
   .count {
     span {
       display: block;
@@ -56,15 +81,18 @@ h1 {
   }
 }
 
-.payment {
-  line-height: 1.2rem;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  td {
-    vertical-align: top;
-    &:first-child {
-      font-size: 1rem;
-      min-width: 3rem;
-    }
-  }
+.cards {
+  margin: 1rem 0 2rem 0;
+}
+
+.hr {
+  height: 1px;
+  background: $grey;
+}
+
+.empty {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
 }

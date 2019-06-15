@@ -10,7 +10,8 @@ import * as convert from "color-convert"
 export class MapComponent implements OnInit, OnChanges {
   @Input() hoverId: string;
   @Output() hoverChange = new EventEmitter();
-  @Output() colorChange = new EventEmitter()
+  @Output() colorChange = new EventEmitter();
+  @Output() heightChange = new EventEmitter();
   public colorThief = new ColorThief();
 
   constructor() { }
@@ -30,6 +31,7 @@ export class MapComponent implements OnInit, OnChanges {
     let colors = this.colorThief.getPalette(ImageMap, 10)
     let hex = colors.map(color => "#" + convert.rgb.hex(color));
     this.colorChange.emit(hex.sort((a, b) => a.localeCompare(b)));
+    this.heightChange.emit(ImageMap.height);
     this._setHover()
   }
 

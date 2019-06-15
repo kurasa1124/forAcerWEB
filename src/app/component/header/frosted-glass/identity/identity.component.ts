@@ -24,7 +24,7 @@ export class IdentityComponent implements OnInit {
     this.lightBox.showIdentity = false;
     if (!this._token.isLogin) { this.lightBox.showLogIn = true; return }
     this.lightBox.showBlur = false;
-    this._router.navigate(['shopping-cart', 'pay'])
+    this._router.navigate(['shopping-cart', 'orders'])
   }
 
 }

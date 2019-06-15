@@ -11,9 +11,10 @@ import { MapComponent } from './map/map.component';
 import { SeatContentComponent } from './seat-content/seat-content.component';
 import { FormsModule } from '@angular/forms';
 import { ComponentModule } from '../../component/component.module';
-import { NoSeatComponent } from './pay/no-seat/no-seat.component';
-import { SeatInfoComponent } from './pay/seat-info/seat-info.component';
-import { PayPackageComponent } from './pay/package/package.component';
+import { NoSeatComponent } from './orders/no-seat/no-seat.component';
+import { SeatInfoComponent } from './orders/seat-info/seat-info.component';
+import { PayPackageComponent } from './orders/package/package.component';
+import { OrdersComponent } from './orders/orders.component';
 @NgModule({
   declarations: [
     ShoppingCartComponent,
@@ -25,7 +26,8 @@ import { PayPackageComponent } from './pay/package/package.component';
     SeatContentComponent,
     PayPackageComponent,
     NoSeatComponent,
-    SeatInfoComponent
+    SeatInfoComponent,
+    OrdersComponent
   ],
   imports: [
     ComponentModule,
@@ -39,6 +41,7 @@ import { PayPackageComponent } from './pay/package/package.component';
         children: [
           { path: "seat", component: SeatComponent },
           { path: "package", component: PackageComponent },
+          { path: "orders", component: OrdersComponent },
           { path: "pay", component: PayComponent },
           { path: "complete", component: CompleteComponent },
           { path: "**", redirectTo: "/" }

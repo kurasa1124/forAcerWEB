@@ -1,94 +1,13 @@
 @import "../../../../theme.scss";
 h1 {
   font-weight: normal;
-}
-.orders {
-  > * {
-    display: block;
-    margin-bottom: 2rem;
-  }
-}
-
-.ticket {
-  position: relative;
-  .mi {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.5rem;
-    width: 2rem;
-    height: 2rem;
-    color: #fff;
-    background: $lightGrey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
-  &:hover {
-    .mi {
-      opacity: 1;
-    }
-  }
-}
-
-button {
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  line-height: 1.2rem;
-  padding: 0 0.5rem;
-  background: $main;
-  &.cancel {
-    color: $grey;
-    background: $lightGrey;
-  }
-}
-
-.btns {
-  font-size: 1rem;
-  margin: 2rem 0;
-  margin-left: 0.5rem;
-  text-align: center;
-  button {
-    padding: 0.5rem 2rem;
-    margin-left: 0.5rem;
-  }
-}
-
-.red {
-  color: $red;
-}
-
-.countTotal {
-  justify-content: space-between;
-  align-items: flex-end;
-  .count {
-    span {
-      display: block;
-      line-height: 1.5rem;
-    }
-  }
-  .total {
-    span {
-      font-size: 2rem;
-    }
-  }
-}
-
-.cards {
-  margin: 1rem 0 2rem 0;
-  border-bottom: 1px solid $grey;
+  margin-top: 2rem;
 }
 
 .payment {
-  padding: 1rem 0;
-  margin: 2rem 0;
   line-height: 1.8rem;
   font-size: 0.8rem;
-  border-bottom: 1px solid $grey;
+
   td {
     vertical-align: top;
     padding: 1rem 0.5rem;
@@ -140,6 +59,7 @@ button {
 }
 
 .card {
+  margin-top: 1rem;
   td {
     padding: 0.5rem 0;
     &:first-child {
@@ -156,6 +76,7 @@ button {
 .hr {
   height: 1px;
   background: $grey;
+  margin-top: 1rem;
 }
 
 .empty {
@@ -180,5 +101,39 @@ button {
   .mi {
     font-size: 1.5rem;
     margin-right: 0.5rem;
+  }
+}
+
+.explain {
+  background: $lightGrey;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.btns {
+  font-size: 1rem;
+  margin: 2rem 0;
+  margin-left: 0.5rem;
+  text-align: center;
+  button {
+    padding: 0.5rem 2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+button {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+  background: $main;
+  &.cancel {
+    color: $grey;
+    background: $lightGrey;
+  }
+  &.green {
+    background: $green;
   }
 }

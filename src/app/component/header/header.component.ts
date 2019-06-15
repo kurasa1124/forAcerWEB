@@ -31,7 +31,7 @@ export class HeaderComponent {
   public photoUrl = "http://pipsum.com/100x100.jpg"
   constructor(public token: TokenService, public lightBox: LightBoxService, private _router: Router) { }
   public goCart() {
-    this._router.navigate(['shopping-cart', 'pay'])
+    this._router.navigate(['shopping-cart', 'orders'])
   }
 
 }

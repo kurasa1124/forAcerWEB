@@ -26,7 +26,8 @@ import { SeatInfoComponent } from './seat-info/seat-info.component';
     IdentityComponent,
     NoSeatComponent,
     PackageComponent,
-    SeatInfoComponent
+    SeatInfoComponent,
+
   ],
   exports: [
     CardComponent,
@@ -40,7 +41,8 @@ import { SeatInfoComponent } from './seat-info/seat-info.component';
     IdentityComponent,
     NoSeatComponent,
     PackageComponent,
-    SeatInfoComponent
+    SeatInfoComponent,
+
   ],
   imports: [
     CommonModule

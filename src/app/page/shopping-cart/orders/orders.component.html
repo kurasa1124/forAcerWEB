@@ -1,0 +1,44 @@
+<h1>{{ tickets.length ? "確認訂單" : "沒有任何訂單" }}</h1>
+<img src="assets/empty-cart.svg" alt="" *ngIf="!tickets.length" class="empty" />
+<div class="orders">
+  <div class="ticket" *ngIf="tickets.includes(0)">
+    <pay-no-seat></pay-no-seat><span class="mi" (click)="remove(0)">clear</span>
+  </div>
+  <div class="ticket" *ngIf="tickets.includes(1)">
+    <pay-seat-info></pay-seat-info
+    ><span class="mi" (click)="remove(1)">clear</span>
+  </div>
+  <div class="ticket" *ngIf="tickets.includes(2)">
+    <pay-package></pay-package><span class="mi" (click)="remove(2)">clear</span>
+  </div>
+</div>
+
+<div class="full" *ngIf="tickets.length">
+  <div class="flex countTotal">
+    <div class="count">
+      <span>訂單金額： 15300</span>
+      <span class="red">折價： 2460</span>
+    </div>
+    <div class="total">總價： <span>12,840</span></div>
+  </div>
+
+  <div class="flex">
+    <div class="hr f1"></div>
+    <div class="btns f0">
+      <button class="cancel ss-hide" (click)="tickets = []">清空購物車</button>
+      <button class="green" [routerLink]="['']">繼續購物</button>
+      <button [routerLink]="['/shopping-cart', 'pay']">前往結帳</button>
+    </div>
+  </div>
+
+  <h1>Bonus Add-On Opportunities:</h1>
+  <div class="cards nowrap">
+    <app-card
+      class="nowrap"
+      *ngFor="let card of cards"
+      [image]="card.image"
+      [title]="card.title"
+      [text]="card.text"
+    ></app-card>
+  </div>
+</div>
