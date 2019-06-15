@@ -10,6 +10,9 @@ export class MenuComponent implements OnInit {
     "活動優惠",
     "座位表",
     "購買/退票",
+    "選擇",
+    "選擇",
+    "選擇",
     "選擇"]
   public active = 0;
   constructor() { }

@@ -5,9 +5,10 @@ import { MenuComponent } from './menu/menu.component';
 import { ContentComponent } from './content/content.component';
 import { RouterModule } from '@angular/router';
 import { ComponentModule } from '../../component/component.module';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [DetailComponent, MenuComponent, ContentComponent],
+  declarations: [DetailComponent, MenuComponent, ContentComponent, TableComponent],
   imports: [
     ComponentModule,
     CommonModule,

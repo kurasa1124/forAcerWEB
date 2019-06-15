@@ -21,18 +21,19 @@
 }
 
 h1 {
-  line-height: 5rem;
+  padding: 1rem 2rem;
   font-weight: normal;
-  @media screen and (max-width: 640px) {
-    padding: 0 2rem;
-  }
 }
 h3 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5rem;
-  height: 1.5rem;
-  overflow: hidden;
+  padding-top: 0.5rem;
+  padding-left: 4vmin;
+  @media screen and (max-width: 640px) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .order {
@@ -47,6 +48,7 @@ h3 {
   }
   .limit {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     line-height: 2.5rem;
@@ -55,40 +57,41 @@ h3 {
     white-space: nowrap;
     position: relative;
     z-index: 10;
+    text-align: right;
     @media screen and (max-width: 640px) {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100vw;
-      display: flex;
+      margin-top: -1rem;
+      text-align: center;
     }
   }
-  button {
-    cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  color: $grey;
+  border-radius: 5px;
+  background: $lightGrey;
+  padding: 0 2rem;
+  line-height: 2.5rem;
+  border: none;
+  margin-left: 1rem;
+  position: relative;
+  transform: translateY(50%);
+  &.active {
     color: #fff;
-    border-radius: 5px;
     background: $main;
-    padding: 0 2rem;
-    line-height: 2.5rem;
-    border: none;
-    margin-left: 1rem;
-    position: relative;
-    transform: translateY(50%);
-    @media screen and(max-width:640px) {
-      flex: 1 1 auto;
-      transform: none;
-      border-radius: 0;
-      margin-left: 0;
-      line-height: 3rem;
-      + button {
-        border-left: 1px solid #fff;
-      }
-    }
+  }
+  &.more {
+    display: block;
+    margin: 1rem auto;
+    transform: none;
+    color: #fff;
+    background: $main;
   }
 }
 
 .main {
   align-items: flex-start;
+  padding: 2rem;
   background: $opacityWhite;
   border-left: 2px solid $opacityBorder;
   border-right: 2px solid $opacityBorder;
@@ -118,13 +121,12 @@ app-selector {
 }
 
 .content {
+  width: 100%;
   position: relative;
 }
 
 .share {
-  position: absolute;
-  left: 1.5rem;
-  top: 1rem;
+  margin-top: 1rem;
   color: $grey;
   margin-bottom: 0.5rem;
   text-align: right;

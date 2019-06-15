@@ -30,12 +30,15 @@
     "hexsorter": "^1.5.0",
     "material-icons": "^0.3.1",
     "moment": "^2.24.0",
+    "ng-zorro-antd": "^7.5.1",
     "ng2-password-strength-bar": "^1.2.3",
     "ngx-countdown": "^3.2.0",
+    "ngx-multi-line-ellipsis": "^1.0.4",
     "process": "^0.11.10",
     "rgb-hex": "^3.0.0",
     "rxjs": "^6.3.3",
     "smoothscroll-polyfill": "^0.4.4",
+    "stickyfilljs": "^2.1.0",
     "tiny-date-picker": "^3.2.8",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -58,10 +61,12 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
+    "source-map-explorer": "^2.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2",
-    "verification-code": "^1.0.0"
+    "verification-code": "^1.0.0",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "browser": {
     "fs": false,

@@ -1,33 +1,28 @@
 @import "../../../../theme.scss";
 :host {
-  height: 100%;
+  margin: 0 -2rem;
+  width: calc(100% + 4rem);
   color: #fff;
-  display: inline-block;
-  background: $second;
-  padding: 1rem 0;
-  border-radius: 0 0 5px 5px;
+  display: block;
+  background: #223e5e;
+  overflow: auto;
+}
+
+ul {
+  display: flex;
 }
 
 li {
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   line-height: 2.5rem;
-  padding: 0 2rem;
-  padding-right: 4rem;
+  padding: 0 0.5rem;
   &:hover {
     background: $darker;
   }
   &.active {
     position: relative;
     background: $lighter;
-    &:after {
-      content: "chevron_right";
-      font-size: 1rem;
-      font-family: "Material Icons";
-      display: block;
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 }

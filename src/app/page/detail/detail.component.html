@@ -1,21 +1,33 @@
 <div class="content-bg"></div>
 
 <div class="head">
-  <h1 class="limit">{{ title }}</h1>
+  <h1>{{ title }}</h1>
   <div class="image" [style.backgroundImage]="'url(' + image + ')'"></div>
   <div class="order">
     <div class="limit">
-      <app-selector [optionals]="menu" class="ss-show"></app-selector>
-      <h3>{{ time }}</h3>
-      <div class="buttons">
-        <button (click)="lightBox.showBlur = true; lightBox.showSeats = true">
+      <!-- <app-selector [optionals]="menu" class="ss-show"></app-selector> -->
+      <h3 class="f1">{{ range }}</h3>
+      <div class="buttons f1">
+        <button
+          (click)="tableType = 'seats'"
+          [class.active]="tableType == 'seats'"
+        >
+          活動場次
+        </button>
+        <button
+          (click)="tableType = 'packages'"
+          [class.active]="tableType == 'packages'"
+        >
+          套票場次
+        </button>
+        <!-- <button (click)="lightBox.showBlur = true; lightBox.showSeats = true">
           活動場次
         </button>
         <button
           (click)="lightBox.showBlur = true; lightBox.showPackages = true"
         >
           套票場次
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
@@ -23,8 +35,11 @@
 
 <div class="limit">
   <div class="flex main">
-    <d-menu class="ss-hide f0"></d-menu>
+    <!-- <d-menu class="ss-hide f0"></d-menu> -->
     <div class="content">
+      <app-table [type]="tableType"></app-table>
+      <button class="more" (click)="seeMore()">看更多</button>
+      <d-menu></d-menu>
       <div class="share flex">
         <i class="fab fa-line"></i>
         <i class="fab fa-facebook-square"></i>

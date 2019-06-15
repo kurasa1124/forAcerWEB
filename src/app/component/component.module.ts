@@ -13,7 +13,6 @@ import { IdentityComponent } from './header/frosted-glass/identity/identity.comp
 import { NoSeatComponent } from './no-seat/no-seat.component';
 import { PackageComponent } from './package/package.component';
 import { SeatInfoComponent } from './seat-info/seat-info.component';
-
 @NgModule({
   declarations: [
     CardComponent,

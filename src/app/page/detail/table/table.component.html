@@ -1,5 +1,5 @@
-<div class="box">
-  <table cellpadding="0" cellspacing="0">
+<div class="table">
+  <table cellpadding="0" cellspacing="0" *ngIf="type == 'seats'">
     <tr>
       <th><span>時間</span><span class="ss-show">地點</span></th>
       <th class="ss-hide">地點</th>
@@ -61,6 +61,25 @@
         <button [disabled]="true">尚未啟售</button
         ><span class="ss-hide">2019/12/31 12:00 起售</span>
       </td>
+    </tr>
+  </table>
+
+  <table cellpadding="0" cellspacing="0" *ngIf="type == 'packages'">
+    <tr>
+      <th class="tal">套票名稱</th>
+      <th class="tar">購票</th>
+    </tr>
+    <tr>
+      <td class="tal">時光劇場雙人套票9折</td>
+      <td class="tar"><button (click)="gotoCart()">購票</button></td>
+    </tr>
+    <tr>
+      <td class="tal">時光劇場任選2場以上8折</td>
+      <td class="tar"><button (click)="gotoCart()">購票</button></td>
+    </tr>
+    <tr>
+      <td class="tal">時光劇場學生三人成行9折</td>
+      <td class="tar"><button (click)="gotoCart()">購票</button></td>
     </tr>
   </table>
 </div>

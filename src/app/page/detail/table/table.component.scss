@@ -1,25 +1,10 @@
 @import "../../../../theme.scss";
 :host {
+  width: calc(100% + 4rem);
+  margin: 0 -2rem;
   display: block;
-  width: 95%;
-  height: 70%;
-  max-width: 960px;
-}
-.box {
-  width: 100%;
-  height: 100%;
-  display: block;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1rem;
-  background: rgba(white, 0.8);
-  color: $grey;
-  position: relative;
+  margin-bottom: 1rem;
   overflow: auto;
-  z-index: 1;
-  @media screen and (max-width: 960px) {
-    padding: 0;
-  }
 }
 
 table {
@@ -31,10 +16,14 @@ td {
   height: 4rem;
   line-height: 1.5rem;
   padding: 5px;
+  text-align: center;
+  &:last-child {
+    text-align: center;
+  }
 }
 
 th {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $second;
   border-bottom: 2px solid $grey;
   .ss-show {
@@ -97,6 +86,16 @@ button {
   }
 }
 
-.align-left {
-  text-align: left;
+.tal {
+  padding-left: 1rem;
+  text-align: left !important;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+.tar {
+  padding-right: 1rem;
+  text-align: right !important;
 }

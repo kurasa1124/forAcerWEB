@@ -31,8 +31,6 @@
 
 ul {
   display: flex;
-  margin: 0 -4vmin;
-  padding: 0 2vmin;
   overflow: hidden;
   overflow-x: auto;
   border-bottom: 1px solid $opacityBorder;
@@ -41,6 +39,11 @@ ul {
     width: 0px !important;
     display: none !important;
   }
+}
+
+.mi {
+  cursor: pointer;
+  border-bottom: 1px solid $opacityBorder;
 }
 
 li {

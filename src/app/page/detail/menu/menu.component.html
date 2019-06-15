@@ -1,5 +1,6 @@
 <ul>
   <li
+    class="f1"
     *ngFor="let item of menu; index as idx"
     (click)="active = idx"
     [class.active]="active == idx"

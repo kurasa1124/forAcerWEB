@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { LightBoxService } from '../../../../service/lightBox.service';
+import { LightBoxService } from '../../../service/lightBox.service';
 
 @Component({
-  selector: 'app-seats',
-  templateUrl: './seats.component.html',
-  styleUrls: ['../table.scss']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
 })
-export class SeatsComponent implements OnInit {
-
+export class TableComponent implements OnInit {
+  @Input() type = "seats";
   constructor(private _router: Router, private _lightbox: LightBoxService) { }
 
   ngOnInit() {

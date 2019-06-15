@@ -25,7 +25,7 @@ export class CardComponent {
     this._router.navigate(['detail', 'content'], {
       queryParams: {
         title: this.title,
-        time: moment().toISOString(),
+        range: moment().format("YYYY/MM/DD") + " - " + moment().add(1, "month").format("YYYY/MM/DD"),
         image: this.image
       }
     })
