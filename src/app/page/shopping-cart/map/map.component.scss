@@ -4,8 +4,18 @@
   padding: 5px;
 }
 .hint {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: $grey;
+  display: flex;
   height: 2rem;
   margin: 1rem;
+  white-space: nowrap;
+  img {
+    margin-right: 0.5rem;
+  }
+  justify-content: center;
+  align-items: center;
 }
 .map {
   text-align: center;

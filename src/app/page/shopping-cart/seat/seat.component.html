@@ -12,6 +12,7 @@
   >
     {{ seatMap ? "更換票區" : "更換場次" }}
   </button>
+  <span class="area" *ngIf="seatMap">B1平面特區5800元</span>
 </h4>
 
 <div *ngIf="!seatMap">
@@ -90,6 +91,7 @@
   <div class="seat-content">
     <app-seat-content></app-seat-content>
     <div class="securiry">
+      <div class="mi reload" (click)="reload()">cached</div>
       <img [src]="imgDataURL" alt="" (click)="reload()" />
       <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue" />
       <button

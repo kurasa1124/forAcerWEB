@@ -49,6 +49,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: on */
   .mi {
     font-size: 1.5rem;
   }

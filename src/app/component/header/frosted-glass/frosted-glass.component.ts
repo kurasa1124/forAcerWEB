@@ -41,6 +41,7 @@ export class FrostedGlassComponent implements OnInit {
     this.lightBox.showPackages = false;
     this.lightBox.showPassword = false;
     this.lightBox.showSeats = false;
+    this.lightBox.showIdentity = false;
   }
 
   public blur() {

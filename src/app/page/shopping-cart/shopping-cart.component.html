@@ -7,14 +7,14 @@
         routerLinkActive="active"
         *ngIf="isPackage"
       >
-        劃區選位
+        <span class="xs-hide">劃區</span>選位
       </li>
       <li
         [routerLink]="['./seat']"
         routerLinkActive="active"
         *ngIf="!isPackage"
       >
-        劃區選位
+        <span class="xs-hide">劃區</span>選位
       </li>
       <li class="mi">
         arrow_forward_ios
@@ -26,13 +26,13 @@
         arrow_forward_ios
       </li>
       <li [routerLink]="['./pay']" routerLinkActive="active">
-        付款結帳
+        <span class="xs-hide">付款</span>結帳
       </li>
       <li class="mi">
         arrow_forward_ios
       </li>
       <li [routerLink]="['./complete']" routerLinkActive="active">
-        完成訂購
+        完成<span class="xs-hide">訂購</span>
       </li>
     </ul>
     <div class="icon f0">

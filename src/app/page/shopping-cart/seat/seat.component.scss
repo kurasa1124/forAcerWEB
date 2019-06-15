@@ -11,6 +11,9 @@ h4 {
     margin-top: 0.5rem;
     margin-right: 0.7rem;
   }
+  .area {
+    color: $facebook;
+  }
   button {
     font-size: 0.8rem;
     color: #fff;
@@ -191,8 +194,14 @@ label {
 .securiry {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   margin: 2rem 0;
+  .reload {
+    cursor: pointer;
+    color: $grey;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
   img {
     width: 6rem;
   }

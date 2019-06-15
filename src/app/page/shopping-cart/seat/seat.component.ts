@@ -58,6 +58,7 @@ export class SeatComponent implements OnInit {
     if (!this.computerChoice) { this.seatMap = true; return }
     this.lightBox.showBlur = true;
     this.lightBox.showIdentity = true;
+    this.lightBox.area = this.seats.find(seat => seat.id == this.selectId).title;
     this.lightBox.remainder = this.seats.find(seat => seat.id == this.selectId).num;
   }
 

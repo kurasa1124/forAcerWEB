@@ -76,3 +76,45 @@ button {
   padding: 1rem 2rem;
   border: none;
 }
+
+.securiry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .code {
+    width: 8rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 100%;
+  }
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    .mi {
+      font-size: 2rem;
+    }
+    input {
+      max-width: 8rem;
+      background: none;
+      border: none;
+      border-left: 1px solid $grey;
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+      line-height: 2rem;
+      width: 100%;
+      &::placeholder {
+        color: $grey;
+      }
+    }
+  }
+}

@@ -9,4 +9,5 @@ export class LightBoxService {
   public showPackages = false;
   public showIdentity = false;
   public remainder = 0;
+  public area = "";
 }

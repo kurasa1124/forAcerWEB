@@ -29,6 +29,14 @@
   color: $grey;
   position: relative;
   z-index: 1;
+  &.mini {
+    max-width: 385.95px;
+    .word {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
   h1 {
     font-weight: normal;
     color: #000;
