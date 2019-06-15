@@ -8,7 +8,7 @@
   border: 2px solid $opacityBorder;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   background: $opacityWhite;
   position: relative;
   padding-top: 0;
@@ -66,17 +66,16 @@ li {
 h3 {
   color: $main;
   line-height: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 h4 {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .content {
-  padding: 2rem 2vw;
+  padding: 1rem 2vw;
 }
 
 p {

@@ -3,7 +3,10 @@
 
 <div class="container">
   <div #content="" class="limit padding">
-    <app-title word="熱門項目" [showMore]="false"></app-title>
+    <app-title
+      word="熱門項目"
+      (more)="routerTo('/goods/category?title=全部分類')"
+    ></app-title>
     <div class="cards nowrap">
       <app-card
         class="nowrap"

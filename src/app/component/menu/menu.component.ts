@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, stagger, animate, style, query } from '@angular/animations';
 import { TokenService } from '../../service/token.service';
-import { ActivatedRouteSnapshot, ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -41,7 +41,7 @@ export class MenuComponent {
 
   public toggleMenu(event: MouseEvent) {
     let el = event.target as HTMLElement;
-    if (el.classList.contains("fold")) return;
+    if (el.classList.contains("fold") || el.classList.contains("mi")) return;
     this.toggle.emit(false);
   }
 }

@@ -32,6 +32,12 @@ i,
 .user,
 .wellcome {
   margin-left: 0.5rem;
+  &.green {
+    color: #fff;
+    background: $main;
+    border-radius: 50%;
+    margin: 0;
+  }
 }
 
 .user {
@@ -39,10 +45,7 @@ i,
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid $lightGrey;
+
   position: relative;
   app-user-list {
     display: block;

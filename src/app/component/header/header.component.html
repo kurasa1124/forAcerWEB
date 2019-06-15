@@ -10,12 +10,12 @@
     <div class="f1"></div>
     <app-selector [optionals]="language"></app-selector>
     <div class="wellcome" *ngIf="token.isLogin">{{ name }}，您好</div>
-    <div
-      class="user"
-      *ngIf="token.isLogin"
-      [style.backgroundImage]="'url(' + photoUrl + ')'"
-      (click)="showUserList = !showUserList"
-    >
+    <div class="user" *ngIf="token.isLogin">
+      <i
+        class="ai-user green"
+        *ngIf="token.isLogin"
+        (click)="showUserList = !showUserList"
+      ></i>
       <app-user-list
         [@slideIn]
         *ngIf="showUserList"
@@ -23,6 +23,7 @@
         (mouseleave)="showUserList = false"
       ></app-user-list>
     </div>
+
     <i
       class="ai-user"
       *ngIf="!token.isLogin"

@@ -5,11 +5,12 @@
   <div class="week f1">
     <div
       class="day f1"
-      *ngFor="let date of dates; trackBy: date"
+      *ngFor="let date of dates"
       [class.active]="this.selectDate.isSame(date)"
       (click)="changeDate(date)"
     >
-      {{ date.format("DD") }}<span>{{ date.format("ddd") | uppercase }}</span>
+      {{ date.format("DD")
+      }}<span>{{ date.locale("zh-tw").format("ddd") | uppercase }}</span>
     </div>
   </div>
   <div class="f0" (click)="changeDate(selectDate.add(1, 'day'))">

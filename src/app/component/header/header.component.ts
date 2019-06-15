@@ -26,7 +26,7 @@ export class HeaderComponent {
   @Output() showMenu = new EventEmitter();
   public showUserList = false;
   public name = 'XXX';
-  public language: string[] = ['中文', '英文'];
+  public language: string[] = ['中文', 'English'];
   public showLogin = false;
   public photoUrl = "http://pipsum.com/100x100.jpg"
   constructor(public token: TokenService, public lightBox: LightBoxService, private _router: Router) { }

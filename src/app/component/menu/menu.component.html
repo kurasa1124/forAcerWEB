@@ -1,4 +1,4 @@
-<ul class="menu" (click)="toggleMenu($event)" (mouseleave)="toggle.emit(false)">
+<ul class="menu" (mouseleave)="toggle.emit(false)">
   <li (click)="goods = !goods">
     <div class="fold">
       節目資訊<span class="f1"></span>
@@ -126,5 +126,7 @@
     </ul>
   </li>
   <li [routerLink]="['goods', 'review']" routerLinkActive="active">精彩回顧</li>
-  <li>支持贊助</li>
+  <li [routerLink]="['about', 'donation']" routerLinkActive="active">
+    支持贊助
+  </li>
 </ul>

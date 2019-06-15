@@ -9,7 +9,7 @@
   border: 2px solid $opacityBorder;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   background: $opacityWhite;
   position: relative;
   @media screen and (max-width: 640px) {
@@ -20,23 +20,12 @@
 }
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 4vmin;
-  color: #fff;
-  background: $second;
-  letter-spacing: 0.5rem;
-  padding: 0 3rem;
-  line-height: 3.5rem;
-  transform: translateY(-50%);
-  border-radius: 4rem;
-  border: 5px solid #fff;
-  box-shadow: 0 3px 6px 0 $darker;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
 }
 
 .content {
   width: 100%;
   align-self: flex-start;
-  padding-top: 2rem;
   padding-bottom: 3rem;
 }

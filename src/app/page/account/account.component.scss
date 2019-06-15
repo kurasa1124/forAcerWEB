@@ -8,7 +8,7 @@
   border: 2px solid $opacityBorder;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   background: $opacityWhite;
   position: relative;
   padding-top: 0;
@@ -24,6 +24,9 @@
   background: #fff;
   margin: 0 -4vmin;
   padding: 1rem 4vmin 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 ul {
@@ -56,20 +59,24 @@ li {
 }
 
 .icon {
-  width: 10rem;
-  height: 10rem;
+  width: 7.5rem;
+  height: 7.5rem;
   background: $main;
-  margin: -5rem 0 -3rem 2rem;
+  margin: -2rem 0 -3rem 2rem;
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 3px 6px 0 $darker;
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: 70%;
+    height: 70%;
+  }
 }
 
 .content {
-  padding: 4rem 2vw;
+  padding: 3rem 2vw;
   @media screen and (max-width: 640px) {
     padding: 2rem 2vw;
   }

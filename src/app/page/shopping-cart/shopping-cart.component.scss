@@ -8,7 +8,7 @@
   border: 2px solid $opacityBorder;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   background: $opacityWhite;
   position: relative;
   padding-top: 0;
@@ -66,10 +66,10 @@ li {
 
 .icon {
   color: #fff;
-  width: 10rem;
-  height: 10rem;
+  width: 7.5rem;
+  height: 7.5rem;
   background: $main;
-  margin: -5rem 0 -3rem 2rem;
+  margin: -2rem 0 -3rem 2rem;
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 3px 6px 0 $darker;
@@ -77,14 +77,14 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   img {
     width: 60%;
   }
   countdown {
     font-weight: normal;
-    font-size: 2.7rem;
+    font-size: 2rem;
     margin-top: 0.5rem;
   }
 
@@ -105,7 +105,7 @@ li {
 }
 
 .content {
-  padding: 4rem 2vw;
+  padding: 3rem 2vw;
   @media screen and (max-width: 640px) {
     padding: 2rem 2vw;
   }
