@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from "moment";
 import * as chinese from "chinesegen"
@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
-export class IndexComponent implements OnDestroy {
+export class IndexComponent implements OnDestroy, AfterViewInit {
   private _destroy$ = new Subject();
   public date: Date;
 
@@ -20,9 +20,23 @@ export class IndexComponent implements OnDestroy {
     });
   }
 
+  ngAfterViewInit(): void {
+    // this.fillFb();
+  }
+
   ngOnDestroy(): void {
     this._destroy$.next();
     this._destroy$.complete();
+  }
+
+  public fillFb() {
+    if (this.viewport.width > 960) return;
+    let fb = document.getElementById("fb") as HTMLElement;
+    let limit = document.querySelector(".limit") as HTMLElement;
+    let vmin = this.viewport.width > this.viewport.height ? this.viewport.height : this.viewport.width;
+    let scale = (limit.clientWidth - vmin * 0.08) / 500;
+    fb.style.transform = `scale(${scale})`;
+    fb.parentElement.style.paddingBottom = `${scale * vmin / 100}rem`
   }
 
   public cards = [
