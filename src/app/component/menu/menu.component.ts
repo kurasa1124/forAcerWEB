@@ -36,7 +36,7 @@ export class MenuComponent {
     if (path.includes("goods")) this.goods = true;
     if (path.includes("review") || path.includes("search")) this.goods = false;
     if (path.includes("notice")) this.notice = true;
-    if (path.includes("qa")) this.notice = true;
+    if (path.includes("QA")) this.qa = true;
   }
 
   public toggleMenu(event: MouseEvent) {

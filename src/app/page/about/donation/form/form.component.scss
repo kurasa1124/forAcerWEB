@@ -3,7 +3,7 @@
 .payment {
   padding: 1rem 0;
   margin: 2rem 0;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   font-size: 0.8rem;
   border-bottom: 1px solid $grey;
   td {
@@ -17,9 +17,8 @@
   .small {
     display: inline-block;
     white-space: pre-wrap;
-    font-size: 1rem;
-    transform: scale(0.7);
-    transform-origin: bottom left;
+    font-size: 0.8rem;
+    line-height: 1rem;
     color: $red;
   }
   .flex {

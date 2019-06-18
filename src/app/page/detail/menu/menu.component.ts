@@ -21,8 +21,8 @@ export class MenuComponent implements OnInit {
   }
 
   public scroll(nav: HTMLElement, pos: string) {
-    if (pos == 'left') nav.scrollLeft -= screen.width / 2;
-    if (pos == 'right') nav.scrollLeft += screen.width / 2;
+    if (pos == 'left') nav.scrollLeft -= nav.clientWidth;
+    if (pos == 'right') nav.scrollLeft += nav.clientWidth;
   }
 
 }
