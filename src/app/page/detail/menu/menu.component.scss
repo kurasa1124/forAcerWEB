@@ -8,25 +8,6 @@
   overflow: auto;
 }
 
-// ul {
-//   display: flex;
-// }
-
-// li {
-//   text-align: center;
-//   white-space: nowrap;
-//   cursor: pointer;
-//   line-height: 2.5rem;
-//   padding: 0 0.5rem;
-//   &:hover {
-//     background: $darker;
-//   }
-//   &.active {
-//     position: relative;
-//     background: $lighter;
-//   }
-// }
-
 ul {
   display: flex;
   overflow: hidden;

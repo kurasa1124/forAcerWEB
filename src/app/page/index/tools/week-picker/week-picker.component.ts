@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, QueryList } from '@angular/core';
 import * as moment from "moment";
 import { ActivatedRoute, Router } from '@angular/router';
-import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-week-picker',
@@ -24,7 +23,7 @@ export class WeekPickerComponent implements OnInit {
     let select = moment(date, "YYYY-MM-DD");
     this.selectDate = select;
     for (let i = -3; i <= 3; i++) {
-      this.dates.push(moment(select).add(i * -1, "day"))
+      this.dates.push(moment(select).add(i, "day"))
     }
   }
 

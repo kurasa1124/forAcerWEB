@@ -70,12 +70,12 @@ export class SeatComponent implements OnInit {
   }
 
   public addToCart() {
-    if (!this._token.isLogin) {
-      this.lightBox.showLogIn = true;
-      this.lightBox.showBlur = true;
-      this._router.navigate(['shopping-cart', 'orders'])
-      return
-    }
+    // if (!this._token.isLogin) {
+    //   this.lightBox.showLogIn = true;
+    //   this.lightBox.showBlur = true;
+    //   this._router.navigate(['shopping-cart', 'orders'])
+    //   return
+    // }
     this._router.navigate(['shopping-cart', 'orders'])
   }
 

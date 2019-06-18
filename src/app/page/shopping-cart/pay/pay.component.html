@@ -150,13 +150,15 @@
   <div class="explain">發票索取方式說明</div>
   <div class="hr"></div>
 </div>
-
-<div class="btns">
+<h2 class="flex total">
+  購物車金額總計：NT$ 123456
   <div class="checkRead" (click)="checkRead = !checkRead">
     <span class="mi">{{
       checkRead ? "check_box" : "check_box_outline_blank"
     }}</span>
     我以詳閱並同意 <a href="">電子商務約定條款</a>
   </div>
+</h2>
+<div class="btns">
   <button [routerLink]="['../', 'complete']">送出結帳</button>
 </div>

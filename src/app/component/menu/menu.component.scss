@@ -11,9 +11,10 @@
   background: $second;
   padding: 4rem 0;
   z-index: 10;
+  width: 320px;
   box-shadow: 0 0 5px rgba(black, 0.5);
   @media screen and (max-width: 480px) {
-    font-size: 1.2rem;
+    font-size: 6vw;
   }
 }
 
@@ -29,20 +30,28 @@ li {
   user-select: none;
   line-height: 3rem;
   padding: 0 2rem;
-  &:hover {
-    background: $active;
-  }
+  &:not(.noHover):hover,
   &.active {
-    border-left: 5px solid #fff;
+    background: $darker;
   }
   > ul {
-    background: $second;
+    background: $lighter;
     width: calc(100% + 4rem);
     overflow: hidden;
     transition: all 0.25s;
-    margin-left: -2rem;
+    margin: 0 -2rem;
+    display: flex;
+    flex-wrap: wrap;
     > li {
-      padding-left: 4rem;
+      flex: 1 1 30%;
+      padding: 0 0.5rem;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      &:hover,
+      &.active {
+        background: rgba($second, 0.5);
+      }
     }
   }
 }

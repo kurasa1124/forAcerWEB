@@ -111,3 +111,65 @@ td {
     background: $lightGrey;
   }
 }
+
+@media screen and(max-width:640px) {
+  table {
+    margin: 0;
+    min-width: 0;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    border: 0;
+  }
+  tbody {
+    width: 100%;
+  }
+
+  tr {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    background: rgba($lightGrey, 0.5);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 1rem;
+    &:first-child {
+      display: none;
+    }
+  }
+  td {
+    display: inline-block;
+    white-space: nowrap;
+    border-bottom: 0 !important;
+    &.pos {
+      white-space: pre-wrap;
+      width: calc(100% + 2rem);
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: #fff;
+      background: $second;
+      margin: 0 -1rem;
+      &::before {
+        content: "";
+      }
+    }
+    &.code {
+      width: 100%;
+      text-align: left;
+      input {
+        width: 50%;
+        background: #fff;
+      }
+    }
+    &.delete {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      background: #fff;
+      // box-shadow: 0 3px 6px 0 $darker;
+      border-radius: 50%;
+    }
+    &:before {
+      content: attr(data-title);
+    }
+  }
+}

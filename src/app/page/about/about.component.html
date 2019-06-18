@@ -1,7 +1,10 @@
 <div class="content-bg"></div>
 <div class="limit padding f1">
   <div class="header">
-    <ul class="f1 flex">
+    <div class="mi" (click)="scroll(nav, 'left')">
+      chevron_left
+    </div>
+    <ul #nav class="f1 flex">
       <li class="f1" [routerLink]="['./us']" routerLinkActive="active">
         關於我們
       </li>
@@ -15,6 +18,9 @@
         捐款贊助
       </li>
     </ul>
+    <div class="mi" (click)="scroll(nav, 'right')">
+      chevron_right
+    </div>
   </div>
 
   <div class="content f1">

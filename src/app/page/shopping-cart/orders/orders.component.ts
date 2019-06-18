@@ -12,6 +12,7 @@ export class OrdersComponent implements OnInit {
     payment: 0,
     card: 0
   }
+  public showPay = false;
   public checkRead = false;
   public tickets = [0, 1, 2];
   public months = Array(12).fill('').map((e, i) => i + 1);
@@ -35,6 +36,11 @@ export class OrdersComponent implements OnInit {
   public remove(value) {
     let idx = this.tickets.indexOf(value)
     this.tickets.splice(idx, idx + 1);
+  }
+
+  public scrollTo(el: HTMLElement) {
+    console.log(el)
+    setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" }), 100)
   }
 
 }

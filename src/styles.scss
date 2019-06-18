@@ -224,3 +224,9 @@ input:-webkit-autofill:active {
     width: 100% !important;
   }
 }
+
+h1 {
+  @media screen and (max-width: 480px) {
+    font-size: 7vw;
+  }
+}

@@ -6,7 +6,7 @@ h1 {
 
 .payment {
   line-height: 1.8rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 
   td {
     vertical-align: top;
@@ -18,9 +18,7 @@ h1 {
   }
   .small {
     white-space: pre-wrap;
-    font-size: 1rem;
-    transform: scale(0.7);
-    transform-origin: bottom left;
+    font-size: 0.8rem;
   }
   .flex {
     display: inline-flex;
@@ -135,5 +133,14 @@ button {
   }
   &.green {
     background: $green;
+  }
+}
+
+.total {
+  margin-top: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  > * {
+    text-align: center;
   }
 }

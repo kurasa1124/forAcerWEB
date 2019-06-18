@@ -82,6 +82,9 @@ button {
   margin-left: 1rem;
   position: relative;
   transform: translateY(50%);
+  @media screen and (max-width: 480px) {
+    padding: 0 1rem;
+  }
   &.active {
     color: #fff;
     background: $main;

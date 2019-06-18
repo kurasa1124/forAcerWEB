@@ -86,41 +86,38 @@
       <td><input type="number" /></td>
     </tr>
   </table>
-
-  <div class="securiry">
-    <div class="mi reload" (click)="reload()">cached</div>
-    <img [src]="imgDataURL" alt="" (click)="reload()" />
-    <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue" />
-    <button
-      [class.active]="verificationValue.toLocaleLowerCase() == code"
-      (click)="addToCart()"
-      [disabled]="verificationValue.toLocaleLowerCase() != code"
-    >
-      加入購物車
-    </button>
-  </div>
 </div>
 
 <div class="seatMap" *ngIf="seatMap && !computerChoice">
   <div class="discount">折扣訊息欄位</div>
   <div class="flex detail">
-    <h2>
-      請勾選你要的座位<br />
-      <br />
-      <span class="area">B1平面特區5800元</span>
-    </h2>
+    <div class="flex map">
+      <div class="f1">
+        <h2>
+          請勾選你要的座位<br />
+          <br />
+          <span class="area">B1平面特區5800元</span>
+        </h2>
 
-    <div class="seat-icons flex">
-      <span class="flex"> <img src="assets/seat-empty.svg" alt="" /> 空位</span>
-      <span class="flex"
-        ><img src="assets/seat-check.svg" alt="" /> 已加入購物車</span
-      >
-      <span class="flex"
-        ><img src="assets/seat-lock.svg" alt="" /> 已被選擇</span
-      >
-      <span class="flex"
-        ><img src="assets/seat-people.svg" alt="" /> 已售出</span
-      >
+        <div class="seat-icons flex">
+          <span class="flex">
+            <img src="assets/seat-empty.svg" alt="" /> 空位</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-check.svg" alt="" /> 已加入購物車</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-lock.svg" alt="" /> 已被選擇</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-people.svg" alt="" /> 已售出</span
+          >
+        </div>
+      </div>
+
+      <div class="miniMap">
+        <img src="assets/seat-mini.png" alt="" />
+      </div>
     </div>
 
     <div class="ticket flex">
@@ -131,25 +128,58 @@
       <button class="f1 blue">敬老票</button>
     </div>
   </div>
-  <div class="flex"></div>
   <div class="seat-content">
-    <div class="flex">
-      <app-seat-content></app-seat-content>
-      <div class="miniMap">
-        <img src="assets/seat-mini.png" alt="" />
-      </div>
+    <div class="scale">
+      <span class="mi">zoom_in</span><span class="mi">zoom_out</span>
     </div>
+    <app-seat-content></app-seat-content>
+  </div>
+</div>
+
+<div class="flex addCart" *ngIf="seatMap">
+  <div class="login">
+    <label
+      ><span class="mi">person</span><input type="text" placeholder="帳號"
+    /></label>
+    <label
+      ><span class="mi">lock</span><input type="password" placeholder="密碼"
+    /></label>
     <div class="securiry">
+      <div class="code">
+        <img [src]="imgDataURL" alt="" (click)="reload()" />
+      </div>
+      <label class="f1">
+        <span class="mi" (click)="reload()">cached</span>
+        <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue"
+      /></label>
+    </div>
+  </div>
+  <button
+    [class.active]="verificationValue.toLocaleLowerCase() == code"
+    (click)="addToCart()"
+    [disabled]="verificationValue.toLocaleLowerCase() != code"
+  >
+    加入購物車
+  </button>
+</div>
+
+<!-- <div class="securiry">
+  <div class="account flex">
+    <div>帳號：<input type="text" placeholder="帳號" /></div>
+    <div>密碼：<input type="password" placeholder="密碼" /></div>
+  </div>
+  <div class="flex">
+    <div class="flex">
       <div class="mi reload" (click)="reload()">cached</div>
       <img [src]="imgDataURL" alt="" (click)="reload()" />
       <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue" />
-      <button
-        [class.active]="verificationValue.toLocaleLowerCase() == code"
-        (click)="addToCart()"
-        [disabled]="verificationValue.toLocaleLowerCase() != code"
-      >
-        加入購物車
-      </button>
     </div>
+    <button
+      [class.active]="verificationValue.toLocaleLowerCase() == code"
+      (click)="addToCart()"
+      [disabled]="verificationValue.toLocaleLowerCase() != code"
+    >
+      加入購物車
+    </button>
   </div>
-</div>
+</div> -->

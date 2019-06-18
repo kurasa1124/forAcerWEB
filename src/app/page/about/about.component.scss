@@ -31,15 +31,23 @@
 
 ul {
   display: flex;
-  margin: 0 -4vmin;
-  padding: 0 2vmin;
   overflow: hidden;
   overflow-x: auto;
   border-bottom: 1px solid $opacityBorder;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     height: 0px !important;
     width: 0px !important;
     display: none !important;
+  }
+}
+
+.mi {
+  color: $grey;
+  cursor: pointer;
+  border-bottom: 1px solid $opacityBorder;
+  &:hover {
+    color: #000;
   }
 }
 

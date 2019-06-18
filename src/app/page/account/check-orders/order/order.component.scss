@@ -55,6 +55,7 @@ table {
     background: $lightGrey;
   }
   td {
+    text-align: center;
     border-bottom: 1px solid $lightGrey;
   }
   @media screen and (max-width: 640px) {
@@ -76,6 +77,7 @@ table {
       min-height: 2rem;
     }
     td {
+      text-align: left;
       display: flex;
       align-items: center;
       &:last-child {

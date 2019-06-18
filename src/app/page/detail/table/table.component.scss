@@ -87,15 +87,15 @@ button {
     font-size: 0.7rem;
     margin-top: 5px;
   }
-  @media screen and (max-width: 640px) {
-    font-size: 0.8rem;
-  }
-  @media screen and (max-width: 480px) {
-    min-width: 3rem;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.5rem 5px;
-  }
+  // @media screen and (max-width: 640px) {
+  //   font-size: 0.8rem;
+  // }
+  // @media screen and (max-width: 480px) {
+  //   min-width: 3rem;
+  //   width: 3rem;
+  //   height: 3rem;
+  //   padding: 0.5rem 5px;
+  // }
 }
 
 .tal {
@@ -116,5 +116,44 @@ button {
   th,
   td {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table,
+  tbody {
+    display: flex;
+  }
+  table {
+    padding: 0.5rem;
+    overflow: auto;
+  }
+  tbody {
+    margin: -0.5rem;
+    padding: 0.5rem;
+  }
+  tr,
+  td {
+    height: auto;
+    display: block;
+  }
+  tr {
+    border: 2px solid $lightGrey;
+    width: 80%;
+    min-width: 250px;
+    background: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px 0 $lightGrey;
+    &:first-child {
+      display: none;
+    }
+  }
+  td {
+    border-bottom: 0;
+    button {
+      margin-top: 0.5rem;
+    }
   }
 }

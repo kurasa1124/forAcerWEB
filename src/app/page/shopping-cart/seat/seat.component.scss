@@ -200,7 +200,27 @@ button {
     }
   }
 }
-
+.seat-content {
+  position: relative;
+  .scale {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    > * {
+      color: $grey;
+      cursor: pointer;
+      background: #fff;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 3px 6px 0 $lightGrey;
+      margin-right: 0.5rem;
+    }
+  }
+}
 app-seat-content {
   display: block;
   border: 1px solid $grey;
@@ -217,36 +237,6 @@ label {
   padding: 0.5rem;
 }
 
-.securiry {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 2rem 0;
-  .reload {
-    cursor: pointer;
-    color: $grey;
-    margin-right: 0.5rem;
-    font-size: 1.5rem;
-  }
-  img {
-    width: 6rem;
-  }
-  input {
-    background: none;
-    border: none;
-    border: 1px solid $grey;
-    border-radius: 5px;
-    text-align: center;
-    margin: 0 0.5rem;
-    line-height: 2rem;
-    width: 6rem;
-    &::placeholder {
-      color: $grey;
-    }
-  }
-}
-
 .discount {
   background: $lightGrey;
   border-radius: 5px;
@@ -261,7 +251,7 @@ label {
 
 .miniMap {
   width: 100%;
-  max-width: 300px;
+  max-width: 150px;
   margin-top: 1rem;
   border: 1px solid $grey;
   img {
@@ -299,4 +289,71 @@ label {
 
 .detail {
   align-items: flex-end;
+  .map {
+    width: 100%;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.addCart {
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  button {
+    height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.login {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.9rem;
+    .mi {
+      color: $grey;
+    }
+    input {
+      background: none;
+      border: none;
+      border-left: 1px solid $grey;
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+      line-height: 2rem;
+      width: 100%;
+      &::placeholder {
+        color: $grey;
+      }
+    }
+  }
+
+  .securiry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .code {
+      width: 8rem;
+      margin-right: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+    }
+    input {
+      max-width: 8rem;
+    }
+  }
 }

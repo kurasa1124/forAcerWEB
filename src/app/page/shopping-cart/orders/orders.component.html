@@ -27,7 +27,7 @@
     <div class="btns f0">
       <button class="cancel ss-hide" (click)="tickets = []">清空購物車</button>
       <button class="green" [routerLink]="['']">繼續購物</button>
-      <button [routerLink]="['/shopping-cart', 'pay']">前往結帳</button>
+      <button (click)="showPay = true; scrollTo(pay)">前往結帳</button>
     </div>
   </div>
 
@@ -41,4 +41,9 @@
       [text]="card.text"
     ></app-card>
   </div>
+</div>
+
+<div #pay [hidden]="!showPay">
+  <div class="hr"></div>
+  <app-pay></app-pay>
 </div>
