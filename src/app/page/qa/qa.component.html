@@ -1,8 +1,10 @@
 <div class="content-bg"></div>
 <div class="limit padding f1">
   <div class="header">
-    <div class="mi">chevron_left</div>
-    <ul class="f1 flex">
+    <div class="mi" (click)="scroll(nav, 'left')">
+      chevron_left
+    </div>
+    <ul #nav class="f1 flex">
       <li class="f1" [routerLink]="['./buy-way']" routerLinkActive="active">
         購票方式
       </li>
@@ -34,7 +36,9 @@
         信用卡3D認證
       </li>
     </ul>
-    <div class="mi">chevron_right</div>
+    <div class="mi" (click)="scroll(nav, 'right')">
+      chevron_right
+    </div>
   </div>
 
   <div class="content f1">

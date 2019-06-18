@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this._router.events.subscribe((evt) => {
+      this.showMenu = false;
       let container = document.getElementById("container");
       container.scrollTop = 0;
     });

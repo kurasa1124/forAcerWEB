@@ -31,8 +31,8 @@
 
 ul {
   display: flex;
-  margin-left: -4vmin;
-  padding-left: 2vmin;
+  margin: 0 -4vmin;
+  padding: 0 2vmin;
   border-bottom: 1px solid $opacityBorder;
   @media screen and (max-width: 640px) {
     margin-right: -4vmin;

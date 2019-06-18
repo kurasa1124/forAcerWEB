@@ -1,12 +1,12 @@
 <table>
   <tr>
-    <td>
+    <!-- <td>
       <label>
         <span class="mi">search</span
         ><input type="text" placeholder="訂單編號" />
       </label>
-    </td>
-    <td>
+    </td> -->
+    <td style="width:100%;">
       <label>
         <span class="mi">event_note</span>
         <div class="muti-input">
@@ -32,11 +32,18 @@
         ></app-calendar>
       </label>
     </td>
+    <td>
+      <button class="range">近一個月</button>
+      <button class="range">近三個月</button>
+    </td>
+
     <td><button>搜尋</button></td>
   </tr>
 </table>
 
-<div class="hr"><span>搜尋結果</span></div>
+<p>若您若您查詢期間的訂單超過100筆，系統將無法完全顯示</p>
+
+<div class="hr"><span>最近五筆訂單</span></div>
 
 <app-order></app-order>
 <app-order type="seatInfo"></app-order>

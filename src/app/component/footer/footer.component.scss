@@ -43,6 +43,9 @@
         border-left: 1px solid #fff;
       }
     }
+    @media screen and (max-width: 480px) {
+      font-size: 3vw;
+    }
   }
 }
 
@@ -51,6 +54,9 @@
   line-height: 1.5em;
   color: #fff;
   padding: 1rem 0;
+  @media screen and (max-width: 480px) {
+    font-size: 3vw;
+  }
   .limit {
     display: flex;
     justify-content: space-between;
@@ -100,6 +106,7 @@
 }
 
 input {
+  color: #fff;
   width: 14rem;
   background: $second;
   line-height: 1.6rem;

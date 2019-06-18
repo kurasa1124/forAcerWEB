@@ -13,12 +13,20 @@ table {
 
 th,
 td {
+  min-width: 30%;
   height: 4rem;
   line-height: 1.5rem;
   padding: 5px;
   text-align: center;
+  &:first-child {
+    white-space: nowrap;
+  }
   &:last-child {
+    min-width: 3rem;
     text-align: center;
+  }
+  .mi {
+    font-size: 1rem;
   }
 }
 
@@ -44,6 +52,11 @@ td {
     .ss-show {
       margin-top: 5px;
     }
+  }
+  &.price {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: auto;
   }
   a {
     color: $darkGrey;
@@ -72,7 +85,6 @@ button {
     line-height: 1rem;
     display: block;
     font-size: 0.7rem;
-    white-space: nowrap;
     margin-top: 5px;
   }
   @media screen and (max-width: 640px) {
@@ -98,4 +110,11 @@ button {
 .tar {
   padding-right: 1rem;
   text-align: right !important;
+}
+
+.package {
+  th,
+  td {
+    width: 100%;
+  }
 }

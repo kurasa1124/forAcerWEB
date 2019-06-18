@@ -10,6 +10,9 @@
 h1 {
   font-weight: normal;
   margin: 3vmax 5px -5px 0;
+  @media screen and (max-width: 480px) {
+    font-size: 7vw;
+  }
 }
 
 span {

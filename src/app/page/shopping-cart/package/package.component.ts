@@ -10,11 +10,13 @@ import { Router } from '@angular/router';
 })
 export class PackageComponent implements OnInit {
   public noContinuous = true;
-  public selectTime = ["請選擇", "2018-08-26 18:30"];
-  public selectPrice = ["請選擇", 500, 1200];
-  public ticketLength = 1;
+  public times = ["請選擇", "2018-08-26 18:30"];
+  public prices = ["請選擇", 500, 1200];
+  public ticketLength = 0;
   public hasPlace = false;
   public changeSeat = false;
+  public selectTime = []
+  public selectPrice = [];
   public get ticketArray() {
     return Array(this.ticketLength - 1).fill('')
   }
@@ -27,10 +29,20 @@ export class PackageComponent implements OnInit {
     if (!this._token.isLogin) {
       this.lightBox.showLogIn = true;
       this.lightBox.showBlur = true;
-      this._router.navigate(['shopping-cart', 'pay'])
+      this._router.navigate(['shopping-cart', 'orders'])
       return
     }
-    this._router.navigate(['shopping-cart', 'pay'])
+    this._router.navigate(['shopping-cart', 'orders'])
+  }
+
+  public newRow(event) {
+    let td = event.target;
+    let row = td.parentElement.cloneNode(true) as HTMLElement;
+    let tr = td.parentElement;
+    tr.parentElement.append(row);
+    row.lastChild.addEventListener("click", () => {
+      this.newRow({ target: row.lastChild })
+    })
   }
 
 }

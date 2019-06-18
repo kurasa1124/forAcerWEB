@@ -4,6 +4,10 @@ h1 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+.subtitle {
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
 h4 {
   color: $grey;
   font-weight: normal;
@@ -11,9 +15,7 @@ h4 {
     margin-top: 0.5rem;
     margin-right: 0.7rem;
   }
-  .area {
-    color: $facebook;
-  }
+
   button {
     font-size: 0.8rem;
     color: #fff;
@@ -22,6 +24,7 @@ h4 {
     border-radius: 1.5rem;
     padding: 0 0.7rem;
     border: none;
+    margin-right: 2rem;
     &::before {
       border-radius: 1.5rem;
     }
@@ -36,6 +39,7 @@ button {
   border: none;
   padding: 0.5rem 2rem;
   margin-right: 0.5rem;
+  margin-top: 0.5rem;
   &.active {
     color: #fff;
     background: $main;
@@ -45,7 +49,10 @@ button {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 
   .checkbox {
     cursor: pointer;
@@ -64,6 +71,7 @@ button {
 
 .seats {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -92,9 +100,6 @@ button {
       &:hover,
       &.hover {
         background: $lightGrey;
-        td {
-          color: $darkGrey;
-        }
       }
     }
     td,
@@ -116,7 +121,6 @@ button {
     td {
       padding: 2px 5px;
       line-height: 1.5rem;
-      color: $grey;
     }
     .color {
       width: 0;
@@ -150,6 +154,11 @@ button {
         &:first-child {
           display: none;
         }
+        &::before {
+          content: attr(data-title);
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
       }
     }
   }
@@ -160,6 +169,23 @@ button {
   > .flex {
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  table,
+  tbody {
+    width: 100%;
+    margin-top: 1rem;
+    th,
+    td {
+      padding: 0.5rem;
+    }
+    th {
+      color: #fff;
+      background: $second;
+    }
+    td {
+      text-align: center;
+      border-bottom: 1px solid $lightGrey;
+    }
   }
 }
 .seat-icons {
@@ -193,6 +219,7 @@ label {
 
 .securiry {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   margin: 2rem 0;
@@ -218,4 +245,58 @@ label {
       color: $grey;
     }
   }
+}
+
+.discount {
+  background: $lightGrey;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.area {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: $facebook;
+}
+
+.miniMap {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1rem;
+  border: 1px solid $grey;
+  img {
+    width: 100%;
+  }
+}
+
+.ticket {
+  width: 100%;
+  flex-wrap: wrap;
+  button {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background: $lightGrey;
+
+    &.grey {
+      color: #000;
+      min-width: 200px;
+    }
+    &.green {
+      background: $green;
+    }
+    &.yellow {
+      background: $yellow;
+    }
+    &.red {
+      background: $red;
+    }
+    &.blue {
+      background: $facebook;
+    }
+  }
+}
+
+.detail {
+  align-items: flex-end;
 }

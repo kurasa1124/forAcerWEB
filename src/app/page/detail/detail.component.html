@@ -2,6 +2,7 @@
 
 <div class="head">
   <h1>{{ title }}</h1>
+  <h4>主辦：宏基資訊股份有限公司</h4>
   <div class="image" [style.backgroundImage]="'url(' + image + ')'"></div>
   <div class="order">
     <div class="limit">
@@ -9,25 +10,17 @@
       <h3 class="f1">{{ range }}</h3>
       <div class="buttons f1">
         <button
-          (click)="tableType = 'seats'"
-          [class.active]="tableType == 'seats'"
+          (click)="tableType = 'seat'"
+          [class.active]="tableType == 'seat'"
         >
           活動場次
         </button>
         <button
-          (click)="tableType = 'packages'"
-          [class.active]="tableType == 'packages'"
+          (click)="tableType = 'package'"
+          [class.active]="tableType == 'package'"
         >
           套票場次
         </button>
-        <!-- <button (click)="lightBox.showBlur = true; lightBox.showSeats = true">
-          活動場次
-        </button>
-        <button
-          (click)="lightBox.showBlur = true; lightBox.showPackages = true"
-        >
-          套票場次
-        </button> -->
       </div>
     </div>
   </div>

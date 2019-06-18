@@ -1,4 +1,7 @@
-<ul>
+<div class="mi" (click)="scroll(nav, 'left')">
+  chevron_left
+</div>
+<ul #nav class="f1">
   <li
     class="f1"
     *ngFor="let item of menu; index as idx"
@@ -8,3 +11,6 @@
     {{ item }}
   </li>
 </ul>
+<div class="mi" (click)="scroll(nav, 'right')">
+  chevron_right
+</div>

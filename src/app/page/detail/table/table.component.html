@@ -1,5 +1,5 @@
 <div class="table">
-  <table cellpadding="0" cellspacing="0" *ngIf="type == 'seats'">
+  <table cellpadding="0" cellspacing="0" *ngIf="type == 'seat'">
     <tr>
       <th><span>時間</span><span class="ss-show">地點</span></th>
       <th class="ss-hide">地點</th>
@@ -10,76 +10,129 @@
     <tr>
       <td>
         <span>2018-01-12 (二) 19:30</span
-        ><span class="ss-show">台中國家歌劇院中劇院</span>
+        ><span class="ss-show"
+          ><div class="mi">location_on</div>
+          台中國家歌劇院中劇院</span
+        >
       </td>
-      <td class="ss-hide">台中國家歌劇院中劇院</td>
+      <td class="ss-hide">
+        <div class="mi">location_on</div>
+        台中國家歌劇院中劇院
+      </td>
       <td>
         <span>幾米音樂劇(時光電影院)</span>
-        <span class="ss-show"><a>1000</a> <a>2000</a> <a>3000</a></span>
+        <span class="ss-show"
+          ><a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+          ><a>1000</a> <a>2000</a> <a>3000</a></span
+        >
       </td>
-      <td class="ss-hide"><a>1000</a> <a>2000</a> <a>3000</a></td>
+      <td class="ss-hide price">
+        <a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+        ><a>1000</a> <a>2000</a> <a>3000</a>
+      </td>
       <td><button (click)="gotoCart()">購買</button></td>
     </tr>
     <tr>
       <td>
         <span>2018-01-12 (二) 19:30</span
-        ><span class="ss-show">台中國家歌劇院中劇院</span>
+        ><span class="ss-show"
+          ><div class="mi">location_on</div>
+          台中國家歌劇院中劇院</span
+        >
       </td>
-      <td class="ss-hide">台中國家歌劇院中劇院</td>
+      <td class="ss-hide">
+        <div class="mi">location_on</div>
+        台中國家歌劇院中劇院
+      </td>
       <td>
         <span>幾米音樂劇(時光電影院)</span>
-        <span class="ss-show"><a>1000</a> <a>2000</a> <a>3000</a></span>
+        <span class="ss-show"
+          ><a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+          ><a>1000</a> <a>2000</a> <a>3000</a></span
+        >
       </td>
-      <td class="ss-hide"><a>1000</a> <a>2000</a> <a>3000</a></td>
+      <td class="ss-hide price">
+        <a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+        ><a>1000</a> <a>2000</a> <a>3000</a>
+      </td>
       <td><button [disabled]="true">已完售</button></td>
     </tr>
     <tr>
       <td>
         <span>2018-01-12 (二) 19:30</span
-        ><span class="ss-show">台中國家歌劇院中劇院</span>
+        ><span class="ss-show"
+          ><div class="mi">location_on</div>
+          台中國家歌劇院中劇院</span
+        >
       </td>
-      <td class="ss-hide">台中國家歌劇院中劇院</td>
+      <td class="ss-hide">
+        <div class="mi">location_on</div>
+        台中國家歌劇院中劇院
+      </td>
       <td>
         <span>幾米音樂劇(時光電影院)</span>
-        <span class="ss-show"><a>1000</a> <a>2000</a> <a>3000</a></span>
+        <span class="ss-show"
+          ><a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+          ><a>1000</a> <a>2000</a> <a>3000</a></span
+        >
       </td>
-      <td class="ss-hide"><a>1000</a> <a>2000</a> <a>3000</a></td>
+      <td class="ss-hide price">
+        <a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+        ><a>1000</a> <a>2000</a> <a>3000</a>
+      </td>
       <td><button [disabled]="true">暫停銷售</button></td>
     </tr>
     <tr>
       <td>
         <span>2018-01-12 (二) 19:30</span
-        ><span class="ss-show">台中國家歌劇院中劇院</span>
+        ><span class="ss-show"
+          ><div class="mi">location_on</div>
+          台中國家歌劇院中劇院</span
+        >
       </td>
-      <td class="ss-hide">台中國家歌劇院中劇院</td>
+      <td class="ss-hide">
+        <div class="mi">location_on</div>
+        台中國家歌劇院中劇院
+      </td>
       <td>
         <span>幾米音樂劇(時光電影院)</span>
-        <span class="ss-show"><a>1000</a> <a>2000</a> <a>3000</a></span>
+        <span class="ss-show"
+          ><a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+          ><a>1000</a> <a>2000</a> <a>3000</a></span
+        >
       </td>
-      <td class="ss-hide"><a>1000</a> <a>2000</a> <a>3000</a></td>
+      <td class="ss-hide price">
+        <a>1000</a> <a>2000</a> <a>3000</a><a>1000</a> <a>2000</a> <a>3000</a
+        ><a>1000</a> <a>2000</a> <a>3000</a>
+      </td>
       <td>
         <button [disabled]="true">尚未啟售</button
-        ><span class="ss-hide">2019/12/31 12:00 起售</span>
+        ><span>2019/12/31 12:00 起售</span>
       </td>
     </tr>
   </table>
 
-  <table cellpadding="0" cellspacing="0" *ngIf="type == 'packages'">
+  <table
+    cellpadding="0"
+    cellspacing="0"
+    *ngIf="type == 'package'"
+    class="package"
+  >
     <tr>
       <th class="tal">套票名稱</th>
-      <th class="tar">購票</th>
+      <th>購票</th>
     </tr>
     <tr>
       <td class="tal">時光劇場雙人套票9折</td>
-      <td class="tar"><button (click)="gotoCart()">購票</button></td>
+      <td><button (click)="gotoCart()">購票</button></td>
     </tr>
     <tr>
       <td class="tal">時光劇場任選2場以上8折</td>
-      <td class="tar"><button (click)="gotoCart()">購票</button></td>
+      <td><button (click)="gotoCart()">購票</button></td>
     </tr>
     <tr>
       <td class="tal">時光劇場學生三人成行9折</td>
-      <td class="tar"><button (click)="gotoCart()">購票</button></td>
+      <td><button (click)="gotoCart()">購票</button></td>
     </tr>
   </table>
 </div>

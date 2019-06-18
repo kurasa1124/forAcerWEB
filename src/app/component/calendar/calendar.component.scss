@@ -19,11 +19,8 @@
   overflow: hidden;
   position: absolute;
   top: -35px;
-  left: 50%;
+  left: $square / 2;
   transform: translateX(-50%) scaleX(0.6);
-  @media screen and (max-width: 960px) {
-    left: $square / 2;
-  }
   &::before {
     content: "";
     display: block;

@@ -1,10 +1,47 @@
 <h3>訂單編號：{{ order.id }}</h3>
-<p>
-  <span>狀態：{{ order.status }}</span>
-  <span>付款方式：{{ order.payMode }}</span>
-  <span class="f1">繳款期限：{{ order.payLastTime }}</span>
-  <span>購買時間：{{ order.buyTime }}</span>
-</p>
-<app-no-seat *ngIf="type == 'noSeat'"></app-no-seat>
+<div class="flex">
+  <p>
+    <span>訂購時間：{{ order.buyTime }}</span>
+    <span>訂單狀態：{{ order.status }}</span>
+    <span>付款方式：{{ order.payMode }}</span>
+    <span>取票方式：國內郵寄</span>
+    <span>取票號：123454567890</span>
+  </p>
+  <p>
+    <span>繳款期限：{{ order.payLastTime }}</span>
+    <span>應繳總額：4200+500=4250</span>
+    <span>郵寄掛號單號：<a href="">郵局</a></span>
+    <span>郵寄地址：新北市新台五路一段88號</span>
+  </p>
+  <p class="btns f1">
+    <button class="pay">立即付款</button>
+    <br />
+    <button>購票證明</button>
+    <button>發票明細</button>
+    <button>退票申請</button>
+  </p>
+</div>
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <th>序號</th>
+    <th>演出名稱</th>
+    <th>演出時間</th>
+    <th>表演場地</th>
+    <th>售價</th>
+    <th>座位</th>
+    <th>票券狀態</th>
+  </tr>
+  <tr>
+    <td data-title="序號">1</td>
+    <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+    <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+    <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+    <td data-title="售價">600</td>
+    <td data-title="座位">自由座</td>
+    <td data-title="票券狀態" class="green">有效票</td>
+  </tr>
+</table>
+
+<!-- <app-no-seat *ngIf="type == 'noSeat'"></app-no-seat>
 <app-seat-info *ngIf="type == 'seatInfo'"></app-seat-info>
-<package-ticket *ngIf="type == 'package'"></package-ticket>
+<package-ticket *ngIf="type == 'package'"></package-ticket> -->

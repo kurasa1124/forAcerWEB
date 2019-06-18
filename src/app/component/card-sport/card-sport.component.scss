@@ -25,7 +25,7 @@
 }
 
 .logo {
-  width: 50%;
+  width: 45%;
   display: flex;
   align-items: center;
   margin-right: 0.5rem;
@@ -44,12 +44,13 @@
 }
 
 .title {
+  line-height: 1.5;
   color: $darkGrey;
   margin-bottom: 0.5rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   overflow: hidden;
+  > * {
+    vertical-align: middle;
+  }
   /* autoprefixer: off */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -57,10 +58,16 @@
   /* autoprefixer: on */
   .mi {
     font-size: 1.5rem;
+    @media screen and (max-width: 480px) {
+      font-size: 6vw;
+    }
   }
   span {
     font-size: 1.2rem;
     margin: 0 0.5rem;
+    @media screen and (max-width: 480px) {
+      font-size: 5vw;
+    }
   }
 }
 
@@ -68,4 +75,21 @@
   color: $grey;
   font-size: 1rem;
   margin: 0 0.5rem;
+  @media screen and (max-width: 480px) {
+    font-size: 3vw;
+  }
+}
+
+.body {
+  color: $grey;
+  font-size: 0.9rem;
+  margin: 1rem 0.5rem;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: on */
+  @media screen and (max-width: 480px) {
+    font-size: 3vw;
+  }
 }

@@ -8,7 +8,7 @@ import { LightBoxService } from '../../../service/lightBox.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  @Input() type = "seats";
+  @Input() type = "seat";
   constructor(private _router: Router, private _lightbox: LightBoxService) { }
 
   ngOnInit() {
@@ -17,7 +17,7 @@ export class TableComponent implements OnInit {
   public gotoCart() {
     this._lightbox.showBlur = false;
     this._lightbox.showSeats = false;
-    this._router.navigate(['shopping-cart', 'seat']);
+    this._router.navigate(['shopping-cart', this.type]);
   }
 
 }

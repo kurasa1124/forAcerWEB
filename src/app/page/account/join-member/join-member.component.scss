@@ -182,7 +182,7 @@ ng2-password-strength-bar {
     padding: 1rem;
     line-height: 1.5rem;
     max-height: 100px;
-    overflow: hidden;
+    overflow: auto;
   }
 }
 
@@ -192,6 +192,7 @@ ng2-password-strength-bar {
   align-items: center;
   font-size: 0.8rem;
   padding-top: 0.5rem;
+  text-align-last: left;
   .mi {
     font-size: 1.5rem;
     margin-right: 0.5rem;

@@ -1,22 +1,14 @@
 <h1>
   幾米音樂劇《時光電影院》
 </h1>
-<h4>
-  臺中國家歌劇院大劇院 <span class="time">2018-01-20 19:30</span>
-  <button
-    (click)="
-      lightBox.showBlur = !seatMap;
-      lightBox.showSeats = !seatMap;
-      seatMap = false
-    "
-  >
-    {{ seatMap ? "更換票區" : "更換場次" }}
-  </button>
-  <span class="area" *ngIf="seatMap">B1平面特區5800元</span>
-</h4>
-
-<div *ngIf="!seatMap">
-  <div class="choice">
+<div class="flex subtitle">
+  <h4>
+    臺中國家歌劇院大劇院 <span class="time">2018-01-20 19:30</span>
+    <button (click)="lightBox.showBlur = true; lightBox.showSeats = true">
+      更換場次
+    </button>
+  </h4>
+  <div class="choice" *ngIf="!seatMap">
     <button [class.active]="computerChoice" (click)="computerChoice = true">
       電腦選位
     </button>
@@ -34,7 +26,10 @@
       電腦配未接受不連號
     </div>
   </div>
-  <div class="seats" (click)="next()" [style.height]="imageHeight + 80 + 'px'">
+</div>
+
+<div *ngIf="!seatMap">
+  <div class="seats" (click)="next()" [style.height]="imageHeight + 100 + 'px'">
     <div class="table">
       <table cellpadding="0" cellspacing="0" class="f1">
         <tr class="head">
@@ -52,9 +47,9 @@
           [style.borderColor]="seat.color"
         >
           <td class="color" [style.background]="seat.color"></td>
-          <td>{{ seat.title }}</td>
-          <td>{{ seat.price }}</td>
-          <td>{{ seat.num || "售完" }}</td>
+          <td data-title="票區：">{{ seat.title }}</td>
+          <td data-title="NT$">{{ seat.price }}</td>
+          <td data-title="空位">{{ seat.num || "售完" }}</td>
         </tr>
       </table>
     </div>
@@ -70,11 +65,51 @@
   </div>
 </div>
 
-<div class="seatMap" *ngIf="seatMap">
-  <div class="flex">
+<div class="seatMap" *ngIf="seatMap && computerChoice">
+  <div class="flex detail">
     <h2>
-      請勾選你要的座位
+      請輸入要購買的張數<br />
+      <br />
+      <span class="area">B1平面特區5800元</span>
     </h2>
+    剩餘張數：48
+  </div>
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <th>內容</th>
+      <th>原價</th>
+      <th>購買數量</th>
+    </tr>
+    <tr>
+      <td>原價</td>
+      <td>5800</td>
+      <td><input type="number" /></td>
+    </tr>
+  </table>
+
+  <div class="securiry">
+    <div class="mi reload" (click)="reload()">cached</div>
+    <img [src]="imgDataURL" alt="" (click)="reload()" />
+    <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue" />
+    <button
+      [class.active]="verificationValue.toLocaleLowerCase() == code"
+      (click)="addToCart()"
+      [disabled]="verificationValue.toLocaleLowerCase() != code"
+    >
+      加入購物車
+    </button>
+  </div>
+</div>
+
+<div class="seatMap" *ngIf="seatMap && !computerChoice">
+  <div class="discount">折扣訊息欄位</div>
+  <div class="flex detail">
+    <h2>
+      請勾選你要的座位<br />
+      <br />
+      <span class="area">B1平面特區5800元</span>
+    </h2>
+
     <div class="seat-icons flex">
       <span class="flex"> <img src="assets/seat-empty.svg" alt="" /> 空位</span>
       <span class="flex"
@@ -87,9 +122,23 @@
         ><img src="assets/seat-people.svg" alt="" /> 已售出</span
       >
     </div>
+
+    <div class="ticket flex">
+      <button class="f1 grey">座位資訊</button>
+      <button class="f1 green">全票</button>
+      <button class="f1 yellow">學生票</button>
+      <button class="f1 red">兒童票</button>
+      <button class="f1 blue">敬老票</button>
+    </div>
   </div>
+  <div class="flex"></div>
   <div class="seat-content">
-    <app-seat-content></app-seat-content>
+    <div class="flex">
+      <app-seat-content></app-seat-content>
+      <div class="miniMap">
+        <img src="assets/seat-mini.png" alt="" />
+      </div>
+    </div>
     <div class="securiry">
       <div class="mi reload" (click)="reload()">cached</div>
       <img [src]="imgDataURL" alt="" (click)="reload()" />

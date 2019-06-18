@@ -13,7 +13,7 @@ import { LightBoxService } from '../../service/lightBox.service';
 export class DetailComponent implements OnDestroy {
   private _destroy$ = new Subject();
   public showSeat = true;
-  public tableType = "seats";
+  public tableType = "seat";
   public title: string = "標題";
   public range: string = moment().format("YYYY/MM/DD");
   public image: string = "https://image.freepik.com/free-vector/mother-s-day-card-with-elegant-flowers_1361-1320.jpg";
@@ -36,7 +36,7 @@ export class DetailComponent implements OnDestroy {
   }
 
   public seeMore() {
-    if (this.tableType == 'seats') {
+    if (this.tableType == 'seat') {
       this.lightBox.showBlur = true; this.lightBox.showSeats = true;
       return
     }

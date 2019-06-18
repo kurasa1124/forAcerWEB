@@ -1,8 +1,8 @@
 <div class="content-bg"></div>
 <div class="limit padding f1">
   <div class="header">
-    <div class="mi">chevron_left</div>
-    <ul class="f1 flex">
+    <div class="mi" (click)="scroll(nav, 'left')">chevron_left</div>
+    <ul #nav class="f1 flex">
       <li class="f1" [routerLink]="['./buy']" routerLinkActive="active">
         購票須知
       </li>
@@ -22,7 +22,7 @@
         如何確認訂票
       </li>
     </ul>
-    <div class="mi">chevron_right</div>
+    <div class="mi" (click)="scroll(nav, 'right')">chevron_right</div>
   </div>
 
   <div class="content f1">
