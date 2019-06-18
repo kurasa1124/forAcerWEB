@@ -4679,7 +4679,7 @@ var WeekPickerComponent = /** @class */ (function () {
         var select = moment__WEBPACK_IMPORTED_MODULE_2__(date, "YYYY-MM-DD");
         this.selectDate = select;
         for (var i = -3; i <= 3; i++) {
-            this.dates.push(moment__WEBPACK_IMPORTED_MODULE_2__(select).add(i * -1, "day"));
+            this.dates.push(moment__WEBPACK_IMPORTED_MODULE_2__(select).add(i, "day"));
         }
     };
     WeekPickerComponent.prototype.changeDate = function (date) {
