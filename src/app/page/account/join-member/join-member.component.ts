@@ -14,10 +14,13 @@ export class JoinMemberComponent {
   public country = ['本國', '外國'];
   public rightEmail = false;
   public showCalendar: boolean = false;
-  public birthDay: moment.Moment;
+  public birthDay = { year: new Date().getFullYear(), month: new Date().getMonth() + 1, date: new Date().getDate() }
   public checkRead = false;
   public orderRss = false;
   public password = "";
+  public years = new Array(new Date().getFullYear()).fill(0).map((e, i) => i + 1).filter(v => v > 1910).sort((a, b) => -1);
+  public months = new Array(12).fill(0).map((e, i) => i + 1);
+  public dates = new Array(moment(this.birthDay.month, "M").daysInMonth()).fill(0).map((e, i) => i + 1);
 
   constructor(public token: TokenService, private _router: Router) { }
 
@@ -29,10 +32,6 @@ export class JoinMemberComponent {
     } else {
       this.rightEmail = false
     }
-  }
-
-  public birthDayChange(event) {
-    this.birthDay = moment(event);
   }
 
   public joinMember() {

@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SelectorComponent implements OnInit {
   @Input() optionals: string[] = ['請選擇'];
   @Input() default: string;
+  @Input() showIcon = true;
   @Output() select = new EventEmitter();
   public active: string;
   public showOptionals = false;

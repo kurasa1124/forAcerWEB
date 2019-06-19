@@ -4,7 +4,7 @@
   (mouseleave)="showOptionals = false"
 >
   {{ active || optionals[0] }}
-  <span class="mi">keyboard_arrow_down</span>
+  <span class="mi" *ngIf="showIcon">keyboard_arrow_down</span>
   <ul *ngIf="showOptionals">
     <li
       *ngFor="let optional of optionals"

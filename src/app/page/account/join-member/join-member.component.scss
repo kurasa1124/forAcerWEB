@@ -115,6 +115,10 @@ app-selector {
       text-align: left;
     }
   }
+  app-selector {
+    margin-right: 1rem;
+    width: 5rem;
+  }
 }
 
 .green {
@@ -205,5 +209,23 @@ ng2-password-strength-bar {
     width: 10rem;
     margin: 1rem;
     margin-bottom: 0;
+  }
+}
+
+.birthday {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  border-left: 1px solid $grey;
+  app-selector {
+    border: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  @media screen and (max-width: 480px) {
+    padding-left: 0;
   }
 }

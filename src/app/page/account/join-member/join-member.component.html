@@ -63,20 +63,34 @@
       ></label>
     </td>
     <td>
-      <label
-        ><span class="mi">cake</span>
-        <div class="muti-input" (click)="showCalendar = !showCalendar">
-          出生於<span>{{ birthDay ? birthDay.format("YYYY") : "-" }}</span
-          >年<span>{{ birthDay ? birthDay.format("MM") : "-" }}</span
-          >月<span>{{ birthDay ? birthDay.format("DD") : "-" }}</span
-          >日
+      <label>
+        <span class="mi">cake</span>
+        <div class="birthday">
+          <a class="xs-hide">出生於</a>
+          <app-selector
+            [showIcon]="false"
+            [default]="birthDay.year"
+            [optionals]="years"
+            (select)="birthDay.year = $event"
+          ></app-selector>
+          <a class="xs-hide">年</a>
+          <a class="xs-show">/</a>
+          <app-selector
+            [showIcon]="false"
+            [default]="birthDay.month"
+            [optionals]="months"
+            (select)="birthDay.month = $event"
+          ></app-selector>
+          <a class="xs-hide">月</a>
+          <a class="xs-show">/</a>
+          <app-selector
+            [showIcon]="false"
+            [default]="birthDay.date"
+            [optionals]="dates"
+            (select)="birthDay.date = $event"
+          ></app-selector>
+          <a class="xs-hide">日</a>
         </div>
-        <app-calendar
-          class="calendar"
-          (select)="birthDayChange($event)"
-          (mouseleave)="showCalendar = false"
-          *ngIf="showCalendar"
-        ></app-calendar>
       </label>
     </td>
   </tr>
@@ -106,7 +120,7 @@
     <td colspan="2">
       <label>
         <span class="mi">location_city</span>
-        <div class="muti-input">
+        <div class="muti-input birthday">
           <input type="tel" placeholder="郵遞區號" />
           <span>-</span>
           <input class="addr" type="text" placeholder="地址" />
