@@ -1,10 +1,20 @@
 <div class="content-bg"></div>
 <div class="limit padding f1">
   <div class="header">
-    <div class="mi" (click)="scroll(nav, 'left')">
+    <div
+      class="mi"
+      (click)="scroll(nav, 'left')"
+      *ngIf="nav.scrollLeft > 0"
+      (blur)="(nav)"
+    >
       chevron_left
     </div>
-    <ul #nav class="f1 flex">
+    <ul
+      #nav
+      class="f1 flex"
+      (scroll)="nav.scrollLeft = nav.scrollLeft"
+      (window:resize)="nav.scrollLeft = nav.scrollLeft"
+    >
       <li class="f1" [routerLink]="['./buy-way']" routerLinkActive="active">
         購票方式
       </li>
@@ -36,7 +46,12 @@
         信用卡3D認證
       </li>
     </ul>
-    <div class="mi" (click)="scroll(nav, 'right')">
+    <div
+      class="mi"
+      (click)="scroll(nav, 'right')"
+      *ngIf="nav.scrollLeft < nav.scrollWidth - nav.clientWidth"
+      (blur)="(nav)"
+    >
       chevron_right
     </div>
   </div>

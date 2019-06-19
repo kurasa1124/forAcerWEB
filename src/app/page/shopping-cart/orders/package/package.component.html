@@ -28,7 +28,11 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
         </td>
-        <td><button class="changeSeat">換位</button></td>
+        <td>
+          <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
+            換位
+          </button>
+        </td>
         <td data-title="定價：">2000</td>
         <td data-title="售價：">1600</td>
       </tr>
@@ -42,7 +46,11 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
         </td>
-        <td><button class="changeSeat">換位</button></td>
+        <td>
+          <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
+            換位
+          </button>
+        </td>
         <td data-title="定價：">2000</td>
         <td data-title="售價：">1600</td>
       </tr>
@@ -56,7 +64,15 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
         </td>
-        <td><button class="changeSeat">換位</button></td>
+        <td>
+          <button
+            class="changeSeat"
+            [routerLink]="['/shopping-cart', 'seat']"
+            [queryParams]="{ seatMap: true }"
+          >
+            換位
+          </button>
+        </td>
         <td data-title="定價：">2000</td>
         <td data-title="售價：">1600</td>
       </tr>

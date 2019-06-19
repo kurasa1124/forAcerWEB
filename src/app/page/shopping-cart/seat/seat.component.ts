@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { LightBoxService } from '../../../service/lightBox.service';
 import verification from 'verification-code';
 import { TokenService } from '../../../service/token.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-seat',
   templateUrl: './seat.component.html',
   styleUrls: ['./seat.component.scss']
 })
 export class SeatComponent implements OnInit {
+  private _destroy = new Subject()
   public imageHeight: 0;
   public computerChoice = true;
   public noContinuous = true;
@@ -19,10 +22,17 @@ export class SeatComponent implements OnInit {
   public verificationValue: string = "";
   public code = this._result.code;
   public imgDataURL = this._result.dataURL;
-  constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router) { }
+  constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router, private _active: ActivatedRoute) {
+    this._active.queryParams.pipe(takeUntil(this._destroy)).subscribe(param => {
+      if (!param.seatMap) return;
+      this.seatMap = true;
+      this.computerChoice = false;
+    })
+  }
 
   ngOnInit() {
-
+    this._destroy.next();
+    this._destroy.complete();
   }
 
   public setTable(colors) {
