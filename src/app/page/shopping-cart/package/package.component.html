@@ -287,10 +287,10 @@
 </table> -->
 <div class="flex addCart">
   <div class="login">
-    <label
+    <label *ngIf="!token.isLogin"
       ><span class="mi">person</span><input type="text" placeholder="帳號"
     /></label>
-    <label
+    <label *ngIf="!token.isLogin"
       ><span class="mi">lock</span><input type="password" placeholder="密碼"
     /></label>
     <div class="securiry">
@@ -306,9 +306,8 @@
   <button
     [class.active]="verificationValue.toLocaleLowerCase() == code"
     (click)="addToCart()"
-    [disabled]="verificationValue.toLocaleLowerCase() != code"
   >
-    加入購物車
+    {{ token.isLogin ? "" : "登入並" }}加入購物車
   </button>
   <!-- <div class="btns">
     <button class="cancel" (click)="hasPlace = false">重選場次</button

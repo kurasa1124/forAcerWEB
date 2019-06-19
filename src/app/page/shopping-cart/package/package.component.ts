@@ -25,7 +25,7 @@ export class PackageComponent implements OnInit {
   public get ticketArray() {
     return Array(this.ticketLength - 1).fill('')
   }
-  constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router) { }
+  constructor(public lightBox: LightBoxService, public token: TokenService, private _router: Router) { }
 
   ngOnInit() {
   }
@@ -37,6 +37,10 @@ export class PackageComponent implements OnInit {
     //   this._router.navigate(['shopping-cart', 'orders'])
     //   return
     // }
+    if (this.verificationValue.toLocaleLowerCase() != this.code) {
+      alert("請輸入正確的驗證碼");
+      return
+    }
     this._router.navigate(['shopping-cart', 'orders'])
   }
   public reload() {

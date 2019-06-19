@@ -22,7 +22,7 @@ export class SeatComponent implements OnInit {
   public verificationValue: string = "";
   public code = this._result.code;
   public imgDataURL = this._result.dataURL;
-  constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router, private _active: ActivatedRoute) {
+  constructor(public lightBox: LightBoxService, private _token: TokenService, private _router: Router, private _active: ActivatedRoute, public token: TokenService) {
     this._active.queryParams.pipe(takeUntil(this._destroy)).subscribe(param => {
       if (!param.seatMap) return;
       this.seatMap = true;
@@ -86,6 +86,10 @@ export class SeatComponent implements OnInit {
     //   this._router.navigate(['shopping-cart', 'orders'])
     //   return
     // }
+    if (this.verificationValue.toLocaleLowerCase() != this.code) {
+      alert("請輸入正確的驗證碼");
+      return
+    }
     this._router.navigate(['shopping-cart', 'orders'])
   }
 
