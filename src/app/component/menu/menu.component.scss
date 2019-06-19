@@ -13,9 +13,6 @@
   z-index: 10;
   width: 320px;
   box-shadow: 0 0 5px rgba(black, 0.5);
-  @media screen and (max-width: 480px) {
-    font-size: 6vw;
-  }
 }
 
 .menu {
