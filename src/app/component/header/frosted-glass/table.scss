@@ -56,12 +56,12 @@ td {
   &:first-child {
     white-space: nowrap;
   }
-  &.price {
-    min-width: 3rem;
-    max-width: 150px;
-    white-space: nowrap;
-    overflow: auto;
-  }
+  // &.price {
+  //   min-width: 3rem;
+  //   max-width: 150px;
+  //   white-space: nowrap;
+  //   overflow: auto;
+  // }
   @media screen and (max-width: 640px) {
     font-size: 0.8rem;
     line-height: 1.2rem;
