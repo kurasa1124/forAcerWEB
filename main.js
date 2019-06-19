@@ -6032,7 +6032,7 @@ var OrdersComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\">\n  <h4 class=\"title\">熱舞套票</h4>\n  <p>\n    <span>2套</span>\n  </p>\n  <div\n    class=\"more\"\n    [class.active]=\"showDetail\"\n    (click)=\"showDetail = !showDetail\"\n  ></div>\n  <div [@slideIn] class=\"overflow\" *ngIf=\"showDetail\">\n    <table cellpadding=\"0\" cellspacing=\"0\">\n      <tr>\n        <th>節目名稱</th>\n        <th>場次時間與地點</th>\n        <th>座位資訊</th>\n        <th></th>\n        <th>定價</th>\n        <th>售價</th>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA－呂紹嘉與NSO《馬勒第七》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td><button class=\"changeSeat\">換位</button></td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA 克莉絲朵．派特X強納森．楊《愛與痛的練習曲》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td><button class=\"changeSeat\">換位</button></td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA 碧娜．鮑許烏帕塔舞蹈劇場《康乃馨》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td><button class=\"changeSeat\">換位</button></td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n    </table>\n  </div>\n\n  <p [@slideIn] *ngIf=\"showDetail\">\n    <span>原價：6000</span>\n    <span class=\"red\">折價：-1200 </span>\n    <span class=\"red\">促銷代碼：0 </span>\n  </p>\n\n  <h4>總計: $ 4,800</h4>\n</div>\n"
+module.exports = "<div class=\"card\">\n  <h4 class=\"title\">熱舞套票</h4>\n  <p>\n    <span>2套</span>\n  </p>\n  <div\n    class=\"more\"\n    [class.active]=\"showDetail\"\n    (click)=\"showDetail = !showDetail\"\n  ></div>\n  <div [@slideIn] class=\"overflow\" *ngIf=\"showDetail\">\n    <table cellpadding=\"0\" cellspacing=\"0\">\n      <tr>\n        <th>節目名稱</th>\n        <th>場次時間與地點</th>\n        <th>座位資訊</th>\n        <th></th>\n        <th>定價</th>\n        <th>售價</th>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA－呂紹嘉與NSO《馬勒第七》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td>\n          <button class=\"changeSeat\" [routerLink]=\"['/shopping-cart', 'seat']\">\n            換位\n          </button>\n        </td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA 克莉絲朵．派特X強納森．楊《愛與痛的練習曲》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td>\n          <button class=\"changeSeat\" [routerLink]=\"['/shopping-cart', 'seat']\">\n            換位\n          </button>\n        </td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n      <tr>\n        <td class=\"pos\" data-title=\"節目名稱：\">\n          2018TIFA 碧娜．鮑許烏帕塔舞蹈劇場《康乃馨》\n        </td>\n        <td data-title=\"場次時間與地點：\">\n          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00\n        </td>\n        <td class=\"nowrap\" data-title=\"座位資訊：\">\n          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號\n        </td>\n        <td>\n          <button\n            class=\"changeSeat\"\n            [routerLink]=\"['/shopping-cart', 'seat']\"\n            [queryParams]=\"{ seatMap: true }\"\n          >\n            換位\n          </button>\n        </td>\n        <td data-title=\"定價：\">2000</td>\n        <td data-title=\"售價：\">1600</td>\n      </tr>\n    </table>\n  </div>\n\n  <p [@slideIn] *ngIf=\"showDetail\">\n    <span>原價：6000</span>\n    <span class=\"red\">折價：-1200 </span>\n    <span class=\"red\">促銷代碼：0 </span>\n  </p>\n\n  <h4>總計: $ 4,800</h4>\n</div>\n"
 
 /***/ }),
 
@@ -6457,6 +6457,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var verification_code__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(verification_code__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _service_token_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../service/token.service */ "./src/app/service/token.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
 
 
 
@@ -6464,10 +6468,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SeatComponent = /** @class */ (function () {
-    function SeatComponent(lightBox, _token, _router) {
+    function SeatComponent(lightBox, _token, _router, _active) {
+        var _this = this;
         this.lightBox = lightBox;
         this._token = _token;
         this._router = _router;
+        this._active = _active;
+        this._destroy = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
         this.computerChoice = true;
         this.noContinuous = true;
         this.seatMap = false;
@@ -6475,8 +6482,16 @@ var SeatComponent = /** @class */ (function () {
         this.verificationValue = "";
         this.code = this._result.code;
         this.imgDataURL = this._result.dataURL;
+        this._active.queryParams.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(this._destroy)).subscribe(function (param) {
+            if (!param.seatMap)
+                return;
+            _this.seatMap = true;
+            _this.computerChoice = false;
+        });
     }
     SeatComponent.prototype.ngOnInit = function () {
+        this._destroy.next();
+        this._destroy.complete();
     };
     SeatComponent.prototype.setTable = function (colors) {
         var areas = document.querySelectorAll("area");
@@ -6535,7 +6550,7 @@ var SeatComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./seat.component.html */ "./src/app/page/shopping-cart/seat/seat.component.html"),
             styles: [__webpack_require__(/*! ./seat.component.scss */ "./src/app/page/shopping-cart/seat/seat.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_lightBox_service__WEBPACK_IMPORTED_MODULE_2__["LightBoxService"], _service_token_service__WEBPACK_IMPORTED_MODULE_4__["TokenService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_lightBox_service__WEBPACK_IMPORTED_MODULE_2__["LightBoxService"], _service_token_service__WEBPACK_IMPORTED_MODULE_4__["TokenService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])
     ], SeatComponent);
     return SeatComponent;
 }());
