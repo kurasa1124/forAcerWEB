@@ -3394,7 +3394,7 @@ var DetailModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mi\" (click)=\"scroll(nav, 'left')\">\n  chevron_left\n</div>\n<ul #nav class=\"f1\">\n  <li\n    class=\"f1\"\n    *ngFor=\"let item of menu; index as idx\"\n    (click)=\"active = idx\"\n    [class.active]=\"active == idx\"\n  >\n    {{ item }}\n  </li>\n</ul>\n<div class=\"mi\" (click)=\"scroll(nav, 'right')\">\n  chevron_right\n</div>\n"
+module.exports = "<div class=\"mi\" (click)=\"scroll(nav, 'left')\" *ngIf=\"nav.scrollLeft > 0\">\n  chevron_left\n</div>\n<ul\n  #nav\n  class=\"f1\"\n  (scroll)=\"nav.scrollLeft = nav.scrollLeft\"\n  (window:resize)=\"nav.scrollLeft = nav.scrollLeft\"\n>\n  <li\n    class=\"f1\"\n    *ngFor=\"let item of menu; index as idx\"\n    (click)=\"active = idx\"\n    [class.active]=\"active == idx\"\n  >\n    {{ item }}\n  </li>\n</ul>\n<div\n  class=\"mi\"\n  (click)=\"scroll(nav, 'right')\"\n  *ngIf=\"nav.scrollLeft < nav.scrollWidth - nav.clientWidth\"\n>\n  chevron_right\n</div>\n"
 
 /***/ }),
 
