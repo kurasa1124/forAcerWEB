@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LightBoxService } from '../../../service/lightBox.service';
 import { TokenService } from '../../../service/token.service';
 import { Router } from '@angular/router';
+import verification from 'verification-code';
 
 @Component({
   selector: 'app-package',
@@ -17,6 +18,10 @@ export class PackageComponent implements OnInit {
   public changeSeat = false;
   public selectTime = []
   public selectPrice = [];
+  private _result = verification.create();
+  public verificationValue: string = "";
+  public code = this._result.code;
+  public imgDataURL = this._result.dataURL;
   public get ticketArray() {
     return Array(this.ticketLength - 1).fill('')
   }
@@ -26,13 +31,18 @@ export class PackageComponent implements OnInit {
   }
 
   public addToCart() {
-    if (!this._token.isLogin) {
-      this.lightBox.showLogIn = true;
-      this.lightBox.showBlur = true;
-      this._router.navigate(['shopping-cart', 'orders'])
-      return
-    }
+    // if (!this._token.isLogin) {
+    //   this.lightBox.showLogIn = true;
+    //   this.lightBox.showBlur = true;
+    //   this._router.navigate(['shopping-cart', 'orders'])
+    //   return
+    // }
     this._router.navigate(['shopping-cart', 'orders'])
+  }
+  public reload() {
+    this._result = verification.create();
+    this.code = this._result.code;
+    this.imgDataURL = this._result.dataURL;
   }
 
   public newRow(event) {

@@ -285,10 +285,35 @@
     <td class="align-right">1200</td>
   </tr>
 </table> -->
-
-<div class="btns">
-  <button class="cancel" (click)="hasPlace = false">重選場次</button
-  ><button (click)="addToCart()">加入購物車</button>
+<div class="flex addCart">
+  <div class="login">
+    <label
+      ><span class="mi">person</span><input type="text" placeholder="帳號"
+    /></label>
+    <label
+      ><span class="mi">lock</span><input type="password" placeholder="密碼"
+    /></label>
+    <div class="securiry">
+      <div class="code">
+        <img [src]="imgDataURL" alt="" (click)="reload()" />
+      </div>
+      <label class="f1">
+        <span class="mi" (click)="reload()">cached</span>
+        <input type="text" placeholder="驗證碼" [(ngModel)]="verificationValue"
+      /></label>
+    </div>
+  </div>
+  <button
+    [class.active]="verificationValue.toLocaleLowerCase() == code"
+    (click)="addToCart()"
+    [disabled]="verificationValue.toLocaleLowerCase() != code"
+  >
+    加入購物車
+  </button>
+  <!-- <div class="btns">
+    <button class="cancel" (click)="hasPlace = false">重選場次</button
+    >
+  </div> -->
 </div>
 
 <!-- <div *ngIf="changeSeat">
