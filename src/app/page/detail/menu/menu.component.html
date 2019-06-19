@@ -1,7 +1,12 @@
-<div class="mi" (click)="scroll(nav, 'left')">
+<div class="mi" (click)="scroll(nav, 'left')" *ngIf="nav.scrollLeft > 0">
   chevron_left
 </div>
-<ul #nav class="f1">
+<ul
+  #nav
+  class="f1"
+  (scroll)="nav.scrollLeft = nav.scrollLeft"
+  (window:resize)="nav.scrollLeft = nav.scrollLeft"
+>
   <li
     class="f1"
     *ngFor="let item of menu; index as idx"
@@ -11,6 +16,10 @@
     {{ item }}
   </li>
 </ul>
-<div class="mi" (click)="scroll(nav, 'right')">
+<div
+  class="mi"
+  (click)="scroll(nav, 'right')"
+  *ngIf="nav.scrollLeft < nav.scrollWidth - nav.clientWidth"
+>
   chevron_right
 </div>
