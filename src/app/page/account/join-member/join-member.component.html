@@ -59,7 +59,8 @@
     <td>
       <label
         ><span class="mi">public</span>
-        <app-selector [optionals]="country"></app-selector
+        <div class="muti-input">
+          <app-selector [optionals]="country"></app-selector></div
       ></label>
     </td>
     <td>
@@ -99,7 +100,7 @@
       <label
         ><span class="mi">phone</span>
         <div class="muti-input">
-          <input type="tel" placeholder="區碼" maxlength="4" /><span>-</span>
+          <app-selector [optionals]="['區碼']"></app-selector>
           <input type="tel" placeholder="手機" maxlength="10" /></div
       ></label>
     </td>
@@ -120,9 +121,11 @@
     <td colspan="2">
       <label>
         <span class="mi">location_city</span>
-        <div class="muti-input birthday">
-          <input type="tel" placeholder="郵遞區號" />
-          <span>-</span>
+        <div class="muti-input">
+          <!-- <input type="tel" placeholder="郵遞區號" />
+          <span>-</span> -->
+          <app-selector [optionals]="['縣市']"></app-selector>
+          <app-selector [optionals]="['鄉鎮']"></app-selector>
           <input class="addr" type="text" placeholder="地址" />
         </div>
       </label>
