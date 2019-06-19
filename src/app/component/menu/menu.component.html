@@ -1,5 +1,5 @@
 <ul class="menu" (mouseleave)="toggle.emit(false)">
-  <li (click)="goods = !goods" [class.noHover]="goods">
+  <li (click)="closeAll(); goods = !goods" [class.noHover]="goods">
     <div class="fold">
       節目資訊<span class="f1"></span>
       <div class="mi">{{ goods ? "expand_more" : "chevron_right" }}</div>
@@ -19,7 +19,7 @@
       <li [routerLink]="['goods', 'others']" routerLinkActive="active">其他</li>
     </ul>
   </li>
-  <li (click)="notice = !notice" [class.noHover]="notice">
+  <li (click)="closeAll(); notice = !notice" [class.noHover]="notice">
     <div class="fold">
       購取票方式<span class="f1"></span>
       <div class="mi">{{ notice ? "expand_more" : "chevron_right" }}</div>
@@ -45,7 +45,7 @@
       </li>
     </ul>
   </li>
-  <li (click)="accounts = !accounts" [class.noHover]="accounts">
+  <li (click)="closeAll(); accounts = !accounts" [class.noHover]="accounts">
     <div class="fold">
       會員專區<span class="f1"></span>
       <div class="mi">{{ accounts ? "expand_more" : "chevron_right" }}</div>
@@ -87,7 +87,7 @@
       </li>
     </ul>
   </li>
-  <li (click)="qa = !qa" [class.noHover]="qa">
+  <li (click)="closeAll(); qa = !qa" [class.noHover]="qa">
     <div class="fold">
       常見問題<span class="f1"></span>
       <div class="mi">{{ qa ? "expand_more" : "chevron_right" }}</div>

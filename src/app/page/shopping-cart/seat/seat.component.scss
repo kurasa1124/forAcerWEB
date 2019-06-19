@@ -357,3 +357,18 @@ label {
     }
   }
 }
+
+.selectNum {
+  td {
+    &:first-child {
+      width: 100%;
+      text-align: left !important;
+    }
+    input {
+      text-align: center;
+      width: 5rem;
+      border-radius: 5px;
+      border: 1px solid $grey;
+    }
+  }
+}

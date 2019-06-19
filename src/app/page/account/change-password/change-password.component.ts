@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import verification from 'verification-code';
+import { TokenService } from '../../../service/token.service';
 @Component({
   selector: 'app-change-password',
   templateUrl: './change-password.component.html',
@@ -14,7 +15,7 @@ export class ChangePasswordComponent implements OnInit {
   private _code = this._result.code;
   public imgDataURL = this._result.dataURL;
 
-  constructor() { }
+  constructor(public token: TokenService) { }
 
   ngOnInit() {
   }

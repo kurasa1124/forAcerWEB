@@ -50,6 +50,7 @@ export class PackageComponent implements OnInit {
     let row = td.parentElement.cloneNode(true) as HTMLElement;
     let tr = td.parentElement;
     tr.parentElement.append(row);
+    row.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     row.lastChild.addEventListener("click", () => {
       this.newRow({ target: row.lastChild })
     })

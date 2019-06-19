@@ -44,4 +44,11 @@ export class MenuComponent {
     if (el.classList.contains("fold") || el.classList.contains("mi")) return;
     this.toggle.emit(false);
   }
+
+  public closeAll() {
+    this.goods = false;
+    this.notice = false;
+    this.accounts = false;
+    this.qa = false;
+  }
 }

@@ -18,9 +18,9 @@ td {
   line-height: 1.5rem;
   padding: 5px;
   text-align: center;
-  &:first-child {
-    white-space: nowrap;
-  }
+  // &:first-child {
+  //   white-space: nowrap;
+  // }
   &:last-child {
     min-width: 3rem;
     text-align: center;
@@ -152,6 +152,14 @@ button {
   }
   td {
     border-bottom: 0;
+    &.tal {
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center !important;
+    }
+    &::before {
+      content: attr(data-title);
+    }
     button {
       margin-top: 0.5rem;
     }

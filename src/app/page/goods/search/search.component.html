@@ -7,15 +7,11 @@
       </label>
     </td>
     <td>
-      <label>
+      <label (click)="showCalendar1 = !showCalendar1; showCalendar2 = false">
         <span class="mi">event_note</span>
         <div class="muti-input">
-          <span (click)="showCalendar1 = !showCalendar1; showCalendar2 = false"
+          <span
             >{{ startDate ? startDate.format("YYYY-MM-DD") : "開始日期" }}
-          </span>
-          <span>-</span>
-          <span (click)="showCalendar2 = !showCalendar2; showCalendar1 = false"
-            >{{ endDate ? endDate.format("YYYY-MM-DD") : "結束日期" }}
           </span>
         </div>
       </label>
@@ -26,6 +22,17 @@
         (mouseleave)="showCalendar1 = false"
         *ngIf="showCalendar1"
       ></app-calendar>
+    </td>
+    <td>～</td>
+    <td>
+      <label (click)="showCalendar2 = !showCalendar2; showCalendar1 = false">
+        <span class="mi">event_note</span>
+        <div class="muti-input">
+          <span
+            >{{ endDate ? endDate.format("YYYY-MM-DD") : "結束日期" }}
+          </span>
+        </div>
+      </label>
       <app-calendar
         class="calendar"
         [date]="endDate"
@@ -44,6 +51,14 @@
     </td>
   </tr>
 </table>
+
+<div class="tags">
+  <span>活動1</span>
+  <span>活動2</span>
+  <span>活動3</span>
+  <span>活動4</span>
+  <span>活動5</span>
+</div>
 
 <div class="hr"><span>搜尋結果</span></div>
 

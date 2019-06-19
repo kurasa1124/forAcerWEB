@@ -113,3 +113,17 @@ button {
 .cards {
   margin-top: 4rem;
 }
+
+.tags {
+  width: 100%;
+  text-align: center;
+  span {
+    display: inline-block;
+    font-size: 0.9rem;
+    background: $lightGrey;
+    white-space: nowrap;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem;
+    border-radius: 2rem;
+  }
+}

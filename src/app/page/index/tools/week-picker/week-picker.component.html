@@ -1,5 +1,5 @@
 <div class="full">
-  <div class="f0" (click)="changeDate(selectDate.add(-1, 'day'))">
+  <div class="f0" (click)="changeDate(selectDate.add(-7, 'day'))">
     <i class="ai-left-circle-o"></i>
   </div>
   <div class="week f1">
@@ -13,7 +13,7 @@
       }}<span>{{ date.locale("zh-tw").format("ddd") | uppercase }}</span>
     </div>
   </div>
-  <div class="f0" (click)="changeDate(selectDate.add(1, 'day'))">
+  <div class="f0" (click)="changeDate(selectDate.add(7, 'day'))">
     <i class="ai-right-circle-o"></i>
   </div>
 </div>

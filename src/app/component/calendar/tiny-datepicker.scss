@@ -174,11 +174,23 @@
 }
 
 .dp-cal-month {
-  left: 15px;
+  // left: 15px;
+  &::before {
+    vertical-align: middle;
+    content: "expand_more";
+    font-family: "Material Icons";
+    font-size: 1.2rem;
+  }
 }
 
 .dp-cal-year {
-  right: 15px;
+  // right: 15px;
+  &:after {
+    vertical-align: middle;
+    content: "expand_more";
+    font-family: "Material Icons";
+    font-size: 1.2rem;
+  }
 }
 
 .dp-cal-footer {
@@ -266,7 +278,7 @@
 }
 
 .dp-month {
-  width: 33%;
+  width: 20%;
   display: inline-block;
   padding: 8px;
 }
