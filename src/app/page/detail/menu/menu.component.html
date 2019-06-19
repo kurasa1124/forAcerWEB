@@ -1,4 +1,4 @@
-<div class="mi" (click)="scroll(nav, 'left')" *ngIf="nav.scrollLeft > 0">
+<div class="mi" (click)="scroll(nav, 'left')" *ngIf="nav && nav.scrollLeft > 0">
   chevron_left
 </div>
 <ul
@@ -19,7 +19,7 @@
 <div
   class="mi"
   (click)="scroll(nav, 'right')"
-  *ngIf="nav.scrollLeft < nav.scrollWidth - nav.clientWidth"
+  *ngIf="nav && nav.scrollLeft < nav.scrollWidth - nav.clientWidth"
 >
   chevron_right
 </div>
