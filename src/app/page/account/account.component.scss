@@ -1,10 +1,10 @@
 @import "../../../theme.scss";
 :host {
-  display: flex;
-  flex-direction: column;
+  display: block;
   flex: 1 1 auto;
 }
 .limit {
+  min-height: 60vh;
   border: 2px solid $opacityBorder;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
@@ -12,6 +12,7 @@
   background: $opacityWhite;
   position: relative;
   padding-top: 0;
+  padding-bottom: 3rem;
   @media screen and (max-width: 640px) {
     margin-top: 0;
     border: none;

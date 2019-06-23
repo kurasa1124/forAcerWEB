@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
+import * as smoothscroll from 'smoothscroll-polyfill';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   public showLightBox = !sessionStorage.LightBox;
   constructor(private _router: Router) {
     sessionStorage.LightBox = true
-
+    smoothscroll.polyfill();
   }
   ngOnInit(): void {
     this._router.events.subscribe((evt) => {

@@ -1,8 +1,7 @@
 @import "../../../theme.scss";
 :host {
   flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
+  display: block;
   position: relative;
 }
 
@@ -11,6 +10,7 @@
   box-shadow: 0 3px 6px $opacityBorder;
   position: relative;
   z-index: 1;
+  padding-top: 1rem;
 }
 .image {
   padding-top: 350px;
@@ -21,7 +21,7 @@
 }
 
 h1 {
-  margin-top: 1rem;
+  // margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: normal;
 }
@@ -52,6 +52,7 @@ h3 {
     border-bottom: none;
   }
   .limit {
+    min-height: 60vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

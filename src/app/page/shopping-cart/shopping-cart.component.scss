@@ -1,7 +1,6 @@
 @import "../../../theme.scss";
 :host {
-  display: flex;
-  flex-direction: column;
+  display: block;
   flex: 1 1 auto;
 }
 .limit {
