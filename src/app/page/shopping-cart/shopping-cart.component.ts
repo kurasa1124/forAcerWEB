@@ -19,8 +19,9 @@ export class ShoppingCartComponent implements OnDestroy {
       this.isComplete = event.snapshot.routeConfig.path == "complete";
     })
   }
-  public timeOut() {
-    alert("您已超過結帳時間，請重新結帳")
+  public async timeOut() {
+    await alert("您已超過結帳時間，請重新訂購");
+    this._router.navigate([''])
   }
   ngOnDestroy(): void {
     this._destroy.next();

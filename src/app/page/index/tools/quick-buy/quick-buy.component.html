@@ -1,4 +1,9 @@
-<div class="full" [class.hint]="!showBefore">
+<div
+  class="full"
+  [class.hint]="!showBefore"
+  [routerLink]="['/goods', 'category']"
+  [queryParams]="{ title: '快速訂購' }"
+>
   <i class="ai-shopping-cart"></i>
   <div class="mi">flash_on</div>
 </div>

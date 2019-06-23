@@ -21,8 +21,8 @@ export class CategoryComponent {
 
   public isSingle(idx: number, length: number): boolean {
     if (this.viewport.width > 960) return (idx % 4 == 0) && (idx + 1 == length);
-    if (this.viewport.width > 480) return (idx % 3 == 0) && (idx + 1 == length);
-    if (this.viewport.width > 320) return (idx % 2 == 0) && (idx + 1 == length);
+    if (this.viewport.width > 480) return (idx % 2 == 0) && (idx + 1 == length);
+    // if (this.viewport.width > 320) return (idx % 2 == 0) && (idx + 1 == length);
     return;
   }
 
