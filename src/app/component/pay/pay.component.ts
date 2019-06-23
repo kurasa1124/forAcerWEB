@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import * as chinese from "chinesegen";
 import * as moment from "moment";
 @Component({
@@ -7,6 +7,9 @@ import * as moment from "moment";
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
+  @Input() buttonName: string = "送出表單";
+  @Output() send = new EventEmitter();
+  @Input() showTicket = false;
   public payment = {
     delivery: 0,
     invoice: 0,

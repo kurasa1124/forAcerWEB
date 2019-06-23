@@ -1,11 +1,11 @@
 <app-slider></app-slider>
 <app-tools></app-tools>
 
-<div class="container">
+<div class="container" (window:resize)="resize()">
   <div #content="" class="limit padding">
     <app-title
       word="熱門項目"
-      (more)="routerTo('/goods/category?title=全部分類')"
+      (more)="routerTo('/goods/category?title=熱門項目')"
     ></app-title>
     <div class="cards nowrap">
       <app-card
@@ -54,38 +54,32 @@
         [text]="card.text"
       ></app-card>
     </div>
+    <app-title
+      word="最新消息"
+      (more)="routerTo('/goods/category?title=最新消息')"
+    ></app-title>
     <div class="contact flex">
       <div class="f1 news">
-        <h3>最新消息</h3>
-        
         <table cellpadding="0" cellspacing="0">
-          <tr>
-            <td><div>newsnewsnewsnewsnewsnewsnewsnewsnewsnewsnewsnews</div></td>
-          </tr>
-          <tr>
-            <td><div>newsnewsnewsnewsnewsnewsnewsnewsnewsnewsnewsnews</div></td>
-          </tr>
-          <tr>
-            <td><div>newsnewsnewsnewsnewsnewsnewsnewsnewsnewsnewsnews</div></td>
-          </tr>
-          <tr>
-            <td><div>newsnewsnewsnewsnewsnewsnewsnewsnewsnewsnewsnews</div></td>
-          </tr>
-          <tr>
-            <td><div>newsnewsnewsnewsnewsnewsnewsnewsnewsnewsnewsnews</div></td>
+          <tr *ngFor="let tr of newsTr">
+            <td>
+              <div>{{ fake }}</div>
+            </td>
           </tr>
         </table>
       </div>
 
       <iframe
-        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGOSUBAR%2F&tabs=timeline&width=238&height=238&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1778311828912618"
-        [width]="viewport.width > 238 ? '238' : '100%'"
-        height="238"
+        *ngIf="content && !resizing"
+        [src]="iframe"
+        [width]="iframeWidth"
+        height="300"
         style="border:none;overflow:hidden"
         scrolling="no"
         frameborder="0"
         allowTransparency="true"
         allow="encrypted-media"
+        class="fb"
       ></iframe>
     </div>
   </div>

@@ -1,0 +1,70 @@
+<div class="box">
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <th>序號</th>
+      <th>演出名稱</th>
+      <th>演出時間</th>
+      <th>表演場地</th>
+      <th>售價</th>
+      <th>座位</th>
+      <th>票券狀態</th>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">自由座</td>
+      <td
+        data-title="票券狀態"
+        class="green return"
+        (click)="toggleActive($event)"
+      >
+        可退票
+      </td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">自由座</td>
+      <td data-title="票券狀態">已取票</td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">自由座</td>
+      <td data-title="票券狀態">超過退票期限</td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">自由座</td>
+      <td
+        data-title="票券狀態"
+        class="green return"
+        (click)="toggleActive($event)"
+      >
+        可退票
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  系統將扣除退票手續費：NT$ 100元，會將剩餘票款：NT$ 500元
+  退入原刷卡信用卡額度中
+</p>
+<div class="btns">
+  <button (click)="lightbox.showBlur = false; lightbox.showReturn = false">
+    確認退票
+  </button>
+</div>

@@ -100,7 +100,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
 }
-
+button {
+  cursor: pointer;
+}
 button:not([class^="dp-"]) {
   position: relative;
   &::before {

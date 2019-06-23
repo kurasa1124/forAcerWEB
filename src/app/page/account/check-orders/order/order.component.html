@@ -18,10 +18,11 @@
     <br />
     <button>購票證明</button>
     <button>發票明細</button>
-    <button>退票申請</button>
+    <button (click)="return()">退票申請</button>
   </p>
 </div>
-<table cellpadding="0" cellspacing="0">
+
+<table cellpadding="0" cellspacing="0" *ngIf="showMore">
   <tr>
     <th>序號</th>
     <th>演出名稱</th>
@@ -37,11 +38,49 @@
     <td data-title="演出時間">2019/04/26 (五) 15:00</td>
     <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
     <td data-title="售價">600</td>
-    <td data-title="座位">自由座</td>
-    <td data-title="票券狀態" class="green">有效票</td>
+    <td data-title="座位">
+      2樓-8排-25號
+    </td>
+    <td data-title="票券狀態" class="green">可退票</td>
+  </tr>
+  <tr>
+    <td data-title="序號">1</td>
+    <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+    <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+    <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+    <td data-title="售價">600</td>
+    <td data-title="座位">
+      2樓-8排-25號
+    </td>
+    <td data-title="票券狀態">已取票</td>
+  </tr>
+  <tr>
+    <td data-title="序號">1</td>
+    <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+    <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+    <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+    <td data-title="售價">600</td>
+    <td data-title="座位">
+      2樓-8排-25號
+    </td>
+    <td data-title="票券狀態">超過退票期限</td>
+  </tr>
+  <tr>
+    <td data-title="序號">1</td>
+    <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+    <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+    <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+    <td data-title="售價">600</td>
+    <td data-title="座位">
+      2樓-8排-25號
+    </td>
+    <td data-title="票券狀態" class="green">可退票</td>
   </tr>
 </table>
 
+<div class="more" [class.active]="showMore" (click)="showMore = !showMore">
+  詳細資訊 <span class="mi">expand_more </span>
+</div>
 <!-- <app-no-seat *ngIf="type == 'noSeat'"></app-no-seat>
 <app-seat-info *ngIf="type == 'seatInfo'"></app-seat-info>
 <package-ticket *ngIf="type == 'package'"></package-ticket> -->

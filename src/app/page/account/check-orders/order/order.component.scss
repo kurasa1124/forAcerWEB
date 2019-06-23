@@ -59,12 +59,11 @@ table {
     border-bottom: 1px solid $lightGrey;
   }
   @media screen and (max-width: 640px) {
-    display: flex;
-    border: 1px solid $lightGrey;
+    display: block;
+    border: 2px solid $grey;
     border-radius: 5px;
     tbody {
-      flex: 1;
-      display: flex;
+      display: block;
       width: 100%;
     }
     tr:first-child,
@@ -73,8 +72,12 @@ table {
     }
     tr,
     td {
+      display: block;
       width: 100%;
       min-height: 2rem;
+    }
+    tr:not(:last-child) {
+      border-bottom: 2px solid $grey;
     }
     td {
       text-align: left;
@@ -96,4 +99,20 @@ table {
 
 .green {
   color: $green;
+}
+
+.more {
+  cursor: pointer;
+  background: $lightGrey;
+  text-align: center;
+  margin-top: 1rem;
+  > * {
+    vertical-align: middle;
+    transition: all 0.25s;
+  }
+  &.active {
+    .mi {
+      transform: rotate(180deg);
+    }
+  }
 }

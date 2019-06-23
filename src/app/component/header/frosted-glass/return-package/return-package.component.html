@@ -1,0 +1,78 @@
+<h1>
+  熱舞套票 <br />
+  <span>兩套</span>
+</h1>
+<div class="choice">
+  <div class="checkbox">
+    <span>申請退票：</span>
+    <div class="flex">
+      <div class="mi" (click)="ticketLength = ticketLength - 1">remove</div>
+      <input type="number" placeholder="套票數量" [(ngModel)]="ticketLength" />
+      <div class="mi" (click)="ticketLength = ticketLength + 1">add</div>
+    </div>
+    套
+  </div>
+</div>
+
+<div class="box">
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <th>序號</th>
+      <th>演出名稱</th>
+      <th>演出時間</th>
+      <th>表演場地</th>
+      <th>售價</th>
+      <th>座位</th>
+      <th>票券狀態</th>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">
+        2樓-8排-25號
+      </td>
+      <td data-title="票券狀態" class="green">可退票</td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">
+        2樓-8排-25號
+      </td>
+      <td data-title="票券狀態" class="green">已取票</td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">
+        2樓-8排-25號
+      </td>
+      <td data-title="票券狀態" class="green">超過退票期限</td>
+    </tr>
+    <tr>
+      <td data-title="序號">1</td>
+      <td data-title="演出名稱">杯子劇場藝術祭-小丑劇團</td>
+      <td data-title="演出時間">2019/04/26 (五) 15:00</td>
+      <td data-title="表演場地">杯子劇場<br />台北市中山區民權東路三段</td>
+      <td data-title="售價">600</td>
+      <td data-title="座位">
+        2樓-8排-25號
+      </td>
+      <td data-title="票券狀態" class="green">可退票</td>
+    </tr>
+  </table>
+</div>
+<div class="btns">
+  <button (click)="lightbox.showBlur = false; lightbox.showReturnPkg = false">
+    確認退票
+  </button>
+</div>

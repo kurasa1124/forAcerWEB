@@ -31,7 +31,7 @@ td {
 }
 
 th {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: $second;
   border-bottom: 2px solid $grey;
   .ss-show {
@@ -43,7 +43,7 @@ th {
 }
 
 td {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #000;
   border-bottom: 1px solid $grey;
   @media screen and (max-width: 640px) {
@@ -53,12 +53,25 @@ td {
       margin-top: 5px;
     }
   }
-  // &.price {
-  //   max-width: 150px;
-  //   white-space: nowrap;
-  //   overflow: auto;
-  // }
+  &.price {
+    font-size: 0.9rem;
+    max-width: 200px;
+    margin: 0 auto;
+    .flex {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .fake {
+      opacity: 0;
+      pointer-events: none;
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
   a {
+    flex: 1 1 auto;
     color: $darkGrey;
     display: inline-block;
     background: $lightGrey;
@@ -112,12 +125,18 @@ button {
   text-align: right !important;
 }
 
-.package {
-  th,
-  td {
-    width: 100%;
-  }
-}
+// .package {
+//   th,
+//   td {
+//     &:first-child {
+//       width: 60%;
+//     }
+//     &:nth-child(2),
+//     &:nth-child(3) {
+//       width: 20%;
+//     }
+//   }
+// }
 
 @media screen and (max-width: 480px) {
   table,
@@ -136,6 +155,7 @@ button {
   td {
     height: auto;
     display: block;
+    width: 100%;
   }
   tr {
     border: 2px solid $lightGrey;
@@ -164,4 +184,13 @@ button {
       margin-top: 0.5rem;
     }
   }
+}
+
+.sellout {
+  text-decoration: line-through;
+}
+
+.memo {
+  color: $grey;
+  margin-top: 0.5rem;
 }

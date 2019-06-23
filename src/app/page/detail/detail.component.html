@@ -1,8 +1,8 @@
 <div class="content-bg"></div>
 
 <div class="head">
-  <h1>{{ title }}</h1>
-  <h4>主辦：宏基資訊股份有限公司</h4>
+  <h1 class="limit">{{ title }}</h1>
+  <h4 class="limit">主辦：宏基資訊股份有限公司</h4>
   <div class="image" [style.backgroundImage]="'url(' + image + ')'"></div>
   <div class="order">
     <div class="limit">
@@ -31,7 +31,7 @@
     <!-- <d-menu class="ss-hide f0"></d-menu> -->
     <div class="content">
       <app-table [type]="tableType"></app-table>
-      <button class="more" (click)="seeMore()">看更多</button>
+      <button class="more" (click)="seeMore()">看更多場次</button>
       <d-menu></d-menu>
       <div class="share flex">
         <i class="fab fa-line"></i>

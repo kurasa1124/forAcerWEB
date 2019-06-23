@@ -9,10 +9,16 @@ import { TokenService } from '../../../service/token.service';
 })
 export class DonationComponent implements OnInit {
   public showForm = false;
+  public showCard = false;
   public optionals = ['方案選擇', '純捐款'];
   constructor(public lightBox: LightBoxService, public token: TokenService) { }
 
   ngOnInit() {
   }
 
+  public async thank() {
+    await alert("感謝您的支持與贊助");
+    this.showCard = false;
+    this.showForm = false;
+  }
 }

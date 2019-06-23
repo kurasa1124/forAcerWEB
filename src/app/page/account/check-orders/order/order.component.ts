@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LightBoxService } from '../../../../service/lightBox.service';
 
 @Component({
   selector: 'app-order',
@@ -15,9 +16,17 @@ export class OrderComponent implements OnInit {
   }
 
   @Input() type = "noSeat";
-  constructor() { }
+  public showMore = false;
+
+  constructor(public lightBox: LightBoxService, ) { }
 
   ngOnInit() {
+  }
+
+  public return() {
+    if (this.type == 'package') this.lightBox.showReturnPkg = true;
+    else this.lightBox.showReturn = true;
+    this.lightBox.showBlur = true;
   }
 
 }

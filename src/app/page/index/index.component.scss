@@ -17,17 +17,11 @@ iframe {
 }
 
 .contact {
-  color: #fff;
-  background: $facebook;
-  border-radius: 5px;
+  color: $darkGrey;
   margin: 5vw auto;
-  padding: 1rem;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  > * {
-    margin: 1rem 0;
-  }
   .f0 {
     margin-right: 1rem;
     white-space: nowrap;
@@ -45,9 +39,10 @@ iframe {
 }
 
 .news {
-  min-width: 238px;
-  max-width: 50%;
-  margin-right: 2rem;
+  min-width: 220px;
+  // background: $lightGrey;
+  // border-radius: 5px;
+  // padding: 1.5rem;
   h3 {
     font-size: 1.5rem;
     margin-bottom: -0.5rem;
@@ -62,8 +57,8 @@ iframe {
   td {
     width: 100%;
     padding: 0.5rem 0;
-    height: 2.5rem;
-    border-bottom: 1px solid $lighter;
+    height: 3rem;
+    border-bottom: 1px dotted $opacityBorder;
     position: relative;
 
     div {
@@ -76,4 +71,8 @@ iframe {
       top: 0;
     }
   }
+}
+
+.fb {
+  margin: 16px;
 }

@@ -11,6 +11,11 @@ table {
   }
 }
 
+h5 {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
 .title {
   color: $second;
 }
@@ -60,10 +65,10 @@ th {
 td {
   padding: 5px;
   text-align: center;
-  &:first-child {
-    padding-left: 1rem;
-    text-align: left;
-  }
+  // &:first-child {
+  //   padding-left: 1rem;
+  //   text-align: left;
+  // }
   &:nth-last-child(2) {
     width: 8rem;
   }

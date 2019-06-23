@@ -13,8 +13,14 @@ import { IdentityComponent } from './header/frosted-glass/identity/identity.comp
 import { NoSeatComponent } from './no-seat/no-seat.component';
 import { PackageComponent } from './package/package.component';
 import { SeatInfoComponent } from './seat-info/seat-info.component';
+import { AddGroupComponent } from './header/frosted-glass/add-group/add-group.component';
+import { ReturnTicketComponent } from './header/frosted-glass/return-ticket/return-ticket.component';
+import { ReturnPackageComponent } from './header/frosted-glass/return-package/return-package.component';
+import { FormsModule } from '@angular/forms';
+import { PayComponent } from './pay/pay.component';
 @NgModule({
   declarations: [
+
     CardComponent,
     SelectorComponent,
     CalendarComponent,
@@ -27,7 +33,10 @@ import { SeatInfoComponent } from './seat-info/seat-info.component';
     NoSeatComponent,
     PackageComponent,
     SeatInfoComponent,
-
+    AddGroupComponent,
+    ReturnTicketComponent,
+    ReturnPackageComponent,
+    PayComponent
   ],
   exports: [
     CardComponent,
@@ -42,9 +51,13 @@ import { SeatInfoComponent } from './seat-info/seat-info.component';
     NoSeatComponent,
     PackageComponent,
     SeatInfoComponent,
-
+    AddGroupComponent,
+    ReturnTicketComponent,
+    ReturnPackageComponent,
+    PayComponent
   ],
   imports: [
+    FormsModule,
     CommonModule
   ]
 })

@@ -13,7 +13,7 @@ export class PackageComponent implements OnInit {
   public noContinuous = true;
   public times = ["請選擇", "2018-08-26 18:30"];
   public prices = ["請選擇", 500, 1200];
-  public ticketLength = 0;
+  public ticketLength = 1;
   public hasPlace = false;
   public changeSeat = false;
   public selectTime = []

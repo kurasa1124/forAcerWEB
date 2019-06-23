@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <h1>Bonus Add-On Opportunities:</h1>
+  <h1>您可能還喜歡:</h1>
   <div class="cards nowrap">
     <app-card
       class="nowrap"
@@ -45,5 +45,9 @@
 
 <div #pay [hidden]="!showPay">
   <div class="hr"></div>
-  <app-pay></app-pay>
+  <app-pay
+    [showTicket]="true"
+    buttonName="送出結帳"
+    (send)="routerTo()"
+  ></app-pay>
 </div>

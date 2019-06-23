@@ -174,7 +174,5 @@ p {
   display: block;
   position: relative;
   z-index: 1;
-  &:hover {
-    text-shadow: 0 0 5px $darker;
-  }
+  text-shadow: 0 0 5px $second;
 }

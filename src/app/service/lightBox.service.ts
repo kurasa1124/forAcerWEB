@@ -8,6 +8,9 @@ export class LightBoxService {
   public showSeats = false;
   public showPackages = false;
   public showIdentity = false;
+  public showGroup = false;
+  public showReturn = false;
+  public showReturnPkg = false;
   public remainder = 0;
   public area = "";
 }

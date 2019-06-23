@@ -26,7 +26,7 @@ export class MenuComponent {
   public notice = false;
   public accounts = false;
   public qa = false;
-  public optionals = ["全部分類", "音樂劇", "音樂", "舞蹈", "展覽", "演唱會", "戲劇", "體育", "親子", "講座", "電影", "國外", "其他"];
+  public optionals = ["最新消息", "快速訂購", "音樂劇", "音樂", "舞蹈", "展覽", "演唱會", "戲劇", "體育", "親子", "講座", "電影", "國外"];
 
   @Output() toggle = new EventEmitter();
 

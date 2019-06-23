@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import * as moment from "moment";
+import * as chinese from "chinesegen"
 
 @Component({
   selector: 'app-card',
@@ -16,6 +17,7 @@ export class CardComponent {
     color: "#3b5998"
   }
   @Input() showTag = true;
+  public fake = chinese({ count: 100, freq: true }).text
 
   constructor(private _router: Router) {
 

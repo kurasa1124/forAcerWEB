@@ -2,21 +2,23 @@
 :host {
   display: block;
   width: 95%;
-  height: 70%;
-  max-width: 960px;
+  height: 80%;
+  // max-width: 1080px;
 }
 .box {
   width: 100%;
   height: 100%;
   display: block;
-  padding: 2rem;
+  // padding: 2rem;
   text-align: center;
   border-radius: 1rem;
   background: rgba(white, 0.8);
   color: $grey;
   position: relative;
   overflow: auto;
-  z-index: 1;
+  &.group {
+    height: calc(100% - 6rem);
+  }
   @media screen and (max-width: 960px) {
     padding: 0;
   }
@@ -38,6 +40,10 @@ th {
   font-size: 1.2rem;
   color: $second;
   border-bottom: 2px solid $grey;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
   .ss-show {
     display: inline-block !important;
   }
@@ -47,7 +53,7 @@ th {
 }
 
 td {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #000;
   border-bottom: 1px solid $grey;
   .mi {
@@ -56,12 +62,28 @@ td {
   // &:first-child {
   //   white-space: nowrap;
   // }
-  // &.price {
-  //   min-width: 3rem;
-  //   max-width: 150px;
-  //   white-space: nowrap;
-  //   overflow: auto;
-  // }
+  &.price {
+    font-size: 0.9rem;
+    min-width: 3rem;
+    max-width: 200px;
+    margin: 0 auto;
+    .flex {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .active {
+      color: #fff;
+      background: $main;
+    }
+    .fake {
+      opacity: 0;
+      pointer-events: none;
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
   @media screen and (max-width: 640px) {
     font-size: 0.8rem;
     line-height: 1.2rem;
@@ -70,6 +92,8 @@ td {
     }
   }
   a {
+    cursor: pointer;
+    flex: 1 1 auto;
     color: $darkGrey;
     display: inline-block;
     background: $lightGrey;
@@ -157,6 +181,34 @@ button {
     }
     button {
       margin-top: 0.5rem;
+    }
+  }
+}
+
+.sellout {
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+.memo {
+  color: $grey;
+  margin-top: 0.5rem;
+}
+.tal {
+  text-align: left;
+}
+
+.btns {
+  margin-top: 2rem;
+  text-align: center;
+  button {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 0 20px #fff;
+    &:before {
+      border-radius: 5px;
     }
   }
 }

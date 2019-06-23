@@ -84,6 +84,9 @@
   .content {
     padding: 2rem 3vw;
   }
+  .body {
+    display: -webkit-box;
+  }
 }
 
 .card {
@@ -156,12 +159,16 @@
   color: $grey;
   font-size: 0.9rem;
   margin-top: 1rem;
+  overflow: hidden;
+  line-height: 1.2rem;
   /* autoprefixer: off */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   /* autoprefixer: on */
+  display: none;
   @media screen and (max-width: 480px) {
     font-size: 3vw;
+    display: none !important;
   }
 }

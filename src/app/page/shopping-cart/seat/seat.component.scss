@@ -244,7 +244,7 @@ label {
   margin: 1rem 0;
 }
 .area {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
   color: $facebook;
 }
@@ -259,15 +259,26 @@ label {
   }
 }
 
-.ticket {
+.seatype {
   width: 100%;
-  flex-wrap: wrap;
+  .mi {
+    color: $grey;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.ticket {
+  overflow: auto;
+  // flex-wrap: wrap;
   button {
     color: #fff;
     padding: 0.5rem 1rem;
     text-align: center;
     background: $lightGrey;
-
+    white-space: nowrap;
     &.grey {
       color: #000;
       min-width: 200px;
@@ -359,10 +370,11 @@ label {
 }
 
 .selectNum {
+  margin-top: 0;
   td {
-    &:first-child {
-      width: 100%;
-      text-align: left !important;
+    &.fill {
+      width: 50%;
+      // text-align: left !important;
     }
     input {
       text-align: center;

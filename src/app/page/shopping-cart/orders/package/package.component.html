@@ -11,22 +11,22 @@
   <div [@slideIn] class="overflow" *ngIf="showDetail">
     <table cellpadding="0" cellspacing="0">
       <tr>
-        <th>節目名稱</th>
-        <th>場次時間與地點</th>
+        <th>名稱</th>
+        <th>時間地點</th>
         <th>座位資訊</th>
         <th></th>
         <th>定價</th>
         <th>售價</th>
       </tr>
       <tr>
-        <td class="pos" data-title="節目名稱：">
+        <td class="pos" data-title="名稱：">
           2018TIFA－呂紹嘉與NSO《馬勒第七》
         </td>
-        <td data-title="場次時間與地點：">
-          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00
+        <td data-title="時間地點：">
+          國家音樂廳21-1號<br />2018 - 01 - 06 19:30
         </td>
         <td class="nowrap" data-title="座位資訊：">
-          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
+          2樓 - 8排 - 25 號
         </td>
         <td>
           <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
@@ -37,14 +37,14 @@
         <td data-title="售價：">1600</td>
       </tr>
       <tr>
-        <td class="pos" data-title="節目名稱：">
+        <td class="pos" data-title="名稱：">
           2018TIFA 克莉絲朵．派特X強納森．楊《愛與痛的練習曲》
         </td>
-        <td data-title="場次時間與地點：">
-          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00
+        <td data-title="時間地點：">
+          國家音樂廳21-1號<br />2018 - 01 - 06 19:30
         </td>
         <td class="nowrap" data-title="座位資訊：">
-          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
+          2樓 - 8排 - 25 號
         </td>
         <td>
           <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
@@ -55,14 +55,14 @@
         <td data-title="售價：">1600</td>
       </tr>
       <tr>
-        <td class="pos" data-title="節目名稱：">
+        <td class="pos" data-title="名稱：">
           2018TIFA 碧娜．鮑許烏帕塔舞蹈劇場《康乃馨》
         </td>
-        <td data-title="場次時間與地點：">
-          國家音樂廳21-1號<br />2018 - 01 - 06 19:30:00
+        <td data-title="時間地點：">
+          國家音樂廳21-1號<br />2018 - 01 - 06 19:30
         </td>
         <td class="nowrap" data-title="座位資訊：">
-          2樓 - 8排 - 25 號<br />2樓 - 8排 - 27 號
+          2樓 - 8排 - 25 號
         </td>
         <td>
           <button
@@ -78,12 +78,12 @@
       </tr>
     </table>
   </div>
-
+  <!--
   <p [@slideIn] *ngIf="showDetail">
     <span>原價：6000</span>
     <span class="red">折價：-1200 </span>
     <span class="red">促銷代碼：0 </span>
-  </p>
+  </p> -->
 
-  <h4>總計: $ 4,800</h4>
+  <h5>小計: $ 4,800</h5>
 </div>

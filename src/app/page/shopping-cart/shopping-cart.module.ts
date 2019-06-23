@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { SeatComponent } from './seat/seat.component';
 import { PackageComponent } from './package/package.component';
 import { CountdownModule } from 'ngx-countdown';
-import { PayComponent } from './pay/pay.component';
 import { CompleteComponent } from './complete/complete.component';
 import { MapComponent } from './map/map.component';
 import { SeatContentComponent } from './seat-content/seat-content.component';
@@ -20,7 +19,6 @@ import { OrdersComponent } from './orders/orders.component';
     ShoppingCartComponent,
     SeatComponent,
     PackageComponent,
-    PayComponent,
     CompleteComponent,
     MapComponent,
     SeatContentComponent,
@@ -42,7 +40,6 @@ import { OrdersComponent } from './orders/orders.component';
           { path: "seat", component: SeatComponent },
           { path: "package", component: PackageComponent },
           { path: "orders", component: OrdersComponent },
-          { path: "pay", component: PayComponent },
           { path: "complete", component: CompleteComponent },
           { path: "**", redirectTo: "/" }
         ]

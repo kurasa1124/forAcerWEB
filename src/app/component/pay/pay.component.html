@@ -1,39 +1,41 @@
 <div class="payment">
-  <h1>取票方式</h1>
-  <ul>
-    <li class="flex" (click)="payment.delivery = 0">
-      <span class="mi">{{
-        payment.delivery == 0
-          ? "radio_button_checked"
-          : "radio_button_unchecked"
-      }}</span
-      >E-Ticket (QR Code) Please download
-      <a href="" target="blank">APP</a>
-    </li>
-    <li class="flex" (click)="payment.delivery = 1">
-      <span class="mi">{{
-        payment.delivery == 1
-          ? "radio_button_checked"
-          : "radio_button_unchecked"
-      }}</span>
-      <a href="" target="blank" class="no-margin">Collect at Box Office</a>
-    </li>
-    <li class="flex" (click)="payment.delivery = 2">
-      <span class="mi">{{
-        payment.delivery == 2
-          ? "radio_button_checked"
-          : "radio_button_unchecked"
-      }}</span
-      >Post Office (Postage: $50)
-      <input type="text" placeholder="Recipient" /><input
-        type="text"
-        placeholder="Address"
-        class="address"
-      />
-    </li>
-  </ul>
-  <div class="explain">{{ fakeWord }}</div>
-  <div class="hr"></div>
+  <div *ngIf="showTicket">
+    <h1>取票方式</h1>
+    <ul>
+      <li class="flex" (click)="payment.delivery = 0">
+        <span class="mi">{{
+          payment.delivery == 0
+            ? "radio_button_checked"
+            : "radio_button_unchecked"
+        }}</span
+        >E-Ticket (QR Code) Please download
+        <a href="" target="blank">APP</a>
+      </li>
+      <li class="flex" (click)="payment.delivery = 1">
+        <span class="mi">{{
+          payment.delivery == 1
+            ? "radio_button_checked"
+            : "radio_button_unchecked"
+        }}</span>
+        <a href="" target="blank" class="no-margin">Collect at Box Office</a>
+      </li>
+      <li class="flex" (click)="payment.delivery = 2">
+        <span class="mi">{{
+          payment.delivery == 2
+            ? "radio_button_checked"
+            : "radio_button_unchecked"
+        }}</span
+        >Post Office (Postage: $50)
+        <input type="text" placeholder="Recipient" /><input
+          type="text"
+          placeholder="Address"
+          class="address"
+        />
+      </li>
+    </ul>
+    <div class="explain">{{ fakeWord }}</div>
+    <div class="hr"></div>
+  </div>
   <h1>付款方式</h1>
   <ul>
     <li class="flex" (click)="payment.payment = 0">
@@ -150,15 +152,19 @@
   <div class="explain">{{ fakeWord }}</div>
   <div class="hr"></div>
 </div>
-<h2 class="flex total">
-  購物車金額總計：NT$ 123456
-  <div class="checkRead" (click)="checkRead = !checkRead">
-    <span class="mi">{{
-      checkRead ? "check_box" : "check_box_outline_blank"
-    }}</span>
-    我以詳閱並同意 <a href="">電子商務約定條款</a>
+<div class="total">
+  <p>系統處理費：NT$ 50</p>
+  <div class="flex">
+    總金額總計：
+    <div class="price">123,456</div>
   </div>
-</h2>
+</div>
+<div class="checkRead" (click)="checkRead = !checkRead">
+  <span class="mi">{{
+    checkRead ? "check_box" : "check_box_outline_blank"
+  }}</span>
+  我以詳閱並同意 <a href="">電子商務約定條款</a>
+</div>
 <div class="btns">
-  <button [routerLink]="['../', 'complete']">送出結帳</button>
+  <button (click)="send.emit()">{{ buttonName }}</button>
 </div>
