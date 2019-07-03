@@ -28,7 +28,7 @@ export class HeaderComponent {
   public name = 'XXX';
   public language: string[] = ['中文', 'English'];
   public showLogin = false;
-  public photoUrl = "http://pipsum.com/100x100.jpg"
+  public photoUrl = "https://picsum.photos/1000?random"
   constructor(public token: TokenService, public lightBox: LightBoxService, private _router: Router) { }
   public goCart() {
     this._router.navigate(['shopping-cart', 'orders'])
