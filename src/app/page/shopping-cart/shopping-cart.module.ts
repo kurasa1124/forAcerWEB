@@ -14,6 +14,7 @@ import { NoSeatComponent } from './orders/no-seat/no-seat.component';
 import { SeatInfoComponent } from './orders/seat-info/seat-info.component';
 import { PayPackageComponent } from './orders/package/package.component';
 import { OrdersComponent } from './orders/orders.component';
+import { QuickCodeComponent } from './quick-code/quick-code.component';
 @NgModule({
   declarations: [
     ShoppingCartComponent,
@@ -25,7 +26,8 @@ import { OrdersComponent } from './orders/orders.component';
     PayPackageComponent,
     NoSeatComponent,
     SeatInfoComponent,
-    OrdersComponent
+    OrdersComponent,
+    QuickCodeComponent
   ],
   imports: [
     ComponentModule,
@@ -39,6 +41,7 @@ import { OrdersComponent } from './orders/orders.component';
         children: [
           { path: "seat", component: SeatComponent },
           { path: "package", component: PackageComponent },
+          { path: "quick-code", component: QuickCodeComponent },
           { path: "orders", component: OrdersComponent },
           { path: "complete", component: CompleteComponent },
           { path: "**", redirectTo: "/" }

@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { LightBoxService } from '../../../../service/lightBox.service';
 
 @Component({
   selector: 'app-quick-buy',
@@ -7,7 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class QuickBuyComponent {
   public showBefore = localStorage.showHintBefore;
-  constructor() {
+  constructor(public lightBox: LightBoxService) {
     localStorage.showHintBefore = "true";
   }
 }

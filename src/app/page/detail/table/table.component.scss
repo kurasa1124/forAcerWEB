@@ -125,19 +125,6 @@ button {
   text-align: right !important;
 }
 
-// .package {
-//   th,
-//   td {
-//     &:first-child {
-//       width: 60%;
-//     }
-//     &:nth-child(2),
-//     &:nth-child(3) {
-//       width: 20%;
-//     }
-//   }
-// }
-
 @media screen and (max-width: 480px) {
   table,
   tbody {
@@ -193,4 +180,8 @@ button {
 .memo {
   color: $grey;
   margin-top: 0.5rem;
+  &.blue {
+    color: $main;
+    cursor: pointer;
+  }
 }

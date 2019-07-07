@@ -10,12 +10,14 @@ import { Subject } from 'rxjs';
 export class ShoppingCartComponent implements OnDestroy {
   private _destroy = new Subject();
   public isPackage = false;
+  public isQuick = false;
   public isComplete = false;
   constructor(private _router: Router) {
     this._router.events.pipe(takeUntil(this._destroy)).subscribe(event => {
       if (!(event instanceof ActivationEnd)) return
       if (event.snapshot.routeConfig.path == "shopping-cart") return
       this.isPackage = event.snapshot.routeConfig.path == "package";
+      this.isQuick = event.snapshot.routeConfig.path == "quick-code";
       this.isComplete = event.snapshot.routeConfig.path == "complete";
     })
   }

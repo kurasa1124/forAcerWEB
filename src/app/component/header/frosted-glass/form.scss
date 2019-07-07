@@ -36,6 +36,7 @@
   color: $grey;
   position: relative;
   z-index: 1;
+
   &.mini {
     max-width: 385.95px;
     .word {
@@ -50,6 +51,9 @@
     padding-top: 1.5rem;
     @media screen and (max-width: 480px) {
       padding-top: 0.5rem;
+    }
+    &.noicon {
+      padding-top: 0;
     }
   }
 }
@@ -175,4 +179,24 @@ p {
   position: relative;
   z-index: 1;
   text-shadow: 0 0 5px $second;
+}
+
+.muti {
+  label {
+    & + label {
+      margin-left: 1rem;
+    }
+    input {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+      text-align: center;
+      &[type="number"] {
+        max-width: 3rem;
+      }
+    }
+    .mi {
+      font-size: 1.5rem;
+    }
+  }
 }

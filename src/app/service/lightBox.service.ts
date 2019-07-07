@@ -12,5 +12,6 @@ export class LightBoxService {
   public showReturn = false;
   public showReturnPkg = false;
   public remainder = 0;
+  public showQuickBuy = false;
   public area = "";
 }

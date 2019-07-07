@@ -18,9 +18,11 @@ import { ReturnTicketComponent } from './header/frosted-glass/return-ticket/retu
 import { ReturnPackageComponent } from './header/frosted-glass/return-package/return-package.component';
 import { FormsModule } from '@angular/forms';
 import { PayComponent } from './pay/pay.component';
+import { QuickOrderComponent } from './header/frosted-glass/quick-order/quick-order.component';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
-
     CardComponent,
     SelectorComponent,
     CalendarComponent,
@@ -36,7 +38,8 @@ import { PayComponent } from './pay/pay.component';
     AddGroupComponent,
     ReturnTicketComponent,
     ReturnPackageComponent,
-    PayComponent
+    PayComponent,
+    QuickOrderComponent
   ],
   exports: [
     CardComponent,
@@ -54,9 +57,11 @@ import { PayComponent } from './pay/pay.component';
     AddGroupComponent,
     ReturnTicketComponent,
     ReturnPackageComponent,
-    PayComponent
+    PayComponent,
+    QuickOrderComponent
   ],
   imports: [
+    RouterModule,
     FormsModule,
     CommonModule
   ]

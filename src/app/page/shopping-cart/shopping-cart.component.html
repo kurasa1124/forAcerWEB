@@ -10,9 +10,16 @@
         <span class="xs-hide">劃區</span>選位
       </li>
       <li
+        [routerLink]="['./quick-code']"
+        routerLinkActive="active"
+        *ngIf="isQuick"
+      >
+        <span class="xs-hide">劃區</span>選位
+      </li>
+      <li
         [routerLink]="['./seat']"
         routerLinkActive="active"
-        *ngIf="!isPackage"
+        *ngIf="!isPackage && !isQuick"
       >
         <span class="xs-hide">劃區</span>選位
       </li>

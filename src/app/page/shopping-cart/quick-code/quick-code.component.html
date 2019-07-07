@@ -1,0 +1,145 @@
+<h1>
+  幾米音樂劇《時光電影院》
+</h1>
+<div class="flex subtitle">
+  <h4>
+    臺中國家歌劇院大劇院
+    <app-selector [optionals]="sessions"></app-selector>
+    <button (click)="lightBox.showQuickBuy = true; lightBox.showBlur = true">
+      快速訂購去（電腦選位）
+    </button>
+  </h4>
+</div>
+
+<div *ngIf="!seatMap">
+  <div class="seats" (click)="next()" [style.height]="imageHeight + 100 + 'px'">
+    <div class="table">
+      <table cellpadding="0" cellspacing="0" class="f1">
+        <tr class="head">
+          <th class="color"></th>
+          <th>票區</th>
+          <th>票價</th>
+          <th>快速訂購碼</th>
+        </tr>
+        <tr
+          *ngFor="let seat of seats"
+          [class.id]="seat.id"
+          [class.hover]="selectId == seat.id"
+          (mouseenter)="selectId = seat.id"
+          (mouseleave)="selectId = null"
+          [style.borderColor]="seat.color"
+        >
+          <td class="color" [style.background]="seat.color"></td>
+          <td data-title="票區：">{{ seat.title }}</td>
+          <td data-title="NT$">{{ seat.price }}</td>
+          <td data-title="空位">1234567</td>
+        </tr>
+      </table>
+    </div>
+
+    <app-map
+      #image
+      class="f1"
+      (colorChange)="setTable($event)"
+      (hoverChange)="hover($event)"
+      (heightChange)="imageHeight = $event"
+      [hoverId]="selectId"
+    ></app-map>
+  </div>
+</div>
+
+<div class="seatMap selectNum" *ngIf="seatMap && computerChoice">
+  <div class="flex detail">
+    <h2>
+      請輸入要購買的張數<br />
+      <br />
+      <span class="area">B1平面特區5800元</span>
+    </h2>
+    剩餘張數：48
+    <div class="miniMap">
+      <img src="assets/seat-mini.png" alt="" />
+    </div>
+  </div>
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <th>名稱</th>
+      <th>價格</th>
+      <th>數量</th>
+    </tr>
+    <tr>
+      <td class="fill">原價</td>
+      <td class="fill">5800</td>
+      <td><input type="number" /></td>
+    </tr>
+  </table>
+</div>
+
+<div class="seatMap" *ngIf="seatMap && !computerChoice">
+  <div class="flex detail">
+    <div class="flex map">
+      <div class="f1">
+        <h2>
+          請選擇票種再勾選座位<br />
+          <br />
+          <span class="area">B1平面特區5800元</span>
+        </h2>
+
+        <div class="seat-icons flex">
+          <span class="flex">
+            <img src="assets/seat-empty.svg" alt="" /> 空位</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-check.svg" alt="" /> 已加入購物車</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-lock.svg" alt="" /> 已被選擇</span
+          >
+          <span class="flex"
+            ><img src="assets/seat-people.svg" alt="" /> 已售出</span
+          >
+        </div>
+      </div>
+
+      <div class="miniMap">
+        <img src="assets/seat-mini.png" alt="" />
+      </div>
+    </div>
+
+    <div class="flex seatype">
+      <div
+        class="mi"
+        (click)="scroll(nav, 'left')"
+        *ngIf="nav.scrollLeft > 0"
+        (blur)="(nav)"
+      >
+        chevron_left
+      </div>
+      <div
+        #nav
+        class="ticket flex f1"
+        (scroll)="nav.scrollLeft = nav.scrollLeft"
+        (window:resize)="nav.scrollLeft = nav.scrollLeft"
+      >
+        <button class="f1 grey">座位資訊</button>
+        <button class="f1 green">全票</button>
+        <button class="f1 yellow">學生票</button>
+        <button class="f1 red">兒童票</button>
+        <button class="f1 blue">敬老票</button>
+      </div>
+      <div
+        class="mi"
+        (click)="scroll(nav, 'right')"
+        *ngIf="nav.scrollLeft < nav.scrollWidth - nav.clientWidth"
+        (blur)="(nav)"
+      >
+        chevron_right
+      </div>
+    </div>
+  </div>
+  <div class="seat-content">
+    <div class="scale">
+      <span class="mi">zoom_in</span><span class="mi">zoom_out</span>
+    </div>
+    <app-seat-content></app-seat-content>
+  </div>
+</div>

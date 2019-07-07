@@ -14,8 +14,20 @@ export class ReturnTicketComponent implements OnInit {
   }
   public toggleActive(event) {
     let el = event.target as HTMLElement;
-    console.log(el)
     if (el.classList.contains("active")) el.classList.remove("active");
     else el.classList.add("active");
+    if (el.nodeName == "TH") {
+      let tds = document.querySelectorAll(".return");
+      if (el.classList.contains("active")) {
+        tds.forEach(td => { td.classList.remove("active"); td.classList.add("active") })
+      } else {
+        tds.forEach(td => td.classList.remove("active"))
+      }
+    }
+  }
+  public async return() {
+    await alert("退票完成");
+    this.lightbox.showBlur = false;
+    this.lightbox.showReturn = false
   }
 }

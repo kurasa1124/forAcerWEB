@@ -1,0 +1,391 @@
+@import "../../../../theme.scss";
+h1 {
+  font-weight: normal;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+h4 {
+  color: $grey;
+  font-weight: normal;
+  > * {
+    margin-top: 0.5rem;
+    margin-right: 0.7rem;
+  }
+  app-selector {
+    margin-left: 0.5rem;
+    color: #000;
+    border: 1px solid #999;
+    border-radius: 5px;
+  }
+  button {
+    font-size: 0.8rem;
+    color: #fff;
+    background: $facebook;
+    line-height: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 0 0.7rem;
+    border: none;
+    margin-right: 2rem;
+    &::before {
+      border-radius: 1.5rem;
+    }
+  }
+}
+button {
+  cursor: pointer;
+  color: $grey;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: $lightGrey;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  &.active {
+    color: #fff;
+    background: $main;
+  }
+}
+.choice {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .checkbox {
+    cursor: pointer;
+    color: $grey;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .mi {
+    font-size: 1rem;
+    font-style: normal;
+    margin-right: 0.2rem;
+  }
+}
+
+.seats {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+  margin: -2vmin -4vmin;
+  box-shadow: 0 3px 20px 0 $opacityBorder;
+  > * {
+    height: 100%;
+    overflow: auto;
+  }
+  @media screen and (max-width: 960px) {
+    height: auto !important;
+    > * {
+      width: 100%;
+      height: auto !important;
+    }
+  }
+  table {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-right: 1rem;
+    padding: 5px;
+    min-width: 200px;
+    tr {
+      cursor: pointer;
+      &:hover,
+      &.hover {
+        background: $lightGrey;
+      }
+    }
+    td,
+    th {
+      padding: 5px;
+      white-space: nowrap;
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+    th {
+      font-weight: normal;
+      border-bottom: 1px solid $grey;
+    }
+    td {
+      padding: 2px 5px;
+      line-height: 1.5rem;
+    }
+    .color {
+      width: 0;
+      padding: 2px;
+    }
+  }
+  app-map {
+    position: relative;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 960px) {
+    flex-direction: column-reverse;
+    table {
+      width: 100%;
+      display: block;
+      white-space: nowrap;
+      overflow: auto;
+      padding: 1rem;
+    }
+    tr {
+      display: inline-block;
+      border-radius: 5px;
+      border: 2px solid $grey;
+      margin-right: 0.5rem;
+      padding: 0 0.5rem;
+      &.head {
+        display: none;
+      }
+      td {
+        display: block;
+        &:first-child {
+          display: none;
+        }
+        &::before {
+          content: attr(data-title);
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.seatMap {
+  margin-top: 2rem;
+  > .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  table,
+  tbody {
+    width: 100%;
+    margin-top: 1rem;
+    th,
+    td {
+      padding: 0.5rem;
+    }
+    th {
+      color: #fff;
+      background: $second;
+    }
+    td {
+      text-align: center;
+      border-bottom: 1px solid $lightGrey;
+    }
+  }
+}
+.seat-icons {
+  margin-top: 1rem;
+  span {
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    align-items: center;
+    img {
+      width: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+.seat-content {
+  position: relative;
+  .scale {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    > * {
+      color: $grey;
+      cursor: pointer;
+      background: #fff;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 3px 6px 0 $lightGrey;
+      margin-right: 0.5rem;
+    }
+  }
+}
+app-seat-content {
+  display: block;
+  border: 1px solid $grey;
+  margin-top: 1rem;
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.discount {
+  background: $lightGrey;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.area {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: $facebook;
+}
+
+.miniMap {
+  width: 100%;
+  max-width: 150px;
+  margin-top: 1rem;
+  border: 1px solid $grey;
+  img {
+    width: 100%;
+  }
+}
+
+.seatype {
+  width: 100%;
+  .mi {
+    color: $grey;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.ticket {
+  overflow: auto;
+  // flex-wrap: wrap;
+  button {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background: $lightGrey;
+    white-space: nowrap;
+    &.grey {
+      color: #000;
+      min-width: 200px;
+    }
+    &.green {
+      background: $green;
+    }
+    &.yellow {
+      background: $yellow;
+    }
+    &.red {
+      background: $red;
+    }
+    &.blue {
+      background: $facebook;
+    }
+  }
+}
+
+.detail {
+  align-items: flex-end;
+  .map {
+    width: 100%;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.addCart {
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  button {
+    height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.login {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.9rem;
+    .mi {
+      color: $grey;
+    }
+    input {
+      background: none;
+      border: none;
+      border-left: 1px solid $grey;
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+      line-height: 2rem;
+      width: 100%;
+      &::placeholder {
+        color: $grey;
+      }
+    }
+  }
+
+  .securiry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .code {
+      width: 8rem;
+      margin-right: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+    }
+    input {
+      max-width: 8rem;
+    }
+  }
+}
+
+.selectNum {
+  margin-top: 0;
+  td {
+    &.fill {
+      width: 50%;
+      // text-align: left !important;
+    }
+    input {
+      text-align: center;
+      width: 5rem;
+      border-radius: 5px;
+      border: 1px solid $grey;
+    }
+  }
+}

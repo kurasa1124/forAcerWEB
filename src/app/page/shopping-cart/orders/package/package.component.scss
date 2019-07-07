@@ -67,6 +67,14 @@ td {
   &:first-child {
     width: 25%;
   }
+  .mi {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $red;
+    font-size: 1.5rem;
+  }
 }
 
 .red {

@@ -9,14 +9,14 @@ import { LightBoxService } from '../../../../service/lightBox.service';
 })
 export class SeatsComponent implements OnInit {
 
-  constructor(private _router: Router, private _lightbox: LightBoxService) { }
+  constructor(private _router: Router, public lightbox: LightBoxService) { }
 
   ngOnInit() {
   }
 
   public gotoCart() {
-    this._lightbox.showBlur = false;
-    this._lightbox.showSeats = false;
+    this.lightbox.showBlur = false;
+    this.lightbox.showSeats = false;
     this._router.navigate(['shopping-cart', 'seat']);
   }
 

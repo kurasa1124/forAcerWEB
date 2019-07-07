@@ -14,9 +14,10 @@
         <th>名稱</th>
         <th>時間地點</th>
         <th>座位資訊</th>
-        <th></th>
         <th>定價</th>
         <th>售價</th>
+        <th></th>
+        <th></th>
       </tr>
       <tr>
         <td class="pos" data-title="名稱：">
@@ -28,13 +29,15 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號
         </td>
+
+        <td data-title="定價：">2000</td>
+        <td data-title="售價：">1600</td>
         <td>
           <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
             換位
           </button>
         </td>
-        <td data-title="定價：">2000</td>
-        <td data-title="售價：">1600</td>
+        <td class="delete"><span class="mi">delete</span></td>
       </tr>
       <tr>
         <td class="pos" data-title="名稱：">
@@ -46,13 +49,15 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號
         </td>
+
+        <td data-title="定價：">2000</td>
+        <td data-title="售價：">1600</td>
         <td>
           <button class="changeSeat" [routerLink]="['/shopping-cart', 'seat']">
             換位
           </button>
         </td>
-        <td data-title="定價：">2000</td>
-        <td data-title="售價：">1600</td>
+        <td class="delete"><span class="mi">delete</span></td>
       </tr>
       <tr>
         <td class="pos" data-title="名稱：">
@@ -64,6 +69,9 @@
         <td class="nowrap" data-title="座位資訊：">
           2樓 - 8排 - 25 號
         </td>
+
+        <td data-title="定價：">2000</td>
+        <td data-title="售價：">1600</td>
         <td>
           <button
             class="changeSeat"
@@ -73,8 +81,7 @@
             換位
           </button>
         </td>
-        <td data-title="定價：">2000</td>
-        <td data-title="售價：">1600</td>
+        <td class="delete"><span class="mi">delete</span></td>
       </tr>
     </table>
   </div>

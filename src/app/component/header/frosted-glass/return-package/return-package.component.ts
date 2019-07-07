@@ -14,4 +14,10 @@ export class ReturnPackageComponent implements OnInit {
   ngOnInit() {
   }
 
+  public async return() {
+    await alert("退票完成");
+    this.lightbox.showBlur = false;
+    this.lightbox.showReturnPkg = false
+  }
+
 }

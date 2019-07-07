@@ -122,15 +122,6 @@ button {
     font-size: 0.7rem;
     margin-top: 5px;
   }
-  // @media screen and (max-width: 640px) {
-  //   font-size: 0.8rem;
-  // }
-  // @media screen and (max-width: 480px) {
-  //   min-width: 3rem;
-  //   width: 3rem;
-  //   height: 3rem;
-  //   padding: 0.5rem 5px;
-  // }
 }
 
 .align-left {
@@ -193,6 +184,10 @@ button {
 .memo {
   color: $grey;
   margin-top: 0.5rem;
+  &.blue {
+    color: $main;
+    cursor: pointer;
+  }
 }
 .tal {
   text-align: left;

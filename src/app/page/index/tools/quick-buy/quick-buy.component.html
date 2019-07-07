@@ -1,8 +1,7 @@
 <div
   class="full"
   [class.hint]="!showBefore"
-  [routerLink]="['/goods', 'category']"
-  [queryParams]="{ title: '快速訂購' }"
+  (click)="lightBox.showQuickBuy = true; lightBox.showBlur = true"
 >
   <i class="ai-shopping-cart"></i>
   <div class="mi">flash_on</div>

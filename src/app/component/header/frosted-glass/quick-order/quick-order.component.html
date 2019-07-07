@@ -1,0 +1,34 @@
+<div class="box mini">
+  <h1 class="noicon">快速訂購</h1>
+  <div class="word">
+    電腦自動選位，限全票
+  </div>
+  <div class="flex muti">
+    <label>
+      <input type="text" placeholder="快速訂購碼" />
+    </label>
+    <label>
+      <span class="mi" (click)="number = number > 0 ? number - 1 : 0"
+        >remove</span
+      >
+      <input type="number" [(ngModel)]="number" />
+      <span class="mi" (click)="number = number + 1">add</span>
+    </label>
+  </div>
+  <label
+    ><span class="mi">person</span><input type="text" placeholder="帳號"
+  /></label>
+  <label
+    ><span class="mi">lock</span><input type="password" placeholder="密碼"
+  /></label>
+  <div class="securiry">
+    <div class="code"><img [src]="imgDataURL" alt="" (click)="reload()" /></div>
+    <label class="f1"
+      ><span class="mi" (click)="reload()">cached</span
+      ><input type="text" placeholder="驗證碼"
+    /></label>
+  </div>
+  <div class="buttons">
+    <button class="f1" (click)="send()">登入並加入購物車</button>
+  </div>
+</div>
