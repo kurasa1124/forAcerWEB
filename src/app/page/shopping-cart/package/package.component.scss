@@ -11,6 +11,27 @@ h2 {
   color: #fff;
   padding: 0.5rem;
 }
+h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: normal;
+  border-right: 2px solid $second;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: $second;
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  border: 3px solid $second;
+  border-radius: 5px;
+  align-items: stretch;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
 h4 {
   color: #000;
   font-weight: normal;
@@ -39,8 +60,9 @@ h4 {
       font-size: 0.9rem;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
       flex-wrap: wrap;
+      padding: 0 1rem;
       .flex {
         margin: 0.5rem;
       }
