@@ -50,11 +50,21 @@ table {
     &:last-child {
       text-align: right;
     }
+    &.tac {
+      text-align: center;
+    }
+    &.tar {
+      text-align: right;
+    }
   }
   th {
-    position: sticky;
-    top: 0;
     background: $lightGrey;
+  }
+  &:not(.package) {
+    th {
+      position: sticky;
+      top: 0;
+    }
   }
   td {
     text-align: center;
@@ -62,13 +72,45 @@ table {
   }
   @media screen and (max-width: 640px) {
     display: block;
-    // border: 2px solid $grey;
     border-radius: 5px;
     tbody {
       flex: 1;
       display: block;
       width: 100%;
     }
+    &.package {
+      display: flex;
+      width: 100%;
+      tbody {
+        display: flex;
+        width: 100%;
+        overflow: auto;
+      }
+      tr {
+        flex: 0 0 70%;
+        &.ss-show {
+          max-width: 4rem;
+          position: sticky;
+          left: 0;
+          td {
+            &::before {
+              min-width: 0;
+            }
+            &::after {
+              width: 2.5rem;
+              height: 2.5rem;
+              background: #fff;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 0 0 10px 0 rgba(black, 0.2);
+            }
+          }
+        }
+      }
+    }
+
     tr:first-child,
     th {
       display: none;
@@ -79,7 +121,7 @@ table {
       width: 100%;
       min-height: 2rem;
     }
-    tr:not(:last-child) {
+    tr {
       border-bottom: 2px solid $grey;
     }
     td {
@@ -95,6 +137,7 @@ table {
         min-width: 6rem;
         color: #000;
         font-weight: bold;
+        text-align: left;
       }
     }
   }
